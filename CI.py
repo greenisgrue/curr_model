@@ -18,7 +18,7 @@ for i, row in vocab.iterrows():
         vocab.at[i,'subject'] = 'Bild'
         vocab.at[i,'audience'] = 'Grundskola 7-9'
 
-    elif row['parent'] == 'fe5a33b2-0a0d-11eb-b4ba-0ae95472d63c' or row['parent'] == '084d72f0-0a0e-11eb-b4ba-0ae95472d63c' or row['parent'] == '01d3ac26-0a0e-11eb-b4ba-0ae95472d63c':
+    elif row['parent'] == 'fe5a33b2-0a0d-11eb-b4ba-0ae95472d63c' or row['parent'] == '084d72f0-0a0e-11eb-b4ba-0ae95472d63c' or row['parent'] == '01d3ac26-0a0e-11eb-b4ba-0ae95472d63c' or row['parent'] == 'fb0406ef-0a0d-11eb-b4ba-0ae95472d63c' or row['parent'] == '04ade330-0a0e-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Biologi'
         vocab.at[i,'audience'] = 'Grundskola 1-3'
 
@@ -42,7 +42,7 @@ for i, row in vocab.iterrows():
         vocab.at[i,'subject'] = 'Engelska'
         vocab.at[i,'audience'] = 'Grundskola 7-9'
 
-    elif row['parent'] == '1ba2e4ed-0a16-11eb-b4ba-0ae95472d63c' or row['parent'] == '204c7fdd-0a16-11eb-b4ba-0ae95472d63c' or row['parent'] == 'ef240f41-0a15-11eb-b4ba-0ae95472d63c':
+    elif row['parent'] == '1ba2e4ed-0a16-11eb-b4ba-0ae95472d63c' or row['parent'] == '204c7fdd-0a16-11eb-b4ba-0ae95472d63c' or row['parent'] == 'ef240f41-0a15-11eb-b4ba-0ae95472d63c' or row['parent'] == '15397ad6-0a16-11eb-b4ba-0ae95472d63c' or row['parent'] == '0e7f4b65-0a16-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Fysik'
         vocab.at[i,'audience'] = 'Grundskola 1-3'
 
@@ -54,31 +54,78 @@ for i, row in vocab.iterrows():
         vocab.at[i,'subject'] = 'Fysik'
         vocab.at[i,'audience'] = 'Grundskola 7-9'
 
-
-
-    elif row['parent'] == '33ee7f31-0a19-11eb-b4ba-0ae95472d63c':
+    elif row['parent'] == '95104b9a-0a19-11eb-b4ba-0ae95472d63c' or row['parent'] == '99cc526e-0a19-11eb-b4ba-0ae95472d63c' or row['parent'] == '914da9e6-0a19-11eb-b4ba-0ae95472d63c' or row['parent'] == '9e089fee-0a19-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Geografi'
+        vocab.at[i,'audience'] = 'Grundskola 1-3'
 
-    elif row['parent'] == 'b2288708-0a1c-11eb-b4ba-0ae95472d63c':
+    elif row['parent'] == '5f9cf9b0-0a1b-11eb-b4ba-0ae95472d63c' or row['parent'] == '58b982ec-0a1b-11eb-b4ba-0ae95472d63c' or row['parent'] == '5cededc8-0a1b-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Geografi'
+        vocab.at[i,'audience'] = 'Grundskola 4-6'
+
+    elif row['parent'] == 'bee090ec-0a1b-11eb-b4ba-0ae95472d63c' or row['parent'] == 'b8e11384-0a1b-11eb-b4ba-0ae95472d63c' or row['parent'] == 'bbb05b55-0a1b-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Geografi'
+        vocab.at[i,'audience'] = 'Grundskola 7-9'
+
+    elif row['parent'] == '6f99d94d-0a1d-11eb-b4ba-0ae95472d63c' or row['parent'] == '1a6a67f7-0a1d-11eb-b4ba-0ae95472d63c' or row['parent'] == '6c4361fb-0a1d-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Hem- och konsumentkunskap'
+        vocab.at[i,'audience'] = 'Grundskola 1-6'
 
-    elif row['parent'] == '675651f9-0a1f-11eb-b4ba-0ae95472d63c':
+    elif row['parent'] == 'b9e2aa8f-0a1d-11eb-b4ba-0ae95472d63c' or row['parent'] == 'b39b33c6-0a1d-11eb-b4ba-0ae95472d63c' or row['parent'] == 'b6ee4716-0a1d-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Hem- och konsumentkunskap'
+        vocab.at[i,'audience'] = 'Grundskola 7-9'
+
+    elif row['parent'] == '0814d85f-0a20-11eb-b4ba-0ae95472d63c' or row['parent'] == 'fb3deb4c-0a1f-11eb-b4ba-0ae95472d63c' or row['parent'] == 'f8e667bb-0a1f-11eb-b4ba-0ae95472d63c' or row['parent'] == 'f63fde33-0a1f-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Historia'
+        vocab.at[i,'audience'] = 'Grundskola 1-3'
 
-    elif row['parent'] == '4ee2d1c6-0a22-11eb-b4ba-0ae95472d63c':
+    elif row['parent'] == 'fa8dad03-0a20-11eb-b4ba-0ae95472d63c' or row['parent'] == 'f1e8bb98-0a20-11eb-b4ba-0ae95472d63c' or row['parent'] == 'f5cb5778-0a20-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Historia'
+        vocab.at[i,'audience'] = 'Grundskola 4-6'
+
+    elif row['parent'] == '75cf47c2-0a21-11eb-b4ba-0ae95472d63c' or row['parent'] == '71a988d7-0a21-11eb-b4ba-0ae95472d63c' or row['parent'] == '6be2e918-0a21-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Historia'
+        vocab.at[i,'audience'] = 'Grundskola 7-9'
+
+    elif row['parent'] == '318afabc-0a23-11eb-b4ba-0ae95472d63c' or row['parent'] == '363aba3e-0a23-11eb-b4ba-0ae95472d63c' or row['parent'] == '2ec4b88f-0a23-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Idrott och hälsa'
+        vocab.at[i,'audience'] = 'Grundskola 1-3'
 
-    elif row['parent'] == 'dc510969-0ee2-11eb-b4ba-0ae95472d63c':
-        row['subject'] == 'Judiska studier'
+    elif row['parent'] == '92993c07-0a23-11eb-b4ba-0ae95472d63c' or row['parent'] == '956a4911-0a23-11eb-b4ba-0ae95472d63c' or row['parent'] == '8fdaa70e-0a23-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Idrott och hälsa'
+        vocab.at[i,'audience'] = 'Grundskola 4-6'
+
+    elif row['parent'] == 'f7f2091c-0a23-11eb-b4ba-0ae95472d63c' or row['parent'] == 'fb951078-0a23-11eb-b4ba-0ae95472d63c' or row['parent'] == 'f4f7341d-0a23-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Idrott och hälsa'
+        vocab.at[i,'audience'] = 'Grundskola 7-9'
+
+    elif row['parent'] == '4ab881f6-0ee3-11eb-b4ba-0ae95472d63c' or row['parent'] == '4489ec09-0ee3-11eb-b4ba-0ae95472d63c' or row['parent'] == '4776d9bc-0ee3-11eb-b4ba-0ae95472d63c' or row['parent'] == '41f44cf1-0ee3-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Judiska studier'
+        vocab.at[i,'audience'] = 'Grundskola 7-9'
 
-    elif row['parent'] == '7e58cb9b-0a25-11eb-b4ba-0ae95472d63c':
-        row['subject'] == 'Kemi'
+    elif row['parent'] == '187bf3f1-0a26-11eb-b4ba-0ae95472d63c' or row['parent'] == '153c9625-0a26-11eb-b4ba-0ae95472d63c' or row['parent'] == '1b6eb777-0a26-11eb-b4ba-0ae95472d63c' or row['parent'] == '1ebed17a-0a26-11eb-b4ba-0ae95472d63c' or row['parent'] == '117facc5-0a26-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Kemi'
+        vocab.at[i,'audience'] = 'Grundskola 1-3'
 
-    elif row['parent'] == '22869688-0a27-11eb-b4ba-0ae95472d63c':
-        row['subject'] == 'Matematik'
+    elif row['parent'] == '6fd43047-0a26-11eb-b4ba-0ae95472d63c' or row['parent'] == '73c8cc79-0a26-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Kemi'
+        vocab.at[i,'audience'] = 'Grundskola 4-6'
+
+    elif row['parent'] == 'b5815331-0a26-11eb-b4ba-0ae95472d63c' or row['parent'] == 'b97c0719-0a26-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Kemi'
+        vocab.at[i,'audience'] = 'Grundskola 7-9'
+
+    elif row['parent'] == 'befa637a-0a28-11eb-b4ba-0ae95472d63c' or row['parent'] == 'ca22d9de-0a28-11eb-b4ba-0ae95472d63c' or row['parent'] == 'da87e6ee-0a28-11eb-b4ba-0ae95472d63c' or row['parent'] == 'd45a31e4-0a28-11eb-b4ba-0ae95472d63c' or row['parent'] == 'd07e49b4-0a28-11eb-b4ba-0ae95472d63c' or row['parent'] == 'c3c0fb5d-0a28-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Matematik'
+        vocab.at[i,'audience'] = 'Grundskola 1-3'
+
+    elif row['parent'] == '9ecc6fe4-0a29-11eb-b4ba-0ae95472d63c' or row['parent'] == 'a24aceac-0a29-11eb-b4ba-0ae95472d63c' or row['parent'] == 'ab01e193-0a29-11eb-b4ba-0ae95472d63c' or row['parent'] == 'ab01e193-0a29-11eb-b4ba-0ae95472d63c' or row['parent'] == 'a5364813-0a29-11eb-b4ba-0ae95472d63c' or row['parent'] == '9b4656cb-0a29-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Matematik'
+        vocab.at[i,'audience'] = 'Grundskola 4-6'
+
+    elif row['parent'] == '47cde506-0a2a-11eb-b4ba-0ae95472d63c' or row['parent'] == '4bc1d343-0a2a-11eb-b4ba-0ae95472d63c' or row['parent'] == '5554f1a4-0a2a-11eb-b4ba-0ae95472d63c' or row['parent'] == '52d4af09-0a2a-11eb-b4ba-0ae95472d63c' or row['parent'] == '4f7ab135-0a2a-11eb-b4ba-0ae95472d63c' or row['parent'] == '455a29cb-0a2a-11eb-b4ba-0ae95472d63c':
+        vocab.at[i,'subject'] = 'Matematik'
+        vocab.at[i,'audience'] = 'Grundskola 7-9'
+
 
     elif row['parent'] == '28849010-0a2c-11eb-b4ba-0ae95472d63c':
         vocab.at[i,'subject'] = 'Moderna språk'
