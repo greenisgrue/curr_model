@@ -44,7 +44,15 @@
 
     {% if result_model_1 %}
     <div class="grid-item grid-title" id="grid-title_cos">
-        <h2>{{ model_1 }}</h2>
+        <h2>
+            {{ model_1.get('model') }}
+            {% if model_1.get('CI_parent') %}
+            + CI_parent
+            {% endif %}
+            {% if model_1.get('content_title') %}
+            + content_title
+            {% endif %}
+        </h2>
     </div>
     {% else %}
     <p></p>
@@ -52,7 +60,15 @@
 
     {% if result_model_2 %}
     <div class="grid-item grid-title" id="grid-title_wmd">
-        <h2>{{ model_2 }}</h2>
+        <h2>
+            {{ model_2.get('model') }}
+            {% if model_2.get('CI_parent') %}
+            + CI_parent
+            {% endif %}
+            {% if model_2.get('content_title') %}
+            + content_title
+            {% endif %}
+        </h2>
     </div>
     {% else %}
     <p></p>
@@ -62,7 +78,13 @@
         {% if result_model_1 %}
         <table>
             <tr>
-                <th>Similarity</th>
+                <th>
+                    {% if model_1.get('model') == 'wmd' %}
+                    Distance
+                    {% else %}
+                    Similarity
+                    {% endif %}
+                </th>
                 <th>Centralt innehåll</th>
                 <th>Bedömning</th>
             </tr>
@@ -71,9 +93,9 @@
                 <td valign=top>{{ value.get('value') }}:</td>
                 <td> <strong>{{ value.get('title') }}:</strong> {{ value.get('CI') }}</td>
                 <td>
-                    <input class="{{key}} btn" id="{{model_2}}_green_{{key}}" type="button" value="Like"
+                    <input class="{{key}} btn" id="{{model_1}}_green_{{key}}" type="button" value="Like"
                         onclick='cosFunction(this.id, this.className, "{{value.value}}")'>
-                    <input class="{{key}} btn" id="{{model_2}}_red_{{key}}" type="button" value="Dislike"
+                    <input class="{{key}} btn" id="{{model_1}}_red_{{key}}" type="button" value="Dislike"
                         onclick='cosFunction(this.id, this.className, "{{value.value}}")'>
 
                 </td>
@@ -89,7 +111,13 @@
         {% if result_model_2 %}
         <table>
             <tr>
-                <th>Distance</th>
+                <th>
+                    {% if model_2.get('model') == 'wmd' %}
+                    Distance
+                    {% else %}
+                    Similarity
+                    {% endif %}
+                </th>
                 <th>Centralt innehåll</th>
                 <th>Bedömning</th>
             </tr>
@@ -98,9 +126,9 @@
                 <td valign=top>{{ value.get('value') }}:</td>
                 <td> <strong>{{ value.get('title') }}: </strong> {{ value.get('CI') }}</td>
                 <td>
-                    <input class="{{key}} btn" id="{{model_1}}_green_{{key}}" type="button" value="Like"
+                    <input class="{{key}} btn" id="{{model_2}}_green_{{key}}" type="button" value="Like"
                         onclick='wmdFunction(this.id, this.className, "{{value.value}}")'>
-                    <input class="{{key}} btn" id="{{model_1}}_red_{{key}}" type="button" value="Dislike"
+                    <input class="{{key}} btn" id="{{model_2}}_red_{{key}}" type="button" value="Dislike"
                         onclick='wmdFunction(this.id, this.className, "{{value.value}}")'>
 
                 </td>

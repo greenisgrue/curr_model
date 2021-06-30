@@ -35,6 +35,7 @@ class W2v():
         self.description = self.chosen_content.iloc[0]['description']
         self.subject = self.chosen_content.iloc[0]['subject'] 
         self.audience = self.chosen_content.iloc[0]['audience']
+        self.media_type = self.chosen_content.iloc[0]['streaming_format']
 
         CI = pd.read_csv('massive_data/stored_data/CI_vocab.csv')
         CIT = pd.read_csv('massive_data/stored_data/CI_vocab_including_titles.csv')
@@ -42,6 +43,11 @@ class W2v():
 
         self.CI_current = CI[CI['subject'].isin(self.subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))]
         self.CI_currentT = CIT[CIT['subject'].isin(self.subject.split(', ')) & CIT['audience'].isin(self.audience.split(', '))]  
+
+        if self.media_type == 'video' or isinstance(self.media_type, float):
+            self.CI_current = self.CI_current.drop(self.CI_current[self.CI_current.title == 'Texter'].index)
+            self.CI_currentT = self.CI_currentT.drop(self.CI_currentT[self.CI_currentT.title == 'Texter'].index)
+
 
 
     def preprocess_texts(self, text):
@@ -96,37 +102,54 @@ class W2v():
         content_processed_titles = self.preprocess_texts(keywords_titles)
         content_processed = self.preprocess_texts(self.keywords)
 
-        if model == 'cos sim':
-            for i, row in self.CI_current.iterrows():
+        if model.get('CI_parent'):
+            for i, row in self.CI_currentT.iterrows():
                 CI_processed = self.preprocess_texts(row['value'])
-                result = self.cos_sim(content_processed, CI_processed)
+                if model.get('content_title'):
+                    if model.get('model') == 'wmd':
+                        result = self.wmd(content_processed_titles, CI_processed)
+                    elif model.get('model') == 'cos':
+                        result = self.cos(content_processed_titles, CI_processed)
+                else:
+                    if model.get('model') == 'wmd':
+                        result = self.wmd(content_processed, CI_processed)
+                    elif model.get('model') == 'cos':
+                        result = self.cos(content_processed, CI_processed)
                 formatted_string = "{:.3f}".format(result)
                 result = float(formatted_string)
                 CI_keywords_dict[row['uuid']] = {'CI': row['CI'], 'title':  row['title'], 'value': result}
-        elif 'titles' in model:
-            for i, row in self.CI_currentT.iterrows():
+        else:
+            for i, row in self.CI_current.iterrows():
                 CI_processed = self.preprocess_texts(row['value'])
-                result = self.cos_sim(content_processed_titles, CI_processed)
+                if model.get('content_title'):
+                    if model.get('model') == 'wmd':
+                        result = self.wmd(content_processed_titles, CI_processed)
+                    elif model.get('model') == 'cos':
+                        result = self.cos(content_processed_titles, CI_processed)
+                else:
+                    if model.get('model') == 'wmd':
+                        result = self.wmd(content_processed, CI_processed)
+                    elif model.get('model') == 'cos':
+                        result = self.cos(content_processed, CI_processed)
                 formatted_string = "{:.3f}".format(result)
                 result = float(formatted_string)
-                CI_keywords_dict[row['uuid']] = {'CI': row['CI'], 'title':row['title'], 'value': result}
+                CI_keywords_dict[row['uuid']] = {'CI': row['CI'], 'title':  row['title'], 'value': result}
 
-        if 'cos' in model:
-            sorted_dict = sorted(CI_keywords_dict.items(), reverse=True, key = lambda x: x[1]['value'])
-            top_candidates = []
-            memory = []
-            i = 0
-            while len(top_candidates) < 3:
-                if (sorted_dict[i][1].get('CI')) not in memory:
-                    top_candidates.append(sorted_dict[i])
-                    memory.append(sorted_dict[i][1].get('CI'))
-                i += 1
-            for key in sorted_dict:
-                top_id = []
-                for value in top_candidates:
-                    top_id.append(value[0])
-                if(key[1].get('value') > 0.87) and (key[0] not in top_id):
-                    top_candidates.append(key)
+        sorted_dict = sorted(CI_keywords_dict.items(), reverse=False, key = lambda x: x[1]['value'])
+        top_candidates = []
+        memory = []
+        i = 0
+        while len(top_candidates) < 3:
+            if (sorted_dict[i][1].get('CI')) not in memory:
+                top_candidates.append(sorted_dict[i])
+                memory.append(sorted_dict[i][1].get('CI'))
+            i += 1
+        for key in sorted_dict:
+            top_id = []
+            for value in top_candidates:
+                top_id.append(value[0])
+            if(key[1].get('value') < 0.90) and (key[0] not in top_id):
+                top_candidates.append(key)
         # elif data == 'wmd':
         #     sorted_dict = sorted(CI_keywords_dict.items(), reverse=False, key = lambda x: x[1]['value'])
         #     top_candidates = sorted_dict[0:3]

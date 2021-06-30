@@ -8,19 +8,23 @@ from bson.json_util import loads, dumps
 from itertools import chain
 import pymongo
 
+from CLI import defined_models
+
 
 connection_url = 'mongodb+srv://dbUser:dbUserPassword@cluster0.ifjkb.mongodb.net/CI_ratings?retryWrites=true&w=majority'
 client = pymongo.MongoClient(connection_url)
 # Database
 Database = client.get_database('CI_ratings')
 # Table
-SampleTable = Database.ratings
+SampleTable = Database.ratings_wmd
 
 # Create flask app
 flask_app = Flask(__name__)
 model_jaccard = Jaccard()
 model_w2v = W2v()
 
+# models = define_models()
+models = defined_models()
 
 @flask_app.route("/")
 def Home():
@@ -40,9 +44,8 @@ def recommend():
     provided_id = request.form.values()
     provided_id = list(provided_id)
     provided_id = provided_id[0]
-    model_1 = 'cos sim'
-    model_2 = 'cos sim including CI titles'
-    keywords = ['keywords']
+    model_1 = models[0].get('model')
+    model_2 = models[1].get('model')
     result_model_1 = model_w2v.predict_CI(model_1, provided_id)
     result_model_2 = model_w2v.predict_CI(model_2, provided_id)
     
@@ -74,8 +77,8 @@ def recommend():
 @flask_app.route("/random", methods = ["POST"])
 def random_id():
     random_id = model_w2v.generate_id()
-    model_1 = 'cos sim'
-    model_2 = 'cos sim double titles'
+    model_1 = models[0]
+    model_2 = models[1]
     result_model_1 = model_w2v.predict_CI(model_1, random_id)
     result_model_2 = model_w2v.predict_CI(model_2 , random_id)
     

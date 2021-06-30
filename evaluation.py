@@ -8,7 +8,7 @@ client = pymongo.MongoClient(connection_url)
 db = client["CI_ratings"]
   
 # Collection Name
-col = db["ratings"]
+col = db["ratings_wmd"]
 
 
 def get_average_rating(model):
@@ -54,12 +54,17 @@ def get_average_value(model):
 
 
 
-model_type = 'cos sim'
+model_type_1 = 'wmd'
+model_type_2 = 'wmd double titles'
 
-average_rating = get_average_rating(model_type)
-print(f'Average rating for {model_type} is {average_rating}')
+average_rating = get_average_rating(model_type_1)
+print(f'Average rating for {model_type_1} is {average_rating}')
+average_value = get_average_value(model_type_1)
+print(f'Values for {model_type_1} is {average_value}')
 
-average_value = get_average_value(model_type)
-print(f'Values for {model_type} is {average_value}')
+average_rating = get_average_rating(model_type_2)
+print(f'Average rating for {model_type_2} is {average_rating}')
+average_value = get_average_value(model_type_2)
+print(f'Values for {model_type_2} is {average_value}')
 
 
