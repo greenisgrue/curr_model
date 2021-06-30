@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="grid-container">
+    <div class="grid-item" id="grid-content_image">
+        {% if thumbnail %}
+        <img src="{{ thumbnail }}" />
+        {% else %}
+        <p></p>
+        {% endif %}
+    </div>
+    <div class="grid-item" id="grid-content_metadata">
+        {% if surtitle %}
+        <p class="content_title">{{ surtitle }}: {{ title }}</p>
+        <hr class="solid">
+        {% else %}
+        <p></p>
+        {% endif %}
+        {% if content_id %}
+        <p><strong>Content ID:</strong> {{ content_id }}</p>
+        {% else %}
+        <p></p>
+        {% endif %}
+        {% if subject %}
+        <p><strong>Ämne:</strong> {{ subject }}</p>
+        {% else %}
+        <p></p>
+        {% endif %}
+        {% if audience %}
+        <p><strong>Årskurs:</strong> {{ audience }}</p>
+        {% else %}
+        <p></p>
+        {% endif %}
+        {% if keywords %}
+        <p><strong>Keywords:</strong> {{ keywords }}</p>
+        {% else %}
+        <p></p>
+        {% endif %}
+        {% if description %}
+        <p><strong>Beskrivning:</strong> {{ description }}</p>
+        {% else %}
+        <p></p>
+        {% endif %}
+    </div>
+
+    {% if result_model_1 %}
+    <div class="grid-item grid-title" id="grid-title_cos">
+        <h2>{{ model_1 }}</h2>
+    </div>
+    {% else %}
+    <p></p>
+    {% endif %}
+
+    {% if result_model_2 %}
+    <div class="grid-item grid-title" id="grid-title_wmd">
+        <h2>{{ model_2 }}</h2>
+    </div>
+    {% else %}
+    <p></p>
+    {% endif %}
+
+    <div class="grid-item" id="grid-list_cos">
+        {% if result_model_1 %}
+        <table>
+            <tr>
+                <th>Similarity</th>
+                <th>Centralt innehåll</th>
+                <th>Bedömning</th>
+            </tr>
+            {% for key, value in result_model_1 %}
+            <tr>
+                <td valign=top>{{ value.get('value') }}:</td>
+                <td> <strong>{{ value.get('title') }}:</strong> {{ value.get('CI') }}</td>
+                <td>
+                    <input class="{{key}} btn" id="{{model_2}}_green_{{key}}" type="button" value="Like"
+                        onclick='cosFunction(this.id, this.className, "{{value.value}}")'>
+                    <input class="{{key}} btn" id="{{model_2}}_red_{{key}}" type="button" value="Dislike"
+                        onclick='cosFunction(this.id, this.className, "{{value.value}}")'>
+
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+
+
+
+    </div>
+    <div class="grid-item" id="grid-list_wmd">
+        {% if result_model_2 %}
+        <table>
+            <tr>
+                <th>Distance</th>
+                <th>Centralt innehåll</th>
+                <th>Bedömning</th>
+            </tr>
+            {% for key, value in result_model_2 %}
+            <tr>
+                <td valign=top>{{ value.get('value') }}:</td>
+                <td> <strong>{{ value.get('title') }}: </strong> {{ value.get('CI') }}</td>
+                <td>
+                    <input class="{{key}} btn" id="{{model_1}}_green_{{key}}" type="button" value="Like"
+                        onclick='wmdFunction(this.id, this.className, "{{value.value}}")'>
+                    <input class="{{key}} btn" id="{{model_1}}_red_{{key}}" type="button" value="Dislike"
+                        onclick='wmdFunction(this.id, this.className, "{{value.value}}")'>
+
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+
+    </div>
+    {% if content_id %}
+    <input type="button" value="Submit" id="submitButton" onclick="otherFunc('{{ keywords }}', '{{ content_id }}')">
+    {% endif %}
+
+</div>
+
+<script>
+    //let dict = {};
+    let cos_dict = {};
+    let wmd_dict = {};
+
+    function cosFunction(id, class_name, value) {
+        var btn1 = document.getElementById(id);
+
+        id_split = id.split('_')
+        //dict['model_type'] = id_split[0]
+
+        class_split = class_name.split(' ')
+        only_id = class_split[0]
+        color = class_split[2]
+
+        cos_dict[only_id] = { 'model_type': id_split[0], 'value': value };
+
+        if ((color == 'green') && id.includes('green')) {
+            btn1.classList.remove('green');
+            cos_dict[only_id]['rating'] = 0;
+        }
+        else if (!(color == 'green') && id.includes('green')) {
+            var btn2 = document.getElementById(id_split[0] + '_red_' + only_id);
+            btn1.classList.toggle('green');
+            btn2.classList.remove('red');
+            cos_dict[only_id]['rating'] = 1;
+
+        }
+        else if ((color == 'red') && id.includes('red')) {
+            btn1.classList.remove('red');
+            cos_dict[only_id]['rating'] = 0;
+
+        }
+        else if (!(color == 'red') && id.includes('red')) {
+            var btn2 = document.getElementById(id_split[0] + '_green_' + only_id);
+            btn1.classList.toggle('red');
+            btn2.classList.remove('green');
+            cos_dict[only_id]['rating'] = -1;
+
+        }
+        return cos_dict
+    }
+
+    function wmdFunction(id, class_name, value) {
+        var btn1 = document.getElementById(id);
+
+        id_split = id.split('_')
+        //dict['model_type'] = id_split[0]
+
+        class_split = class_name.split(' ')
+        only_id = class_split[0]
+        color = class_split[2]
+
+        wmd_dict[only_id] = { 'model_type': id_split[0], 'value': value };
+
+        if ((color == 'green') && id.includes('green')) {
+            btn1.classList.remove('green');
+            wmd_dict[only_id]['rating'] = 0;
+
+        }
+        else if (!(color == 'green') && id.includes('green')) {
+            var btn2 = document.getElementById(id_split[0] + '_red_' + only_id);
+            btn1.classList.toggle('green');
+            btn2.classList.remove('red');
+            wmd_dict[only_id]['rating'] = 1;
+
+
+        }
+        else if ((color == 'red') && id.includes('red')) {
+            btn1.classList.remove('red');
+            wmd_dict[only_id]['rating'] = 0;
+
+        }
+        else if (!(color == 'red') && id.includes('red')) {
+            var btn2 = document.getElementById(id_split[0] + '_green_' + only_id);
+            btn1.classList.toggle('red');
+            btn2.classList.remove('green');
+            wmd_dict[only_id]['rating'] = -1;
+
+        }
+        return wmd_dict
+    }
+
+    function otherFunc(keywords, content_id) {
+        timestamp = new Date().toISOString()
+        cos_dict['keywords'] = keywords
+        cos_dict['content_id'] = content_id
+        cos_dict['timestamp'] = timestamp
+        wmd_dict['keywords'] = keywords
+        wmd_dict['content_id'] = content_id
+        wmd_dict['timestamp'] = timestamp
+        $.ajax({
+            type: "POST",
+            url: "{{ url_for('post_data') }}",
+            contentType: "application/json",
+            data: JSON.stringify([cos_dict, wmd_dict]),
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+                window.location = 'http://127.0.0.1:5000/post_data'
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }
+
+</script>
+{% endblock %}
