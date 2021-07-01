@@ -15,8 +15,6 @@ mappings
 mappings/!*.md
 pickles
 pickles/!*.md
-models
-models/!*.md
 local
 local/!*.md
 topics
