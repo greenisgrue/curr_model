@@ -79,7 +79,7 @@
         <table>
             <tr>
                 <th>
-                    {% if model_1.get('model') == 'wmd' %}
+                    {% if 'wmd' in model_1.get('model') %}
                     Distance
                     {% else %}
                     Similarity
@@ -112,7 +112,7 @@
         <table>
             <tr>
                 <th>
-                    {% if model_2.get('model') == 'wmd' %}
+                    {% if 'wmd' in model_2.get('model') %}
                     Distance
                     {% else %}
                     Similarity

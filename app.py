@@ -44,8 +44,8 @@ def recommend():
     provided_id = request.form.values()
     provided_id = list(provided_id)
     provided_id = provided_id[0]
-    model_1 = models[0].get('model')
-    model_2 = models[1].get('model')
+    model_1 = models[0]
+    model_2 = models[1]
     result_model_1 = model_w2v.predict_CI(model_1, provided_id)
     result_model_2 = model_w2v.predict_CI(model_2, provided_id)
     
