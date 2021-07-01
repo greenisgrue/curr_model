@@ -6,9 +6,9 @@ stanza==1.2
 torch==1.9.0
 wheel==0.36.2
 pandas==1.2.4
-FontAwesome
-Flask-PyMongo
-pymongo[srv]
+Flask-PyMongo==2.3.0
+
+
 
 
 

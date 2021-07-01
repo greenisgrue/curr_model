@@ -54,3 +54,7 @@ print(similarity)
 result = word_vectors.similar_by_word("musikinstrumentens")
 most_similar_key, similarity = result[0] 
 print(f"{most_similar_key}: {similarity:.4f}")
+
+fontawesome==5.10.1.post1
+pymongo==3.11.4
+pymongo[srv]

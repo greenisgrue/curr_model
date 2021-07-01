@@ -8,7 +8,7 @@ from bson.json_util import loads, dumps
 from itertools import chain
 import pymongo
 
-from CLI import defined_models
+from define_models import defined_models
 
 
 connection_url = 'mongodb+srv://dbUser:dbUserPassword@cluster0.ifjkb.mongodb.net/CI_ratings?retryWrites=true&w=majority'
