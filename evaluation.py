@@ -81,5 +81,7 @@ average_value = get_average_value(model_type_2)
 print(f'Values for {model_type_2} is {average_value}')
 
 get_value_list(model_type_1, -1)
+get_value_list(model_type_2, -1)
+
 
 

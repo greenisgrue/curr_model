@@ -58,6 +58,7 @@ def recommend():
     thumbnail = model_w2v.thumbnail
     description = model_w2v.description
 
+
     return render_template(
         "recommend.html",
         result_model_1=result_model_1, 
@@ -111,7 +112,6 @@ def random_id():
 def post_data():    
     if request.method == 'POST':
         data = request.get_json()
-        print(data)
         queryObject = data
         query = SampleTable.insert_many(queryObject) 
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}

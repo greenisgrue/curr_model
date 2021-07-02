@@ -37,26 +37,59 @@ class W2v():
         self.audience = self.chosen_content.iloc[0]['audience']
         self.media_type = self.chosen_content.iloc[0]['streaming_format']
 
+        print(self.content_id)
         CI = pd.read_csv('massive_data/stored_data/CI_vocab.csv')
         CIT = pd.read_csv('massive_data/stored_data/CI_vocab_including_titles.csv')
 
+        if not isinstance(self.surtitle, float):
+            if 'Lilla Aktuellt' in self.surtitle:
+                self.CI_current = CI[CI['uuid'] == '51e34da1-0e1d-11eb-b4ba-0ae95472d63c']
+                self.CI_currentT = CIT[CIT['uuid'] == '51e34da1-0e1d-11eb-b4ba-0ae95472d63c']
+        
+            elif 'Newsreel' in self.surtitle and self.audience == 'Grundskola 4-6':
+                self.CI_current = CI[(CI['uuid'] == '35518dcf-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '3e8c4968-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '0c60d903-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '1aa25dc9-0a14-11eb-b4ba-0ae95472d63c')]
+                self.CI_currentT = CIT[(CIT['uuid'] == '35518dcf-0a14-11eb-b4ba-0ae95472d63c') | (CIT['uuid'] == '3e8c4968-0a14-11eb-b4ba-0ae95472d63c') | (CIT['uuid'] == '0c60d903-0a14-11eb-b4ba-0ae95472d63c') | (CIT['uuid'] == '1aa25dc9-0a14-11eb-b4ba-0ae95472d63c')]
+        
+            elif 'Newsreel' in self.surtitle and self.audience == 'Grundskola 7-9':
+                self.CI_current = CI[(CI['uuid'] == 'ee776597-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == 'f265d641-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '00be6ce6-0a15-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '9fdfda18-0a14-11eb-b4ba-0ae95472d63c')]
+                self.CI_currentT = CIT[(CIT['uuid'] == 'ee776597-0a14-11eb-b4ba-0ae95472d63c') | (CIT['uuid'] == 'f265d641-0a14-11eb-b4ba-0ae95472d63c') | (CIT['uuid'] == '00be6ce6-0a15-11eb-b4ba-0ae95472d63c') | (CIT['uuid'] == '9fdfda18-0a14-11eb-b4ba-0ae95472d63c')]
 
-        self.CI_current = CI[CI['subject'].isin(self.subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))]
-        self.CI_currentT = CIT[CIT['subject'].isin(self.subject.split(', ')) & CIT['audience'].isin(self.audience.split(', '))]  
+            else:
+                self.CI_current = CI[CI['subject'].isin(self.subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))]
+                self.CI_currentT = CIT[CIT['subject'].isin(self.subject.split(', ')) & CIT['audience'].isin(self.audience.split(', '))]  
 
-        if self.media_type == 'video' or isinstance(self.media_type, float):
+        elif self.media_type == 'video' or self.media_type == 'audio' or isinstance(self.media_type, float):
             self.CI_current = self.CI_current.drop(self.CI_current[self.CI_current.title == 'Texter'].index)
             self.CI_currentT = self.CI_currentT.drop(self.CI_currentT[self.CI_currentT.title == 'Texter'].index)
 
+        print(self.CI_current)
 
 
     def preprocess_texts(self, text):
         stop_words = stopwords.words('swedish')
         text = text.lower()
         text = ' '.join([self.dictionary.get(i, i) for i in text.split()])
-        text = re.sub(r"[^\w\d'\s\-]+", '', text)
+        text = re.sub(r"[^\w\s-]+", '', text)
         text = " ".join([w for w in text.split() if w not in stop_words])
+        for word in text.split():
+            if '-' in word and len(word) > 1:
+                years = word.split('-')
+                if years[0].isnumeric() and years[1].isnumeric():
+                    era = [self.find_era(years[0]), self.find_era(years[1])]
+                    era = ' '.join(era)
+                    text = text.replace(word, era)
         return text.split(" ")
+
+    def find_era(self, year):
+        era = year
+        if 800 <= int(year) <= 1459:
+            era = 'medeltiden'
+        elif 1500 <= int(year) <= 1759:
+            era = 'renässansen'
+        elif 1800 <= int(year) <= 1859 and int(year) != 1850:
+            era = 'industrialiseringen'
+        return era  
+ 
 
     def cos_sim(self, keywords, CI_doc):         
         try:
@@ -104,7 +137,7 @@ class W2v():
 
     def predict_CI(self, model, uid):
         self.find_CI(uid)
-
+            
         self.CI_keywords_dict = {}
 
 
@@ -135,24 +168,28 @@ class W2v():
                 self.format_result_cos(row['uuid'], row['CI'], row['title'], result_cos_CT)
                 self.format_result_cos(row['uuid'], row['CI'], row['title'], result_cos)
             
+            if not isinstance(self.surtitle, float) and ('Lilla Aktuellt' in self.surtitle or 'Newsreel' in self.surtitle):
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=True, key = lambda x: x[1]['value'])
+                return (sorted_dict)
 
-            sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=True, key = lambda x: x[1]['value'])
-            top_candidates = []
-            memory = []
-            i = 0
-            while len(top_candidates) < 3:
-                if (sorted_dict[i][1].get('CI')) not in memory:
-                    top_candidates.append(sorted_dict[i])
-                    memory.append(sorted_dict[i][1].get('CI'))
-                i += 1
-            for key in sorted_dict:
-                top_id = []
-                for value in top_candidates:
-                    top_id.append(value[0])
-                if(key[1].get('value') > 0.85) and (key[0] not in top_id):
-                    top_candidates.append(key)
-
-            return top_candidates
+            else:    
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=True, key = lambda x: x[1]['value'])
+                print(sorted_dict)
+                top_candidates = []
+                memory = []
+                i = 0
+                while len(top_candidates) < 3:
+                    if (sorted_dict[i][1].get('CI')) not in memory:
+                        top_candidates.append(sorted_dict[i])
+                        memory.append(sorted_dict[i][1].get('CI'))
+                    i += 1
+                for key in sorted_dict:
+                    top_id = []
+                    for value in top_candidates:
+                        top_id.append(value[0])
+                    if(key[1].get('value') > 0.85) and (key[0] not in top_id):
+                        top_candidates.append(key)
+                return top_candidates
 
 
         if model.get('model') == 'opti_wmd':
@@ -172,26 +209,31 @@ class W2v():
                 
                 dict_wmd_CT = self.format_result_wmd(row['uuid'], row['CI'], row['title'], result_wmd_CT)
                 dict_wmd = self.format_result_wmd(row['uuid'], row['CI'], row['title'], result_wmd)
+            
+        
+            if not isinstance(self.surtitle, float) and ('Lilla Aktuellt' in self.surtitle or 'Newsreel' in self.surtitle):
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=False, key = lambda x: x[1]['value'])
+                return (sorted_dict)
 
-            sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=False, key = lambda x: x[1]['value'])
-            top_candidates = []
-            memory = []
-            i = 0
-            while len(top_candidates) < 3:
-                if (sorted_dict[i][1].get('CI')) not in memory:
-                    top_candidates.append(sorted_dict[i])
-                    memory.append(sorted_dict[i][1].get('CI'))
-                i += 1
-            for key in sorted_dict:
-                top_id = []
-                for value in top_candidates:
-                    top_id.append(value[0])
-                if(key[1].get('value') < 0.90) and (key[0] not in top_id):
-                    top_candidates.append(key)
+            else:
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=False, key = lambda x: x[1]['value'])
+                top_candidates = []
+                memory = []
+                i = 0
+                while len(top_candidates) < 3:
+                    if (sorted_dict[i][1].get('CI')) not in memory:
+                        top_candidates.append(sorted_dict[i])
+                        memory.append(sorted_dict[i][1].get('CI'))
+                    i += 1
+                for key in sorted_dict:
+                    top_id = []
+                    for value in top_candidates:
+                        top_id.append(value[0])
+                    if(key[1].get('value') < 0.90) and (key[0] not in top_id):
+                        top_candidates.append(key)
 
-            return top_candidates
-
-        if True:
+                return top_candidates
+        if model.get('model') == 'wmd' or model.get('model') == 'cos':
             if model.get('CI_parent'):
                 for i, row in self.CI_currentT.iterrows():
                     CI_processed = self.preprocess_texts(row['value'])
@@ -225,7 +267,13 @@ class W2v():
                     result = float(formatted_string)
                     self.CI_keywords_dict[row['uuid']] = {'CI': row['CI'], 'title':  row['title'], 'value': result}
 
-            if model.get('model') == 'wmd':
+
+        if model.get('model') == 'wmd':
+            if not isinstance(self.surtitle, float) and ('Lilla Aktuellt' in self.surtitle or 'Newsreel' in self.surtitle):
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=False, key = lambda x: x[1]['value'])
+                return (sorted_dict)
+
+            else:
                 sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=False, key = lambda x: x[1]['value'])
                 top_candidates = []
                 memory = []
@@ -243,7 +291,12 @@ class W2v():
                         top_candidates.append(key) 
                 return top_candidates 
 
-            elif model.get('model') == 'cos':
+        elif model.get('model') == 'cos':
+            if not isinstance(self.surtitle, float) and ('Lilla Aktuellt' in self.surtitle or 'Newsreel' in self.surtitle):
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=True, key = lambda x: x[1]['value'])
+                return (sorted_dict)
+
+            else:
                 sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=True , key = lambda x: x[1]['value'])
                 top_candidates = []
                 memory = []

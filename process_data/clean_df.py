@@ -17,7 +17,6 @@ def clean():
     ur_df['subject'] = ur_df['subject'].str.replace('Värdegrund', 'Samhällskunskap, Religionskunskap, Biologi')
     ur_df['subject'] = ur_df['subject'].str.replace('Pedagogiska frågor', 'Samhällskunskap, Religionskunskap, Biologi, Hem- konsumentskap, idrott och hälsa, Historia')
     ur_df['subject'] = ur_df['subject'].str.replace('Information och media', 'Samhällskunskap, Teknik')
-    print(len(ur_df.index))
     for index, row in ur_df.iterrows():
         if not isinstance(row['subject'], float):
             if 'Modersmål och minoritetsspråk' in row['subject']:
@@ -33,8 +32,18 @@ def clean():
         if row['subject'] == 'Övrigt':
             ur_df = ur_df.drop(labels=index, axis=0)
 
-    print(len(ur_df.index))
     ur_df.to_csv('../massive_data/stored_data/search_ur_cleaned.csv')
+
+    CI = pd.read_csv("../massive_data/stored_data/CI_vocab.csv")
+    CI_titles = pd.read_csv("../massive_data/stored_data/CI_vocab_including_titles.csv")
+
+    CI['title'] = CI['title'].str.replace('–', '-')
+    CI_titles['title'] = CI_titles['title'].str.replace('–', '-')
+    CI_titles['value'] = CI_titles['value'].str.replace('–', '-')
+
+
+    CI.to_csv("../massive_data/stored_data/CI_vocab.csv")
+    CI_titles.to_csv("../massive_data/stored_data/CI_vocab_including_titles.csv")
 
 
 def remove_duplicates(input):
