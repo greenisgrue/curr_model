@@ -8,7 +8,7 @@ client = pymongo.MongoClient(connection_url)
 db = client["CI_ratings"]
   
 # Collection Name
-col = db["ratings_wmd"]
+col = db["ratings_opti"]
 
 
 def get_average_rating(model):
@@ -50,12 +50,25 @@ def get_average_value(model):
     value_dict['value_up'] = value_dict['value_up'] / value_dict['count_up']
     value_dict['value_down'] = value_dict['value_down'] / value_dict['count_down']
 
-    return value_dict    
+    return value_dict  
+
+def get_value_list(model, rating):
+    data = col.find({},{'_id': 0})
+    value_list = []
+    for d in data:
+        metadata = list(d.values())
+        for m in metadata:
+            if type(m) is dict:
+                if m.get('model_type') == model and m.get('rating') == rating:
+                    value_list.append(m.get('value'))
+
+    print(value_list)
 
 
 
-model_type_1 = 'wmd'
-model_type_2 = 'wmd double titles'
+
+model_type_1 = 'opti_cos'
+model_type_2 = 'opti_wmd'
 
 average_rating = get_average_rating(model_type_1)
 print(f'Average rating for {model_type_1} is {average_rating}')
@@ -66,5 +79,7 @@ average_rating = get_average_rating(model_type_2)
 print(f'Average rating for {model_type_2} is {average_rating}')
 average_value = get_average_value(model_type_2)
 print(f'Values for {model_type_2} is {average_value}')
+
+get_value_list(model_type_1, -1)
 
 

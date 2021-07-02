@@ -207,7 +207,7 @@ class W2v():
                             result = self.cos_sim(content_processed, CI_processed)
                     formatted_string = "{:.3f}".format(result)
                     result = float(formatted_string)
-                    CI_keywords_dict[row['uuid']] = {'CI': row['CI'], 'title':  row['title'], 'value': result}
+                    self.CI_keywords_dict[row['uuid']] = {'CI': row['CI'], 'title':  row['title'], 'value': result}
             else:
                 for i, row in self.CI_current.iterrows():
                     CI_processed = self.preprocess_texts(row['value'])
@@ -223,10 +223,10 @@ class W2v():
                             result = self.cos_sim(content_processed, CI_processed)
                     formatted_string = "{:.3f}".format(result)
                     result = float(formatted_string)
-                    CI_keywords_dict[row['uuid']] = {'CI': row['CI'], 'title':  row['title'], 'value': result}
+                    self.CI_keywords_dict[row['uuid']] = {'CI': row['CI'], 'title':  row['title'], 'value': result}
 
             if model.get('model') == 'wmd':
-                sorted_dict = sorted(CI_keywords_dict.items(), reverse=False, key = lambda x: x[1]['value'])
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=False, key = lambda x: x[1]['value'])
                 top_candidates = []
                 memory = []
                 i = 0
@@ -244,7 +244,7 @@ class W2v():
                 return top_candidates 
 
             elif model.get('model') == 'cos':
-                sorted_dict = sorted(CI_keywords_dict.items(), reverse=True , key = lambda x: x[1]['value'])
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=True , key = lambda x: x[1]['value'])
                 top_candidates = []
                 memory = []
                 i = 0

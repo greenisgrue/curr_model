@@ -16,7 +16,7 @@ client = pymongo.MongoClient(connection_url)
 # Database
 Database = client.get_database('CI_ratings')
 # Table
-SampleTable = Database.ratings_wmd
+SampleTable = Database.ratings_opti
 
 # Create flask app
 flask_app = Flask(__name__)
@@ -111,8 +111,9 @@ def random_id():
 def post_data():    
     if request.method == 'POST':
         data = request.get_json()
+        print(data)
         queryObject = data
-        query = SampleTable.insert(queryObject) 
+        query = SampleTable.insert_many(queryObject) 
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     return render_template("post_data.html")
 
