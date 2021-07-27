@@ -1,4 +1,4 @@
-# map_kewords
+# curr_model
 
 - Klona projektet med `git clone https://github.com/greenisgrue/map_kewords.git`
 - Navigera till mappen map_kewords `cd map_kewords`
