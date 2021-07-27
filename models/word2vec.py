@@ -11,8 +11,8 @@ import numpy
 from process_data.dictionary import get_dictionary
 
 class W2v():
-    def __init__(self):
-        self.ur_df = pd.read_csv("massive_data/stored_data/search_ur_cleaned.csv", engine='python')
+    def __init__(self, index):
+        self.ur_df = pd.read_csv(f"massive_data/stored_data/{index}.csv", engine='python')
         self.word_vectors = KeyedVectors.load('massive_data/word_vector_models/coNLL17_vectors.kv')
         self.dictionary = get_dictionary()
 
@@ -147,15 +147,17 @@ class W2v():
 
                 # Lock specific language related "centralt innehåll" for content in other languages that are based on a swedish version
                 if self.audience == 'Grundskola 1-3':
-                    self.relevant_CI = self.relevant_CI.append(CI[(CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')], ignore_index=True)
-                    self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[(CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')], ignore_index=True)
+                    if 'Modersmål - finska som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & ('Modersmål - finska som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[(CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')], ignore_index=True)
                     if 'Modersmål -  utom nationella minoritetsspråk' in self.subject:
                         self.relevant_CI = self.relevant_CI.append(CI[CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.'], ignore_index=True)
                         self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.'], ignore_index=True)
 
                 if self.audience == 'Grundskola 4-6':
-                    self.relevant_CI = self.relevant_CI.append(CI[(CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')], ignore_index=True)
-                    self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[(CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') & (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')], ignore_index=True)
+                    if 'Modersmål - finska som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & ('Modersmål - finska som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[(CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')], ignore_index=True)
                     if 'Modersmål -  utom nationella minoritetsspråk' in self.subject:
                         self.relevant_CI = self.relevant_CI.append(CI[(CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.') | (CI['value'] == 'Synonymer, motsatsord och andra relationer mellan ord.')], ignore_index=True)
                         self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[(CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.') | (CI['value'] == 'Synonymer, motsatsord och andra relationer mellan ord.')], ignore_index=True)

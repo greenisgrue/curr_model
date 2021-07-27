@@ -64,12 +64,11 @@ def remove_duplicates(input):
 
 def translate(language):
     for key in dictionary:
-        key = key.lower()        
+        # key = key.lower()        
         if not (isinstance(language, float)) and (key in language):
             return dictionary.get(key)
     
     return 'Modersmål -  utom nationella minoritetsspråk'
 
-#print(remove_duplicates('Teknik, Teknik'))
-#clean()
+
  

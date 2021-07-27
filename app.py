@@ -21,7 +21,7 @@ SampleTable = Database.ratings_opti
 
 # Create flask app and initiate classes
 flask_app = Flask(__name__)
-model_w2v = W2v()
+model_w2v = W2v("search_ur_20210722_cleaned")
 #models = defined_models()
 
 
