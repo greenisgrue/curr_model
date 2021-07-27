@@ -15,17 +15,6 @@
 <body>
     <h1>Rekommendationer Centralt Innehåll</h1>
 
-    <!-- Main Input For Receiving Query to our ML -->
-    <!-- <form action="{{ url_for('jaccard')}}" method="post">
-            <p>
-                <label for="jaccard">Jaccard</label>
-                <input type="text" name="jaccard" placeholder="Provide uid" required="required" />
-                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-            </p>
-        </form> -->
-
-
-
     <div class="grid-container">
         <div class="grid-item rand_title">
             <h3>Generera slumpmässigt ID</h3>
@@ -38,17 +27,17 @@
         </div>
 
         <div class="grid-item provide_id" id="random_button">
-            <form method="post" action="{{ url_for('random_id')}}">
-                <input class="button" type="submit" value="Random ID" name="action1" />
+            <form id="form_random">
+                <input class="button" id="input_random" type="button" value="Random ID" name="action1"
+                    onclick="check_for_submit()" />
             </form>
         </div>
 
         <div class="grid-item provide_id">
-            <form action="{{ url_for('recommend')}}" method="post">
-                <p>
-                    <input type="text" name="rec" placeholder="Provide uid" required="required" />
-                    <button type="submit">Predict</button>
-                </p>
+            <form id="form_provide">
+                <input id="input_provide" name="rec" placeholder="Ange ID" required="required"
+                    onclick="check_for_submit()" />
+                <button class="button">Predict</button>
             </form>
         </div>
     </div>
@@ -56,8 +45,63 @@
     {% block content %}
     {% endblock %}
 
+    {% block error %}
+    {% endblock %}
+
     {% block test %}
     {% endblock %}
+
+    <script>
+        function check_for_submit() {
+            var green_buttons = document.getElementsByClassName("green");
+            var neutral_buttons = document.getElementsByClassName("neutral");
+            var red_buttons = document.getElementsByClassName("red");
+            var uncertain_buttons = document.getElementsByClassName("uncertain");
+
+            var form_random = document.getElementById("form_random")
+            var form_provide = document.getElementById("form_provide")
+            var input_random = document.getElementById("input_random")
+            var input_provide = document.getElementById("input_provide")
+
+            form_random.removeAttribute("action")
+            form_random.removeAttribute("method")
+            form_provide.removeAttribute("action")
+            form_provide.removeAttribute("method")
+            input_random.removeAttribute("submit")
+
+            if (green_buttons.length > 0 || neutral_buttons.length > 0 || red_buttons.length > 0 || uncertain_buttons.length > 0) {
+                alert("Det verkar som att du har glömt att skicka de bedömningar du gjort. Stäng den här rutan och skicka dina bedömningar innan du bedömmer nytt innehåll");
+            }
+            else {
+                form_random.action = "{{ url_for('random_id')|safe }}";
+                form_random.method = "post"
+                input_random.type = "submit"
+
+                try {
+                    form_provide.action = "{{ url_for('recommend')|safe }}";
+                    form_provide.method = "post"
+                }
+                catch (err) {
+                    console.log(err)
+                    console.log('error')
+                    $.ajax({
+                        // type: "POST",
+                        url: "{{ url_for('error_handler') }}",
+                        contentType: "application/json",
+                        success: function (response) {
+                            console.log(response);
+                            window.location = 'http://127.0.0.1:5000/handle_error'
+                        },
+                        error: function (err) {
+                            console.log(err);
+                        }
+                    });
+                }
+
+            }
+
+        }
+    </script>
 
 </body>
 

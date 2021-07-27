@@ -3,12 +3,12 @@ import math
 import numpy
 from collections import Counter
 
-from dictionary import get_dictionary
+from process_data.dictionary import get_dictionary
 
 dictionary = get_dictionary()
 
-def clean():
-    ur_df = pd.read_csv("../massive_data/stored_data/search_ur.csv", sep='~,~', engine='python')
+def clean(index):
+    ur_df = pd.read_csv(f"./massive_data/stored_data/{index}.csv", sep='~,~', engine='python')
     ur_df = ur_df[ur_df.audience.str.contains('|'.join(['Grundskola F-3','Grundskola 4-6','Grundskola 7-9']), na=False)]
     ur_df['audience'] = ur_df['audience'].str.replace('Grundskola F-3','Grundskola 1-3')
     ur_df['subject'] = ur_df['subject'].str.replace('Svenska som andraspråk och SFI', 'Svenska som andraspråk')
@@ -17,33 +17,38 @@ def clean():
     ur_df['subject'] = ur_df['subject'].str.replace('Värdegrund', 'Samhällskunskap, Religionskunskap, Biologi')
     ur_df['subject'] = ur_df['subject'].str.replace('Pedagogiska frågor', 'Samhällskunskap, Religionskunskap, Biologi, Hem- konsumentskap, idrott och hälsa, Historia')
     ur_df['subject'] = ur_df['subject'].str.replace('Information och media', 'Samhällskunskap, Teknik')
-    for index, row in ur_df.iterrows():
+    for i, row in ur_df.iterrows():
         if not isinstance(row['subject'], float):
             if 'Modersmål och minoritetsspråk' in row['subject']:
-                ur_df.at[index,'subject'] = row['subject'].replace('Modersmål och minoritetsspråk', translate(row['language']))
+                ur_df.at[i,'subject'] = row['subject'].replace('Modersmål och minoritetsspråk', translate(row['language']))
+
+            if 'Miljö' in row['subject']:
+                ur_df.at[i,'subject'] = row['subject'].replace('Miljö', 'Biologi, Kemi, Teknik, Geografi')
 
             if ('Hem- och konsumentkunskap' in row['subject']) & (row['audience'] != 'Grundskola 7-9'):
-                ur_df.at[index,'audience'] = row['audience'] + ', Grundskola 1-6'
+                ur_df.at[i,'audience'] = row['audience'] + ', Grundskola 1-6'
             
-            ur_df.at[index,'subject'] = remove_duplicates(ur_df.at[index,'subject'])
+            ur_df.at[i,'subject'] = remove_duplicates(ur_df.at[i,'subject'])
         else:
-            ur_df = ur_df.drop(labels=index, axis=0)
+            ur_df = ur_df.drop(labels=i, axis=0)
 
         if row['subject'] == 'Övrigt':
-            ur_df = ur_df.drop(labels=index, axis=0)
+            ur_df = ur_df.drop(labels=i, axis=0)
 
-    ur_df.to_csv('../massive_data/stored_data/search_ur_cleaned.csv')
+    ur_df.to_csv(f'./massive_data/stored_data/{index}_cleaned.csv', index=False)
 
-    CI = pd.read_csv("../massive_data/stored_data/CI_vocab.csv")
-    CI_titles = pd.read_csv("../massive_data/stored_data/CI_vocab_including_titles.csv")
+    CI = pd.read_csv("./massive_data/stored_data/CI_vocab.csv")
+    CI_titles = pd.read_csv("./massive_data/stored_data/CI_vocab_including_titles.csv")
 
     CI['title'] = CI['title'].str.replace('–', '-')
     CI_titles['title'] = CI_titles['title'].str.replace('–', '-')
     CI_titles['value'] = CI_titles['value'].str.replace('–', '-')
 
 
-    CI.to_csv("../massive_data/stored_data/CI_vocab.csv")
-    CI_titles.to_csv("../massive_data/stored_data/CI_vocab_including_titles.csv")
+    CI.to_csv("./massive_data/stored_data/CI_vocab.csv")
+    CI_titles.to_csv("./massive_data/stored_data/CI_vocab_including_titles.csv")
+
+    return ur_df
 
 
 def remove_duplicates(input):
@@ -59,13 +64,12 @@ def remove_duplicates(input):
 
 def translate(language):
     for key in dictionary:
-        # print(language)
-        
+        key = key.lower()        
         if not (isinstance(language, float)) and (key in language):
             return dictionary.get(key)
     
     return 'Modersmål -  utom nationella minoritetsspråk'
 
 #print(remove_duplicates('Teknik, Teknik'))
-clean()
+#clean()
  

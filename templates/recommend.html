@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+
 <div class="grid-container">
     <div class="grid-item" id="grid-content_image">
         {% if thumbnail %}
-        <img src="{{ thumbnail }}" />
+        <a href="https://skolfilm.se/film/{{content_id}}" target="_blank"><img src="{{ thumbnail }}" /></a>
         {% else %}
         <p></p>
         {% endif %}
@@ -15,6 +16,7 @@
         {% else %}
         <p></p>
         {% endif %}
+        <a href="https://skolfilm.se/film/{{content_id}}" target="_blank">Se resurs på Skolfilm</a>
         {% if content_id %}
         <p><strong>Content ID:</strong> {{ content_id }}</p>
         {% else %}
@@ -42,205 +44,241 @@
         {% endif %}
     </div>
 
-    {% if result_model_1 %}
-    <div class="grid-item grid-title" id="grid-title_cos">
+    {% if result_model %}
+    <div class="grid-item" id="grid-title_model">
         <h2>
-            {{ model_1.get('model') }}
-            {% if model_1.get('CI_parent') %}
-            + CI_parent
-            {% endif %}
-            {% if model_1.get('content_title') %}
-            + content_title
-            {% endif %}
+            Rekommendationer för innehållet
         </h2>
     </div>
     {% else %}
-    <p></p>
+    <h2>Data saknas</h2>
     {% endif %}
 
-    {% if result_model_2 %}
-    <div class="grid-item grid-title" id="grid-title_wmd">
+    {% if subject == 'Matematik' %}
+    {% set limit = 0.6 %}
+    {% else %}
+    {% set limit = 0.7 %}
+    {% endif %}
+
+    <div class="grid-item" id="grid-list_model">
+        {% if result_model %}
+        <table>
+            <tr>
+                <th>Similarity</th>
+                <th>Årskurs</th>
+                <th>Ämne</th>
+                <th>Del i centralt innehåll</th>
+                <th>Centralt innehåll</th>
+                <th>Bedömning</th>
+            </tr>
+            {% set vars = {'counter': -1} %}
+            {% for key, value in result_model %}
+            {% if not value.get('duplicate') == 'Yes' and value.get('value') >= limit and
+            vars.counter > -16 %}<tr>
+                {% if vars.update({'counter': vars.counter - 1}) %} {% endif %}
+                <td class="td-value centered-td" valign=top>{{ value.get('value') }}:</td>
+                <td class="td-audience centered-td" valign=top>{{ value.get('audience') }}</td>
+                <td class="td-subject centered-td" valign=top>{{ value.get('subject') }}</td>
+                <td class="td-subject centered-td" valign=top>{{ value.get('title') }}</td>
+                <td class="td-CI" valign=top> {{ value.get('CI') }}</td>
+                <td class="td-rating centered-td" valign="top">
+                    <input class="{{key}} btn" id="green-{{key}}" type="button" value="Bra"
+                        onclick='model_func(this.id, this.className, "{{value.value}}", "{{value.duplicate}}")'>
+                    <input class="{{key}} btn" id="neutral-{{key}}" type="button" value="Neutral"
+                        onclick='model_func(this.id, this.className, "{{value.value}}", "{{value.duplicate}}")'>
+                    <input class="{{key}} btn" id="red-{{key}}" type="button" value="Dålig"
+                        onclick='model_func(this.id, this.className, "{{value.value}}", "{{value.duplicate}}")'>
+                    <input class="{{key}} btn uncertain-btn" id="uncertain-{{key}}" type="button" value="Kan ej bedöma"
+                        onclick='model_func(this.id, this.className, "{{value.value}}", "{{value.duplicate}}")'>
+                </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+
+    {% if result_model %}
+    <div class="grid-item" id="grid-title_model">
         <h2>
-            {{ model_2.get('model') }}
-            {% if model_2.get('CI_parent') %}
-            + CI_parent
-            {% endif %}
-            {% if model_2.get('content_title') %}
-            + content_title
-            {% endif %}
+            Resterande centralt innehåll
         </h2>
     </div>
     {% else %}
-    <p></p>
+    <h2>Data saknas</h2>
     {% endif %}
 
-    <div class="grid-item" id="grid-list_cos">
-        {% if result_model_1 %}
+    <div class="grid-item" id="grid-list_model">
+        {% if result_model %}
         <table>
-            <tr>
-                <th>
-                    {% if 'wmd' in model_1.get('model') %}
-                    Distance
-                    {% else %}
-                    Similarity
+            <thead class="thead">
+                <tr>
+                    <th class="sim">Similarity</th>
+                    <th class="year">Årskurs</th>
+                    <th class="sub">Ämne</th>
+                    <th class="title">Del i centralt innehåll</th>
+                    <th class="CI">Centralt innehåll</th>
+                    <th class="rating">Bedömning</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                {% for key, value in result_model %}
+                {% if not value.get('duplicate') == 'Yes' and value.get('value') < limit %} <tr>
+                    <td class="sim centered-td" valign=top>{{ value.get('value') }}:</td>
+                    <td class="year centered-td" valign=top>{{ value.get('audience') }}</td>
+                    <td class="sub centered-td" valign=top>{{ value.get('subject') }}</td>
+                    <td class="title centered-td" valign=top>{{ value.get('title') }}</td>
+                    <td class="CI" valign=top> {{ value.get('CI') }}</td>
+                    <td class="rating centered-td" valign="top">
+                        <input class="{{key}} btn" id="green-{{key}}" type="button" value="Bra"
+                            onclick='model_func(this.id, this.className, "{{value.value}}", "{{value.duplicate}}")'>
+                        <input class="{{key}} btn" id="neutral-{{key}}" type="button" value="Neutral"
+                            onclick='model_func(this.id, this.className, "{{value.value}}", "{{value.duplicate}}")'>
+                        <input class="{{key}} btn" id="red-{{key}}" type="button" value="Dålig"
+                            onclick='model_func(this.id, this.className, "{{value.value}}", "{{value.duplicate}}")'>
+                        <input class="{{key}} btn uncertain-btn" id="uncertain-{{key}}" type="button"
+                            value="Kan ej bedöma"
+                            onclick='model_func(this.id, this.className, "{{value.value}}", "{{value.duplicate}}")'>
+                    </td>
+                    </tr>
                     {% endif %}
-                </th>
-                <th>Centralt innehåll</th>
-                <th>Bedömning</th>
-            </tr>
-            {% for key, value in result_model_1 %}
-            <tr>
-                <td valign=top>{{ value.get('value') }}:</td>
-                <td> <strong>{{ value.get('title') }}:</strong> {{ value.get('CI') }}</td>
-                <td>
-                    <input class="{{key}} btn" id="{{model_1.get('model')}}-green-{{key}}" type="button" value="Like"
-                        onclick='model_1_func(this.id, this.className, "{{value.value}}")'>
-                    <input class="{{key}} btn" id="{{model_1.get('model')}}-red-{{key}}" type="button" value="Dislike"
-                        onclick='model_1_func(this.id, this.className, "{{value.value}}")'>
-
-                </td>
-            </tr>
-            {% endfor %}
+                    {% endfor %}
+            </tbody>
         </table>
         {% endif %}
-
-
-
     </div>
-    <div class="grid-item" id="grid-list_wmd">
-        {% if result_model_2 %}
-        <table>
-            <tr>
-                <th>
-                    {% if 'wmd' in model_2.get('model') %}
-                    Distance
-                    {% else %}
-                    Similarity
-                    {% endif %}
-                </th>
-                <th>Centralt innehåll</th>
-                <th>Bedömning</th>
-            </tr>
-            {% for key, value in result_model_2 %}
-            <tr>
-                <td valign=top>{{ value.get('value') }}:</td>
-                <td> <strong>{{ value.get('title') }}: </strong> {{ value.get('CI') }}</td>
-                <td>
-                    <input class="{{key}} btn" id="{{model_2.get('model')}}-green-{{key}}" type="button" value="Like"
-                        onclick='model_2_func(this.id, this.className, "{{value.value}}")'>
-                    <input class="{{key}} btn" id="{{model_2.get('model')}}-red-{{key}}" type="button" value="Dislike"
-                        onclick='model_2_func(this.id, this.className, "{{value.value}}")'>
 
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
-        {% endif %}
-
+    <div class="grid-item" id="grid-fill">
     </div>
-    {% if content_id %}
-    <input type="button" value="Submit" id="submitButton" onclick="otherFunc('{{ keywords }}', '{{ content_id }}')">
+
+    {% if content_id and result_model %}
+    <div class="grid-item" id="grid-submit">
+        <input class="button" type="button" value="Submit" id="submitButton"
+            onclick="send_data('{{ keywords }}', '{{ content_id }}', '{{ user_id }}')">
+    </div>
     {% endif %}
+
 
 </div>
 
 <script>
-    //let dict = {};
-    let cos_dict = {};
-    let wmd_dict = {};
 
-    function model_1_func(id, class_name, value) {
-        var btn1 = document.getElementById(id);
-        id_split = id.split('-')
-        //dict['model_type'] = id_split[0]
+    let rating_dict = {};
 
-        class_split = class_name.split(' ')
-        only_id = class_split[0]
-        color = class_split[2]
-        cos_dict[only_id] = { 'model_type': id_split[0], 'value': value };
-
-        console.log(id_split[0])
-        console.log(only_id)
-        if ((color == 'green') && id.includes('green')) {
-            btn1.classList.remove('green');
-            cos_dict[only_id]['rating'] = 0;
-            console.log(cos_dict)
-        }
-        else if (!(color == 'green') && id.includes('green')) {
-            var btn2 = document.getElementById(id_split[0] + '-red-' + only_id);
-            btn1.classList.toggle('green');
-            btn2.classList.remove('red');
-            cos_dict[only_id]['rating'] = 1;
-        }
-        else if ((color == 'red') && id.includes('red')) {
-            btn1.classList.remove('red');
-            cos_dict[only_id]['rating'] = 0;
-
-        }
-        else if (!(color == 'red') && id.includes('red')) {
-            var btn2 = document.getElementById(id_split[0] + '-green-' + only_id);
-            btn1.classList.toggle('red');
-            btn2.classList.remove('green');
-            cos_dict[only_id]['rating'] = -1;
-
-        }
-        return cos_dict
-    }
-
-    function model_2_func(id, class_name, value) {
-        var btn1 = document.getElementById(id);
-
-        id_split = id.split('-')
-        //dict['model_type'] = id_split[0]
+    function model_func(id, class_name, value, duplicate) {
+        var current_btn = document.getElementById(id);
 
         class_split = class_name.split(' ')
         only_id = class_split[0]
         color = class_split[2]
 
-        wmd_dict[only_id] = { 'model_type': id_split[0], 'value': value };
+        if (duplicate !== 'False') {
+            rating_dict[duplicate] = { 'value': value };
+        }
+
+        rating_dict[only_id] = { 'value': value };
 
         if ((color == 'green') && id.includes('green')) {
-            btn1.classList.remove('green');
-            wmd_dict[only_id]['rating'] = 0;
+            current_btn.classList.remove('green');
+            rating_dict[only_id]['rating'] = null;
+            if (duplicate !== 'False') {
+                rating_dict[duplicate]['rating'] = null;
+            }
 
         }
         else if (!(color == 'green') && id.includes('green')) {
-            var btn2 = document.getElementById(id_split[0] + '-red-' + only_id);
-            btn1.classList.toggle('green');
-            btn2.classList.remove('red');
-            wmd_dict[only_id]['rating'] = 1;
-
+            var red_btn = document.getElementById('red-' + only_id);
+            var neutral_btn = document.getElementById('neutral-' + only_id);
+            var uncertain_btn = document.getElementById('uncertain-' + only_id);
+            current_btn.classList.toggle('green');
+            red_btn.classList.remove('red');
+            neutral_btn.classList.remove('neutral');
+            uncertain_btn.classList.remove('uncertain');
+            rating_dict[only_id]['rating'] = 1;
+            if (duplicate !== 'False') {
+                rating_dict[duplicate]['rating'] = 1;
+            }
 
         }
         else if ((color == 'red') && id.includes('red')) {
-            btn1.classList.remove('red');
-            wmd_dict[only_id]['rating'] = 0;
-
+            current_btn.classList.remove('red');
+            rating_dict[only_id]['rating'] = null;
+            if (duplicate !== 'False') {
+                rating_dict[duplicate]['rating'] = null;
+            }
         }
         else if (!(color == 'red') && id.includes('red')) {
-            var btn2 = document.getElementById(id_split[0] + '-green-' + only_id);
-            btn1.classList.toggle('red');
-            btn2.classList.remove('green');
-            wmd_dict[only_id]['rating'] = -1;
-
+            var green_btn = document.getElementById('green-' + only_id);
+            var neutral_btn = document.getElementById('neutral-' + only_id);
+            var uncertain_btn = document.getElementById('uncertain-' + only_id);
+            current_btn.classList.toggle('red');
+            green_btn.classList.remove('green');
+            neutral_btn.classList.remove('neutral');
+            uncertain_btn.classList.remove('uncertain');
+            rating_dict[only_id]['rating'] = -1;
+            if (duplicate !== 'False') {
+                rating_dict[duplicate]['rating'] = -1;
+            }
         }
-        return wmd_dict
+
+        else if ((color == 'neutral') && id.includes('neutral')) {
+            current_btn.classList.remove('neutral');
+            rating_dict[only_id]['rating'] = null;
+            if (duplicate !== 'False') {
+                rating_dict[duplicate]['rating'] = null;
+            }
+        }
+
+        else if (!(color == 'neutral') && id.includes('neutral')) {
+            var green_btn = document.getElementById('green-' + only_id);
+            var red_btn = document.getElementById('red-' + only_id);
+            var uncertain_btn = document.getElementById('uncertain-' + only_id);
+            current_btn.classList.toggle('neutral');
+            red_btn.classList.remove('red');
+            green_btn.classList.remove('green');
+            uncertain_btn.classList.remove('uncertain');
+            rating_dict[only_id]['rating'] = 0;
+            if (duplicate !== 'False') {
+                rating_dict[duplicate]['rating'] = 0;
+            }
+        }
+
+        else if ((color == 'uncertain') && id.includes('uncertain')) {
+            current_btn.classList.remove('uncertain');
+            rating_dict[only_id]['rating'] = null;
+            if (duplicate !== 'False') {
+                rating_dict[duplicate]['rating'] = null;
+            }
+        }
+
+        else if (!(color == 'uncertain') && id.includes('uncertain')) {
+            var green_btn = document.getElementById('green-' + only_id);
+            var red_btn = document.getElementById('red-' + only_id);
+            var neutral_btn = document.getElementById('neutral-' + only_id);
+            current_btn.classList.toggle('uncertain');
+            red_btn.classList.remove('red');
+            green_btn.classList.remove('green');
+            neutral_btn.classList.remove('neutral');
+            rating_dict[only_id]['rating'] = null;
+            if (duplicate !== 'False') {
+                rating_dict[duplicate]['rating'] = null;
+            }
+        }
+
+        return rating_dict
     }
 
-    function otherFunc(keywords, content_id) {
+    function send_data(keywords, content_id, uid) {
         timestamp = new Date().toISOString()
-        cos_dict['keywords'] = keywords
-        cos_dict['content_id'] = content_id
-        cos_dict['timestamp'] = timestamp
-        wmd_dict['keywords'] = keywords
-        wmd_dict['content_id'] = content_id
-        wmd_dict['timestamp'] = timestamp
-        console.log(cos_dict)
+        rating_dict['keywords'] = keywords
+        rating_dict['content_id'] = content_id
+        rating_dict['timestamp'] = timestamp
+        rating_dict['user_id'] = uid
         $.ajax({
             type: "POST",
             url: "{{ url_for('post_data') }}",
             contentType: "application/json",
-            data: JSON.stringify([cos_dict, wmd_dict]),
+            data: JSON.stringify([rating_dict]),
             dataType: "json",
             success: function (response) {
                 console.log(response);

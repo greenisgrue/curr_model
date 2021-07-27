@@ -1,6 +1,11 @@
 from gensim.models.fasttext import load_facebook_model, load_facebook_vectors
 import fasttext.util
 
+# stanza.download("sv")
+# stemmer = SnowballStemmer("swedish")
+# download('stopwords')  # Download stopwords list.
+self.nlp = stanza.Pipeline("sv", processors='tokenize,lemma')
+
 
 # Downloaded pre-trained embeddings will be used. 
 # These are loaded into a Gensim Word2Vec model class.
@@ -58,3 +63,42 @@ print(f"{most_similar_key}: {similarity:.4f}")
 fontawesome==5.10.1.post1
 pymongo==3.11.4
 pymongo[srv]
+
+
+
+        if model.get('model') == 'jaccard':
+            for i, row in self.CI_currentT.iterrows():
+                CI_processed = self.preprocess_texts(row['value'])
+                result_jaccard_CIT_CT = self.jaccard_similarity(content_processed_titles, CI_processed)
+                result_jaccard_desc = self.jaccard_similarity(content_processed_desc, CI_processed)
+                result_jaccard_desc_titles = self.jaccard_similarity(content_processed_desc_titles, CI_processed)
+
+
+                self.format_result_cos(row['uuid'], row['CI'], row['title'], result_jaccard_CIT_CT)
+                self.format_result_cos(row['uuid'], row['CI'], row['title'], result_jaccard_desc)
+                self.format_result_cos(row['uuid'], row['CI'], row['title'], result_jaccard_desc_titles)
+
+            
+            if not isinstance(self.surtitle, float) and ('Lilla Aktuellt' in self.surtitle or 'Newsreel' in self.surtitle):
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=True, key = lambda x: x[1]['value'])
+                return (sorted_dict)
+
+            else:
+                sorted_dict = sorted(self.CI_keywords_dict.items(), reverse=True, key = lambda x: x[1]['value'])
+                top_candidates = []
+                memory = []
+                i = 0
+                while len(top_candidates) < 3:
+                    if (sorted_dict[i][1].get('CI')) not in memory:
+                        top_candidates.append(sorted_dict[i])
+                        memory.append(sorted_dict[i][1].get('CI'))
+                    i += 1
+                for key in sorted_dict:
+                    top_id = []
+                    for value in top_candidates:
+                        top_id.append(value[0])
+                    if(key[1].get('value') < 0.90) and (key[0] not in top_id):
+                        top_candidates.append(key)
+
+                return top_candidates
+

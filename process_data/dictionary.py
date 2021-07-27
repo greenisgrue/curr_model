@@ -1,9 +1,9 @@
 def get_dictionary():
     return{
-        'Finska': 'Modersmål -  finska som nationellt minoritetsspråk',
-        'Jiddish': 'Modersmål -  jiddish som nationellt minoritetsspråk',
-        'Meänkieli': 'Modersmål -  meänkieli som nationellt minoritetsspråk',
-        'Romani': 'Modersmål -  romani chib som nationellt minoritetsspråk',
+        'finska': 'Modersmål -  finska som nationellt minoritetsspråk',
+        'jiddish': 'Modersmål -  jiddish som nationellt minoritetsspråk',
+        'meänkieli': 'Modersmål -  meänkieli som nationellt minoritetsspråk',
+        'romani': 'Modersmål -  romani chib som nationellt minoritetsspråk',
         'betalningsformer': 'betalningsform', 
         'räknesättens': 'räknesätt', 
         'lösningars': 'lösning', 
@@ -38,5 +38,6 @@ def get_dictionary():
         'verklighetsuppfattningar': 'verklighetsuppfattning', 
         'performancekonstnärer': 'performancekonstnär', 
         'auditioner': 'audition', 
-        'gymnastikföreningar': 'gymnastikförening'
+        'gymnastikföreningar': 'gymnastikförening',
+        'östersjöväldet': 'stormaktstiden'
     }
