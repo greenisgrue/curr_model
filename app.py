@@ -8,6 +8,8 @@ from itertools import chain
 import pymongo
 
 from define_models import defined_models
+from skolmedia_client.skolfilm_client import Skolfilm
+
 
 
 connection_url = 'mongodb+srv://dbUser:dbUserPassword@cluster0.ifjkb.mongodb.net/CI_ratings?retryWrites=true&w=majority'
@@ -38,8 +40,30 @@ def recommend():
     form_object = request.form.values()
     provided_id = list(form_object)
     provided_id = provided_id[0]
-    result_model = model_w2v.predict_CI(provided_id)
+    # result_model = model_w2v.predict_CI(provided_id)
+    
+    import pickle
+    with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:
+        df = pickle.load(f)
 
+    selected = df.loc[df['uid'] == provided_id]
+    results = selected.iloc[0]['result']
+    content_metadata = results[0]
+    audience = content_metadata[1].get('audience')
+    subject = content_metadata[1].get('subject')
+    keywords = content_metadata[1].get('keywords')
+    user_id = 'user_id'
+    print(results)
+    if any(sub in subject.split(', ') for sub in teacher_subjects):
+        for key, value in results:
+            teacher_adjusted_value = value.get('value') + (1-value.get('value'))*1.2-(1-value.get('value'))
+            formatted_string = "{:.3f}".format(teacher_adjusted_value)
+            teacher_adjusted_value = float(formatted_string)
+            print(teacher_adjusted_value)
+            value['value'] = teacher_adjusted_value
+
+    print(results)        
+    
     # Handle errors by redirecting to error page
     # try:
     #     result_model = model_w2v.predict_CI(provided_id)
@@ -47,29 +71,45 @@ def recommend():
     #     return render_template("handle_error.html")
 
     # Get metadata to display on interface
-    content_id = model_w2v.content_id
-    keywords = model_w2v.keywords
-    title = model_w2v.title
-    surtitle = model_w2v.surtitle
-    subject = model_w2v.subject
-    audience = model_w2v.audience
-    thumbnail = model_w2v.thumbnail
-    description = model_w2v.description
-    user_id = 'user id'
+    # content_id = model_w2v.content_id
+    # keywords = model_w2v.keywords
+    # title = model_w2v.title
+    # surtitle = model_w2v.surtitle
+    # subject = model_w2v.subject
+    # audience = model_w2v.audience
+    # thumbnail = model_w2v.thumbnail
+    # description = model_w2v.description
+    # user_id = 'user id'
 
     return render_template(
         "recommend.html",
-        result_model=result_model, 
-        title=title,
+        result_model=results, 
+        title=selected.iloc[0]['title'],
         subject=subject,
         audience=audience,
         keywords=keywords,
-        surtitle=surtitle,
-        thumbnail=thumbnail,
-        content_id=content_id,
-        description=description,
+        surtitle=selected.iloc[0]['surtitle'],
+        thumbnail=selected.iloc[0]['thumbnail'],
+        content_id=selected.iloc[0]['uid'],
+        description=selected.iloc[0]['description'],
         user_id=user_id
         )
+
+    # return render_template(
+    #     "recommend.html",
+    #     result_model=result_model, 
+    #     title=title,
+    #     subject=subject,
+    #     audience=audience,
+    #     keywords=keywords,
+    #     surtitle=surtitle,
+    #     thumbnail=thumbnail,
+    #     content_id=content_id,
+    #     description=description,
+    #     user_id=user_id
+    #     )
+
+
 
 @flask_app.route("/random", methods = ["POST"])
 def random_id():

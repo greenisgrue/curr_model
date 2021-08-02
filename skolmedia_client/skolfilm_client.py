@@ -162,16 +162,20 @@ class Skolfilm:
     
         run_model = W2v(index)
         list_of_uid = df['~uid'].tolist()
-        model_results = pd.DataFrame(columns=['uid', 'result'])
+        model_results = pd.DataFrame(columns=['uid', 'result', 'title', 'surtitle', 'thumbnail', 'description'])
 
         for uid in tqdm(list_of_uid):
+            run_model = W2v(index)
             uid = uid.strip('~')
             result = run_model.predict_CI(uid)
-            model_results = model_results.append({'uid':uid, 'result':result}, ignore_index=True)
-
+            model_results = model_results.append({'uid':uid, 'result':result, 'title':run_model.title, 'surtitle':run_model.surtitle, 'keywords':run_model.keywords, 'thumbnail':run_model.thumbnail, 'description':run_model.description}, ignore_index=True)
+        
+        # with open('massive_data/stored_data/pickles/model_pickle.pickle', 'wb') as f:
+        #     pickle.dump(model_results, f) 
+        
         merged_df = self.__merge_df(model_results)
         with open('massive_data/stored_data/pickles/model_pickle.pickle', 'wb') as f:
-            pickle.dump(merged_df, f)
+            pickle.dump(merged_df, f) 
 
 
     def __merge_df(self, to_merge_df):

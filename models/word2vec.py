@@ -105,8 +105,8 @@ class W2v():
             versions_dict = [json.loads(idx.replace("'", '"')) for idx in versions]
             self.versions_dict = versions_dict[0]
             primary = next((item for item in self.versions_dict if item['primary'] == 'true'), None)     
-            # if not primary:
-            #     return None 
+            if not primary: 
+                return None 
             if str(primary.get('uid')) != chosen_uid:
                 primary_uid = str(primary.get('uid'))
                 primary_uid = f'~{primary_uid}' 
