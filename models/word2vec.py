@@ -9,22 +9,23 @@ import json
 import numpy
 
 from process_data.dictionary import get_dictionary
+from models.self_learning import SelfLearning 
 
 class W2v():
     def __init__(self, index):
         self.ur_df = pd.read_csv(f"massive_data/stored_data/{index}.csv", engine='python')
         self.word_vectors = KeyedVectors.load('massive_data/word_vector_models/coNLL17_vectors.kv')
         self.dictionary = get_dictionary()
+        self.self_learn = SelfLearning()
+        self.self_learn.adjust_weights()
 
     def generate_id(self):
         random_row = self.ur_df.sample()
         return random_row.iloc[0]['~uid'].strip('~')
 
-
     def find_CI(self, chosen_uid):
         # Get metadata from content
         chosen_uid = f'~{chosen_uid}'
-
         chosen_content = self.ur_df[self.ur_df['~uid'] == chosen_uid]
         self.content_id = chosen_uid.strip('~')
         self.title = chosen_content.iloc[0]['title']
@@ -56,7 +57,7 @@ class W2v():
             self.desc_titles = self.description + ', ' + self.title + ', ' + self.surtitle
         else:
             self.keywords_titles = self.keywords + ', ' + self.title
-            self.desc_titles = self.description + ', ' + self.title
+            self.desc_titles = str(self.description) + ', ' + self.title
 
         # Get length of keywords field for wiegthing results
         self.keywords_length = len(self.keywords.split(', '))
@@ -96,22 +97,24 @@ class W2v():
         self.relevant_CI = self.relevant_CI.drop(self.relevant_CI[self.relevant_CI.title == 'Texter'].index)
         self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.drop(self.relevant_CI_inc_titles[self.relevant_CI_inc_titles.title == 'Texter'].index)
 
-        versions = chosen_content.iloc[0]['versions']
+        self.versions = chosen_content.iloc[0]['versions']
         self.versions_dict = []
 
-        print(self.subject)
-        if versions != '[]':
-            versions = [versions]
+        if self.versions != '[]':
+            versions = [self.versions]
             versions_dict = [json.loads(idx.replace("'", '"')) for idx in versions]
             self.versions_dict = versions_dict[0]
             primary = next((item for item in self.versions_dict if item['primary'] == 'true'), None)     
+            # if not primary:
+            #     return None 
             if str(primary.get('uid')) != chosen_uid:
                 primary_uid = str(primary.get('uid'))
                 primary_uid = f'~{primary_uid}' 
                 chosen_uid = primary_uid
                 primary_content = self.ur_df[self.ur_df['~uid'] == chosen_uid]
-                print(primary_content)
-                subject = primary_content.iloc[0]['subject'] 
+                self.primary_subject = primary_content.iloc[0]['subject'] 
+                title = primary_content.iloc[0]['title']
+                surtitle = primary_content.iloc[0]['surtitle']
                 freetext = primary_content.iloc[0]['freetext']
                 tags = primary_content.iloc[0]['tags']
                 barn = primary_content.iloc[0]['barn']
@@ -120,92 +123,90 @@ class W2v():
                 fields = [freetext, tags, barn, sao]
 
                 # Freetext, tags, barn and sao is used in combination as the keywords field
-                keywords = "" 
+                self.primary_keywords = "" 
                 for field in fields:
                     if not isinstance(field, float) and len(field) > 0:
-                        if len(self.keywords) > 0:
-                            keywords += ', ' + field
+                        if len(self.primary_keywords) > 0:
+                            self.primary_keywords += ', ' + field
                         else:
-                            keywords += field
+                            self.primary_keywords += field
 
                 # Combining keywords and description with titles
                 if not isinstance(self.surtitle, float):
-                    self.keywords_titles = keywords + ', ' + self.title + ', ' + self.surtitle
-                    self.desc_titles = self.description + ', ' + self.title + ', ' + self.surtitle
+                    self.keywords_titles = self.primary_keywords + ', ' + title + ', ' + surtitle
+                    self.desc_titles = self.description + ', ' + title + ', ' + surtitle
                 else:
-                    self.keywords_titles = keywords + ', ' + self.title
-                    self.desc_titles = self.description + ', ' + self.title
+                    self.keywords_titles = self.primary_keywords + ', ' + title
+                    self.desc_titles = self.description + ', ' + title               
 
-                # Get length of keywords field for wiegthing results
-                self.keywords_length = len(keywords.split(', '))
+                # Get length of keywords field for weighting results
+                self.keywords_length = len(self.primary_keywords.split(', '))
 
                 # Basfaktor avgör med vilken hastighet kurvan ökar. Högre ökar hastigheten
                 # Konstanterna avgör hur nära 1 maxtaket ligger samt faktorn vid k = 1. Mindre differens ger närmare 1.
                 self.key_len_factor = (math.log(self.keywords_length,3)+0.4)/(math.log(self.keywords_length,3)+0.47) 
 
                 # Finding all relevant "centralt innehåll" for the provided content id.
-                self.relevant_CI = CI[CI['subject'].isin(subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))]
-                self.relevant_CI_inc_titles = CI_inc_titles[CI_inc_titles['subject'].isin(subject.split(', ')) & CI_inc_titles['audience'].isin(self.audience.split(', '))] 
+                self.relevant_CI = CI[CI['subject'].isin(self.primary_subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))]
+                self.relevant_CI_inc_titles = CI_inc_titles[CI_inc_titles['subject'].isin(self.primary_subject.split(', ')) & CI_inc_titles['audience'].isin(self.audience.split(', '))] 
 
                 # Lock specific language related "centralt innehåll" for content in other languages that are based on a swedish version
                 if self.audience == 'Grundskola 1-3':
-                    if 'Modersmål - finska som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & ('Modersmål - finska som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & ('Modersmål - finska som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - jiddish som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & ('Modersmål - jiddish som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & ('Modersmål - jiddish som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - meänkieli som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & ('Modersmål - meänkieli som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & ('Modersmål - meänkieli som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - romani chib som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & ('Modersmål - romani chib som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & ('Modersmål - romani chib som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
+                    if 'Modersmål -  finska som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & (CI['subject'] == 'Modersmål -  finska som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & (CI['subject'] == 'Modersmål -  finska som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  jiddish som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & (CI['subject'] == 'Modersmål -  jiddish som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & (CI['subject'] == 'Modersmål -  jiddish som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  meänkieli som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & (CI['subject'] == 'Modersmål -  meänkieli som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & (CI['subject'] == 'Modersmål -  meänkieli som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  romani chib som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & (CI['subject'] == 'Modersmål -  romani chib som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.')) & (CI['subject'] == 'Modersmål -  romani chib som nationellt minoritetsspråk')], ignore_index=True)
                     elif 'Modersmål -  utom nationella minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.') | (CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.')) & ('Modersmål - utom nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.') | (CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.')) & ('Modersmål - utom nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.') | (CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.')) & ((CI['subject'] == 'Modersmål -  utom nationella minoritetsspråk') | (CI['subject'] == 'Modersmål -  utom nationellt minoritetsspråk'))], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter.') | (CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.')) & ((CI['subject'] == 'Modersmål -  utom nationella minoritetsspråk') | (CI['subject'] == 'Modersmål -  utom nationellt minoritetsspråk'))], ignore_index=True)
 
                 if self.audience == 'Grundskola 4-6':
                     if 'Modersmål -  finska som nationellt minoritetsspråk' in self.subject:
-                        print("debug")
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & ('Modersmål -  finska som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & ('Modersmål -  finska som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - jiddish som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & ('Modersmål - jiddish som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & ('Modersmål - jiddish som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - meänkieli som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & ('Modersmål - meänkieli som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & ('Modersmål - meänkieli som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - romani chib som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & ('Modersmål - romani chib som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & ('Modersmål - romani chib som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & (CI['subject'] == 'Modersmål -  finska som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & (CI['subject'] == 'Modersmål -  finska som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  jiddish som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & (CI['subject'] == 'Modersmål -  jiddish som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & (CI['subject'] == 'Modersmål -  jiddish som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  meänkieli som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & (CI['subject'] == 'Modersmål -  meänkieli som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & (CI['subject'] == 'Modersmål -  meänkieli som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  romani chib som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & (CI['subject'] == 'Modersmål -  romani chib som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Samtal om egna och andras upplevelser samt om vardagliga företeelser och händelser.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning.')) & (CI['subject'] == 'Modersmål -  romani chib som nationellt minoritetsspråk')], ignore_index=True)
                     if 'Modersmål -  utom nationella minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.') | (CI['value'] == 'Synonymer, motsatsord och andra relationer mellan ord.')) & ('Modersmål - utom nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.') | (CI['value'] == 'Synonymer, motsatsord och andra relationer mellan ord.')) & ('Modersmål - utom nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.') | (CI['value'] == 'Synonymer, motsatsord och andra relationer mellan ord.')) & ((CI['subject'] == 'Modersmål -  utom nationellt minoritetsspråk') | (CI['subject'] == 'Modersmål -  utom nationella minoritetsspråk'))], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Uttal, betoning och satsmelodi och uttalets betydelse för att göra sig förstådd.') | (CI['value'] == 'Synonymer, motsatsord och andra relationer mellan ord.')) & ((CI['subject'] == 'Modersmål -  utom nationellt minoritetsspråk') | (CI['subject'] == 'Modersmål -  utom nationella minoritetsspråk'))], ignore_index=True)
 
                 if self.audience == 'Grundskola 7-9':
-                    if 'Modersmål - finska som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - finska som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - finska som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - jiddish som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - jiddish som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - jiddish som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - meänkieli som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - meänkieli som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - meänkieli som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - romani chib som nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - romani chib som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - romani chib som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                    elif 'Modersmål - utom nationellt minoritetsspråk' in self.subject:
-                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Uttal, betoning och satsmelodi i jämförelse med svenskan samt olika talade variationer av modersmålet.') | (CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - romani chib som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
-                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Uttal, betoning och satsmelodi i jämförelse med svenskan samt olika talade variationer av modersmålet.') | (CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ('Modersmål - romani chib som nationellt minoritetsspråk' in CI['audience'])], ignore_index=True)
+                    if 'Modersmål -  finska som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & (CI['subject'] == 'Modersmål -  finska som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & (CI['subject'] == 'Modersmål -  finska som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  jiddish som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & (CI['subject'] == 'Modersmål -  jiddish som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & (CI['subject'] == 'Modersmål -  jiddish som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  meänkieli som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & (CI['subject'] == 'Modersmål -  meänkieli som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & (CI['subject'] == 'Modersmål -  meänkieli som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  romani chib som nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & (CI['subject'] == 'Modersmål -  romani chib som nationellt minoritetsspråk')], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & (CI['subject'] == 'Modersmål -  romani chib som nationellt minoritetsspråk')], ignore_index=True)
+                    elif 'Modersmål -  utom nationellt minoritetsspråk' in self.subject:
+                        self.relevant_CI = self.relevant_CI.append(CI[((CI['value'] == 'Uttal, betoning och satsmelodi i jämförelse med svenskan samt olika talade variationer av modersmålet.') | (CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ((CI['subject'] == 'Modersmål -  utom nationellt minoritetsspråk') | (CI['subject'] == 'Modersmål -  utom nationella minoritetsspråk'))], ignore_index=True)
+                        self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.append(CI[((CI['value'] == 'Uttal, betoning och satsmelodi i jämförelse med svenskan samt olika talade variationer av modersmålet.') | (CI['value'] == 'Skillnader i språkanvändning beroende på syfte, mottagare och sammanhang. Språkets betydelse för att utöva inflytande.') | (CI['value'] == 'Ord och begrepp för att uttrycka känslor, kunskaper och åsikter. Ords och begrepps nyanser och värdeladdning. Bildspråk och idiomatiska uttryck.')) & ((CI['subject'] == 'Modersmål -  utom nationellt minoritetsspråk') | (CI['subject'] == 'Modersmål -  utom nationella minoritetsspråk'))], ignore_index=True)
 
                 # Drop duplicates and "centralt innehåll" with title "Texter" as no content involves reading
                 self.relevant_CI = self.relevant_CI.drop_duplicates(subset=['value'])
                 #if media_type == 'video' or media_type == 'audio' or isinstance(self.media_type, float):
                 self.relevant_CI = self.relevant_CI.drop(self.relevant_CI[self.relevant_CI.title == 'Texter'].index)
                 self.relevant_CI_inc_titles = self.relevant_CI_inc_titles.drop(self.relevant_CI_inc_titles[self.relevant_CI_inc_titles.title == 'Texter'].index)
-
 
     def preprocess_texts(self, text):
         # Preprocess text. Lowercase, remove punctuation, remove stop words and custom stop words
@@ -251,7 +252,8 @@ class W2v():
         union = set(query).union(set(document))
         return len(intersection)/len(union)
 
-    def cos_sim(self, keywords, CI_doc):         
+    def cos_sim(self, keywords, CI_doc):     
+        # calculate cos_sim between documents. If word can not be found, remove from document and try cos_sim again    
         try:
             similarity = self.word_vectors.n_similarity(keywords, CI_doc)
             return similarity
@@ -267,6 +269,7 @@ class W2v():
             return results
 
     def wmd(self, keywords, CI_doc):
+        # calculate wmd between documents. If word can not be found, remove from document and try wmd again    
         try:
             distance = self.word_vectors.wmdistance(keywords, CI_doc)
             return distance
@@ -285,14 +288,18 @@ class W2v():
         # Format result to remove unneccesary decimals
         formatted_string = "{:.3f}".format(result)
         result = float(formatted_string)
-        # Search for previos instance of current "centralt innehåll" in dict. If found but with worse value, replace with current
+        # Save results for "centralt innehåll" in dictionary
+        # Also search for previos instance of current "centralt innehåll" in dict. If found but with worse value, replace with current        
         current_CI = self.jaccard_dict.get(uid)
         if current_CI is None or current_CI.get('value') < result:
             self.jaccard_dict[uid] = {'CI': CI, 'title':  title, 'value': result}
     
     def format_result_cos(self, uid, CI, audience, subject, title, result, result_type):
+        # Format result to remove unneccesary decimals
         formatted_string = "{:.3f}".format(result)
         result = float(formatted_string)
+        # Save results for "centralt innehåll" in dictionary
+        # Also search for previos instance of current "centralt innehåll" in dict. If found but with worse value, replace with current        
         current_CI = self.cos_dict.get(uid)
         if current_CI is None or current_CI.get('value') < result:
             self.cos_dict[uid] = {'CI': CI, 'audience': audience, 'subject': subject, 'title': title, 'type': result_type, 'value': result}
@@ -301,14 +308,18 @@ class W2v():
         current_CI = self.wmd_dict.get(uid)
         # Normalize results to be able to compare with cos_sim results
         norm_result = (1-((result/1.25)-0.5))/0.9
+        # Format result to remove unneccesary decimals
         formatted_string = "{:.3f}".format(norm_result)
         norm_result = float(formatted_string)
+        # Save results for "centralt innehåll" in dictionary
+        # Also search for previos instance of current "centralt innehåll" in dict. If found but with worse value, replace with current
         if current_CI is None or current_CI.get('value') < norm_result:
             self.wmd_dict[uid] = {'CI': CI, 'audience': audience, 'subject': subject, 'title':  title, 'type': result_type, 'value': norm_result}
 
     def get_results(self, row):
         CI_processed = self.preprocess_texts(row['value'])
 
+        # Apply versions of sub-models and save results in dictionaries
         result_jaccard_CIT_CT = self.jaccard_similarity(self.content_processed_CT, CI_processed)
         result_jaccard_desc = self.jaccard_similarity(self.content_processed_desc, CI_processed)
         result_jaccard_desc_CT = self.jaccard_similarity(self.content_processed_desc_CT, CI_processed)
@@ -339,29 +350,38 @@ class W2v():
 
 
     def predict_CI(self, uid):
+        # Find relevant CI
         self.find_CI(uid)
-            
+        
+        # Dictionaries to save results of CI for different sub-models
         self.cos_dict = {}
         self.wmd_dict = {}
         self.jaccard_dict = {}
 
+        # Process metadata using keywords and content title, only keywords, only description and description and content title
         self.content_processed_CT = self.preprocess_texts(self.keywords_titles)
         self.content_processed = self.preprocess_texts(self.keywords)
         self.content_processed_desc = self.preprocess_texts(self.description)
         self.content_processed_desc_CT = self.preprocess_texts(self.desc_titles)
-        
+
+        if self.versions != '[]':
+            self.content_processed = self.preprocess_texts(self.primary_keywords)
+
+        # Iterate rows containing "centralt innehåll" with titles and apply sub-models to compare with content metadata
         for i, row in self.relevant_CI_inc_titles.iterrows():
             self.get_results(row)    
             if (self.versions_dict and 'Modersmål' in row['subject']) or (self.surtitle == 'Lilla Aktuellt skola') or (self.surtitle == 'Newsreel'):
                 self.cos_dict[row.uuid] = {'CI': row['CI'], 'audience': row['audience'], 'subject': row['subject'], 'title': row['title'], 'type': 'Preset', 'value': 1.0}          
                 self.wmd_dict[row.uuid] = {'CI': row['CI'], 'audience': row['audience'], 'subject': row['subject'], 'title': row['title'], 'type': 'Preset', 'value': 1.0}          
 
+        # Iterate rows containing only "centralt innehåll" and apply sub-models to compare with content metadata
         for i, row in self.relevant_CI.iterrows():
             self.get_results(row)
             if self.versions_dict and'Modersmål' in row['subject']:
                 self.cos_dict[row.uuid] = {'CI': row['CI'], 'audience': row['audience'], 'subject': row['subject'], 'title': row['title'], 'type': 'Preset', 'value': 1.0}          
                 self.wmd_dict[row.uuid] = {'CI': row['CI'], 'audience': row['audience'], 'subject': row['subject'], 'title': row['title'], 'type': 'Preset', 'value': 1.0}          
 
+        # Find duplicates of "centralt innehåll". If duplicate is found, flag it so it is not shown in interface. 
         duplicate_list = []
         to_delete = []
         key_list = list(self.cos_dict.keys())
@@ -380,21 +400,40 @@ class W2v():
                 self.cos_dict[key]['duplicate'] = False
                 duplicate_list.append(value.get('CI'))
 
+            # Calculate a score for each "centralt innehåll"
             matched_wmd = self.wmd_dict.get(key)
             matched_jaccard = self.jaccard_dict.get(key)
             wmd_value = matched_wmd.get('value')
             cos_value = value.get('value')
             jaccard_value = matched_jaccard.get('value')
 
+            # Optimal value is calcualted using the average of cos_sim and wmd and a factor of jaccard value. 
+            # Multiply with key_len_factor to adjust for number of keywords of content. Fewer keywords leading to a lower key_len_factor 
             opti_value = self.key_len_factor * ((wmd_value + cos_value) / 2) + (1 - ((wmd_value + cos_value) / 2)) * 3*jaccard_value
+            
+            # Apply self learning factor. Also adjust score if user has teaching subject that is included in content subject
+            if self.versions != '[]':
+                self_learn_score = self.self_learn.update_score(key, self.primary_keywords, opti_value)  
+                # if any(subject in self.primary_subject for subject in teacher_subjects):
+                #     self_learn_score *= 1.5
+            else:
+                self_learn_score = self.self_learn.update_score(key, self.keywords, opti_value)
+                # if any(subject in self.subject for subject in teacher_subjects):
+                #     self_learn_score *= 1.5
 
+            opti_value += self_learn_score
+
+            # Format final value to remove unneccesary decimals
             formatted_string = "{:.3f}".format(opti_value)
             opti_value = float(formatted_string)
+
+            # Add new adjusted optimal value to dictionary
             self.cos_dict[key]['value'] = opti_value
 
+        # Sort dictionary on value to get the best scored "centralt innehåll" first
         sorted_dict = sorted(self.cos_dict.items(), reverse=True, key = lambda x: x[1]['value'])       
-        return sorted_dict
 
+        return sorted_dict
 
 
 

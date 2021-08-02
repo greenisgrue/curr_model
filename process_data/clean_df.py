@@ -21,16 +21,9 @@ def clean(index):
         if not isinstance(row['subject'], float):
             if 'Modersmål och minoritetsspråk' in row['subject']:
                 ur_df.at[i,'subject'] = row['subject'].replace('Modersmål och minoritetsspråk', translate(row['language']))
-                if row['~uid'] == "~222327":
-                    print(translate(row['language']))
-                    print(ur_df.at[i,'subject'])
 
             if 'Miljö' in row['subject']:
-                if row['~uid'] == "~222327":
-                    print(ur_df.at[i, 'subject'])
                 ur_df.at[i,'subject'] = ur_df.at[i,'subject'].replace('Miljö', 'Biologi, Kemi, Teknik, Geografi')
-                if row['~uid'] == "~222327":
-                    print(ur_df.at[i, 'subject'])
 
             if ('Hem- och konsumentkunskap' in row['subject']) & (row['audience'] != 'Grundskola 7-9'):
                 ur_df.at[i,'audience'] = row['audience'] + ', Grundskola 1-6'
@@ -41,14 +34,12 @@ def clean(index):
 
         if row['subject'] == 'Övrigt':
             ur_df = ur_df.drop(labels=i, axis=0)
-        if row['~uid'] == "~222327":
-            print(ur_df.at[i, 'subject'])
 
     ur_df.to_csv(f'./massive_data/stored_data/{index}_cleaned.csv', index=False)
 
     CI = pd.read_csv("./massive_data/stored_data/CI_vocab.csv")
     CI_titles = pd.read_csv("./massive_data/stored_data/CI_vocab_including_titles.csv")
-
+    
     CI['title'] = CI['title'].str.replace('–', '-')
     CI_titles['title'] = CI_titles['title'].str.replace('–', '-')
     CI_titles['value'] = CI_titles['value'].str.replace('–', '-')

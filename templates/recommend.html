@@ -176,7 +176,8 @@
             rating_dict[duplicate] = { 'value': value };
         }
 
-        rating_dict[only_id] = { 'value': value };
+
+        rating_dict[only_id] = { 'uid': only_id, 'value': value };
 
         if ((color == 'green') && id.includes('green')) {
             current_btn.classList.remove('green');
@@ -264,12 +265,18 @@
                 rating_dict[duplicate]['rating'] = null;
             }
         }
-
+        // for (const key in rating_dict) {
+        //     console.log(`${key} has rating ${rating_dict[key].rating}`)
+        // }
+        var arrayObject = Object.values(rating_dict)
+        console.log(arrayObject)
         return rating_dict
     }
 
     function send_data(keywords, content_id, uid) {
-        timestamp = new Date().toISOString()
+        timestamp = new Date()
+        timestamp.setHours(timestamp.getHours() + 2)
+        timestamp = timestamp.toISOString()
         rating_dict['keywords'] = keywords
         rating_dict['content_id'] = content_id
         rating_dict['timestamp'] = timestamp

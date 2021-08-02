@@ -1,0 +1,3448 @@
+[
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "oJ-oznoBGgXZRBqNiwC0",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 184174,
+                "synchronized": "2021-07-22 10:08:11",
+                "creator": "system",
+                "created": "2021-07-22 10:08:11",
+                "modified": "2021-07-30 11:25:30",
+                "source": "",
+                "uri": "local/184174"
+            },
+            "product": {
+                "summary": "Hur \u00e4r det att vara ung i Tunisiens huvudstad Tunis? Och hur har den tunisiska revolutionen som skedde 2011 p\u00e5verkat ungdomarnas liv? Genom inskickade mobilfilmer st\u00e4ller svenska elever fr\u00e5gor till tunisiska ungdomar. Programledaren Jonas Modin tr\u00e4ffar Nour och Yosri som visar oss Tunis.",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/184174/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/184174/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/184174/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/184174/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/184174/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/184174/images/1_hd.jpg"
+                },
+                "year": "2014",
+                "created": "2014-07-15",
+                "articleid": "184174",
+                "description": "Hur \u00e4r det att vara ung i Tunisiens huvudstad Tunis? Och hur har den tunisiska revolutionen som skedde 2011 p\u00e5verkat ungdomarnas liv? Genom inskickade mobilfilmer st\u00e4ller svenska elever fr\u00e5gor till tunisiska ungdomar. Programledaren Jonas Modin tr\u00e4ffar Nour och Yosri som visar oss Tunis.",
+                "language": [
+                    "Franska"
+                ],
+                "published": "2014-12-07",
+                "source": "http://www.ur.se/id/184174",
+                "title": "\u00catre jeune \u00e0 Tunis",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "Hur \u00e4r det att vara ung i Tunisiens huvudstad Tunis?",
+                "publisherid": "",
+                "surtitle": "Alors demande !",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-06-04",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Grundskola 7-9",
+                    "Vuxen\u00f6vergripande"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "Barn och ungdom, Tunisiska revolutionen 2010-2011 , Frankrike, Tunisien",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Moderna spr\u00e5k"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Franska"
+                ],
+                "breadcrumbs": [
+                    "Moderna spr\u00e5k/Franska/Realia och kultur"
+                ],
+                "tags": [
+                    "Moderna spr\u00e5k",
+                    "Franska",
+                    "Realia och kultur",
+                    "Franska spr\u00e5ket",
+                    "Samh\u00e4llsvetenskap",
+                    "Sociologi",
+                    "Spr\u00e5kvetenskap",
+                    "Spr\u00e5k",
+                    "Spr\u00e5k och identitet",
+                    "Ungdomar"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "184174-12.mp4",
+                "srt": [
+                    "fre",
+                    "swe"
+                ],
+                "size": 170820510,
+                "mime": "",
+                "format": "film",
+                "location": "film/184174",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "L\u00e4tt",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2014-12-06",
+                "ability": [],
+                "to": "2022-06-30"
+            },
+            "query": {
+                "keywords": [
+                    "moderna spr\u00e5k",
+                    "franska",
+                    "realia och kultur",
+                    "franska spr\u00e5ket",
+                    "samh\u00e4llsvetenskap",
+                    "sociologi",
+                    "spr\u00e5kvetenskap",
+                    "spr\u00e5k",
+                    "spr\u00e5k och identitet",
+                    "ungdomar",
+                    "barn och ungdom",
+                    "tunisiska revolutionen 2010-2011",
+                    "frankrike",
+                    "tunisien"
+                ],
+                "freetext": "Barn och ungdom, Tunisiska revolutionen 2010-2011 , Frankrike, Tunisien",
+                "articleid": "184174",
+                "title_sort": "Alors demande !: \u00catre jeune \u00e0 Tunis",
+                "language": [
+                    "Franska"
+                ],
+                "curriculum": [],
+                "title": "Alors demande !: \u00catre jeune \u00e0 Tunis",
+                "title_ngram": "Alors demande !: \u00catre jeune \u00e0 Tunis",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "moderna spr\u00e5k",
+                    "franska",
+                    "realia och kultur",
+                    "franska spr\u00e5ket",
+                    "samh\u00e4llsvetenskap",
+                    "sociologi",
+                    "spr\u00e5kvetenskap",
+                    "spr\u00e5k",
+                    "spr\u00e5k och identitet",
+                    "ungdomar"
+                ],
+                "title_autocomplete": "Alors demande !: \u00catre jeune \u00e0 Tunis",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 1,
+                    "default": 0
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Franska",
+                    "Svenska"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": 10,
+                "mediaid": "FaYV9f9-y0vb5wrnLVT_-A",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 589.92,
+                "season": "",
+                "trailerid": "",
+                "episodes": 12,
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 181645,
+                "attachments": [
+                    {
+                        "location": "https://www.ur.se/mb/pdf/Arbetsblad/186000-186999/186805-1_65010366910_arbetsblad.pdf",
+                        "title": "Alors demande ! : \u00catre jeune \u00e0 Tunis",
+                        "type": "Arbetsblad"
+                    }
+                ],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    },
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "op-oznoBGgXZRBqNjABG",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 184175,
+                "synchronized": "2021-07-22 10:08:11",
+                "creator": "system",
+                "created": "2021-07-22 10:08:11",
+                "modified": "2021-07-30 11:25:30",
+                "source": "",
+                "uri": "local/184175"
+            },
+            "product": {
+                "summary": "Till\u00e5ter tunisiska f\u00f6r\u00e4ldrar att man har en flick- eller pojkv\u00e4n? Vad betyder familjen, och \u00e4r det viktigt att ha en b\u00e4sta kompis? Via inskickade mobilfilmer fr\u00e5gar svenska elever allt de vill veta om v\u00e4nskap och familj i Tunisien. Vi tr\u00e4ffar Amira och Yasine som \u00e4r b\u00e4sta kompisar, de svarar p\u00e5 programledaren Jonas Modins fr\u00e5gor. Och s\u00e5 blir vi hembjudna till Chaima och hennes familj som ber\u00e4ttar om hur familjelivet i Tunisien ser ut.",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/184175/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/184175/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/184175/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/184175/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/184175/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/184175/images/1_hd.jpg"
+                },
+                "year": "2014",
+                "created": "2014-07-15",
+                "articleid": "184175",
+                "description": "Till\u00e5ter tunisiska f\u00f6r\u00e4ldrar att man har en flick- eller pojkv\u00e4n? Vad betyder familjen, och \u00e4r det viktigt att ha en b\u00e4sta kompis? Via inskickade mobilfilmer fr\u00e5gar svenska elever allt de vill veta om v\u00e4nskap och familj i Tunisien. Vi tr\u00e4ffar Amira och Yasine som \u00e4r b\u00e4sta kompisar, de svarar p\u00e5 programledaren Jonas Modins fr\u00e5gor. Och s\u00e5 blir vi hembjudna till Chaima och hennes familj som ber\u00e4ttar om hur familjelivet i Tunisien ser ut.",
+                "language": [
+                    "Franska"
+                ],
+                "published": "2014-12-14",
+                "source": "http://www.ur.se/id/184175",
+                "title": "L'amiti\u00e9 et la famille en Tunisie",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "Till\u00e5ter tunisiska f\u00f6r\u00e4ldrar att man har en flick- eller pojkv\u00e4n?",
+                "publisherid": "",
+                "surtitle": "Alors demande !",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-06-04",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Grundskola 7-9",
+                    "Vuxen\u00f6vergripande"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "Fysiologisk psykologi, Tunisien",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Moderna spr\u00e5k"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Franska"
+                ],
+                "breadcrumbs": [
+                    "Moderna spr\u00e5k/Franska/Realia och kultur"
+                ],
+                "tags": [
+                    "Moderna spr\u00e5k",
+                    "Franska",
+                    "Realia och kultur",
+                    "Familjesociologi",
+                    "K\u00e4nslor",
+                    "Psykologi",
+                    "Samh\u00e4llsvetenskap",
+                    "Sociologi",
+                    "Spr\u00e5k",
+                    "Ungdomar",
+                    "V\u00e4nskap",
+                    "Familjer"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "184175-7.mp4",
+                "srt": [
+                    "fre",
+                    "swe"
+                ],
+                "size": 171845972,
+                "mime": "",
+                "format": "film",
+                "location": "film/184175",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "L\u00e4tt",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2014-12-13",
+                "ability": [],
+                "to": "2022-06-30"
+            },
+            "query": {
+                "keywords": [
+                    "moderna spr\u00e5k",
+                    "franska",
+                    "realia och kultur",
+                    "familjesociologi",
+                    "k\u00e4nslor",
+                    "psykologi",
+                    "samh\u00e4llsvetenskap",
+                    "sociologi",
+                    "spr\u00e5k",
+                    "ungdomar",
+                    "v\u00e4nskap",
+                    "familjer",
+                    "fysiologisk psykologi",
+                    "tunisien"
+                ],
+                "freetext": "Fysiologisk psykologi, Tunisien",
+                "articleid": "184175",
+                "title_sort": "Alors demande !: L'amiti\u00e9 et la famille en Tunisie",
+                "language": [
+                    "Franska"
+                ],
+                "curriculum": [],
+                "title": "Alors demande !: L'amiti\u00e9 et la famille en Tunisie",
+                "title_ngram": "Alors demande !: L'amiti\u00e9 et la famille en Tunisie",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "moderna spr\u00e5k",
+                    "franska",
+                    "realia och kultur",
+                    "familjesociologi",
+                    "k\u00e4nslor",
+                    "psykologi",
+                    "samh\u00e4llsvetenskap",
+                    "sociologi",
+                    "spr\u00e5k",
+                    "ungdomar",
+                    "v\u00e4nskap",
+                    "familjer"
+                ],
+                "title_autocomplete": "Alors demande !: L'amiti\u00e9 et la famille en Tunisie",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 1,
+                    "default": 0
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Franska",
+                    "Svenska"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": 11,
+                "mediaid": "be9-tsZUQDmc2BfZ63dHkQ",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 587.56,
+                "season": "",
+                "trailerid": "",
+                "episodes": 12,
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 181645,
+                "attachments": [
+                    {
+                        "location": "https://www.ur.se/mb/pdf/Arbetsblad/186000-186999/186891-3_65010366911_Alors demande.pdf",
+                        "title": "Alors demande ! : Le fran\u00e7ais en Tunisie",
+                        "type": "Arbetsblad"
+                    }
+                ],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    },
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "wp-oznoBGgXZRBqNlAD0",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 217885,
+                "synchronized": "2021-07-22 10:16:23",
+                "creator": "system",
+                "created": "2021-07-22 10:16:23",
+                "modified": "2021-07-30 11:25:31",
+                "source": "",
+                "uri": "local/217885"
+            },
+            "product": {
+                "summary": "Kortfilm i regi av Jonah Senften och Jimmy Sundin.  \n\u00c5rstiderna f\u00f6rskjuts; vintrarna blir varmare och somrarna l\u00e4ngre, media rapporterar om klimatf\u00f6r\u00e4ndringarna n\u00e4stan varje dag. En poetisk ber\u00e4ttelse om marken och om naturens v\u00e4rde genom tankar hos den som nyttjar marken dagligen. Filmen ing\u00e5r i Svenska Filminstitutets projekt Gl\u00f6d, d\u00e4r Sveriges urfolk och nationella minoriteter ber\u00e4ttar sina historier.",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/217885/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/217885/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/217885/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/217885/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/217885/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/217885/images/1_hd.jpg"
+                },
+                "year": "2020",
+                "created": "2020-06-01",
+                "articleid": "217885",
+                "description": "Kortfilm i regi av Jonah Senften och Jimmy Sundin.  \n\u00c5rstiderna f\u00f6rskjuts; vintrarna blir varmare och somrarna l\u00e4ngre, media rapporterar om klimatf\u00f6r\u00e4ndringarna n\u00e4stan varje dag. En poetisk ber\u00e4ttelse om marken och om naturens v\u00e4rde genom tankar hos den som nyttjar marken dagligen. Filmen ing\u00e5r i Svenska Filminstitutets projekt Gl\u00f6d, d\u00e4r Sveriges urfolk och nationella minoriteter ber\u00e4ttar sina historier.",
+                "language": [
+                    "Nordsamiska"
+                ],
+                "published": "2020-11-15",
+                "source": "http://www.ur.se/id/217885",
+                "title": "Badjel\u00e1nnda",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "En poetisk ber\u00e4ttelse om marken och om naturens v\u00e4rde.",
+                "publisherid": "",
+                "surtitle": "Gl\u00f6d",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-01-19",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Gymnasieskola"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "Naturen, Sverige, S\u00e1pmi",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Modersm\u00e5l och minoritetsspr\u00e5k",
+                    "Samh\u00e4llskunskap"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Samiska",
+                    "Individer och gemenskaper"
+                ],
+                "breadcrumbs": [
+                    "Modersm\u00e5l och minoritetsspr\u00e5k/Samiska",
+                    "Samh\u00e4llskunskap/Individer och gemenskaper/Nationella minoriteter"
+                ],
+                "tags": [
+                    "Modersm\u00e5l och minoritetsspr\u00e5k",
+                    "Samiska",
+                    "Samh\u00e4llskunskap",
+                    "Individer och gemenskaper",
+                    "Nationella minoriteter",
+                    "Samh\u00e4llsvetenskap",
+                    "Sociala fr\u00e5gor",
+                    "Minoritetsspr\u00e5k",
+                    "Ursprungsbefolkningar",
+                    "Samer",
+                    "Klimatf\u00f6r\u00e4ndringar"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "217885-4.mp4",
+                "srt": [
+                    "sme",
+                    "swe"
+                ],
+                "size": 54544005,
+                "mime": "",
+                "format": "film",
+                "location": "film/217885",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2020-11-15",
+                "ability": [],
+                "to": "2025-09-01"
+            },
+            "query": {
+                "keywords": [
+                    "modersm\u00e5l och minoritetsspr\u00e5k",
+                    "samh\u00e4llskunskap",
+                    "samiska",
+                    "individer och gemenskaper",
+                    "nationella minoriteter",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "minoritetsspr\u00e5k",
+                    "ursprungsbefolkningar",
+                    "samer",
+                    "klimatf\u00f6r\u00e4ndringar",
+                    "naturen",
+                    "sverige",
+                    "s\u00e1pmi"
+                ],
+                "freetext": "Naturen, Sverige, S\u00e1pmi",
+                "articleid": "217885",
+                "title_sort": "Gl\u00f6d: Badjel\u00e1nnda",
+                "language": [
+                    "Nordsamiska"
+                ],
+                "curriculum": [],
+                "title": "Gl\u00f6d: Badjel\u00e1nnda",
+                "title_ngram": "Gl\u00f6d: Badjel\u00e1nnda",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "modersm\u00e5l och minoritetsspr\u00e5k",
+                    "samiska",
+                    "samh\u00e4llskunskap",
+                    "individer och gemenskaper",
+                    "nationella minoriteter",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "minoritetsspr\u00e5k",
+                    "ursprungsbefolkningar",
+                    "samer",
+                    "klimatf\u00f6r\u00e4ndringar"
+                ],
+                "title_autocomplete": "Gl\u00f6d: Badjel\u00e1nnda",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 0,
+                    "default": -1
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Svenska",
+                    "Nordsamiska"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": "",
+                "mediaid": "4n_KgvIYQZuUUbUqVxWPeg",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 273.32,
+                "season": "",
+                "trailerid": "",
+                "episodes": "",
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 217881,
+                "attachments": [],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    },
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "xJ-oznoBGgXZRBqNlQB2",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 217882,
+                "synchronized": "2021-07-22 10:14:45",
+                "creator": "system",
+                "created": "2021-07-22 10:14:45",
+                "modified": "2021-07-30 11:25:31",
+                "source": "",
+                "uri": "local/217882"
+            },
+            "product": {
+                "summary": "Ida-Maria k\u00e4mpar mot svenska myndigheter f\u00f6r r\u00e4tten att g\u00f6ra ett skatteavdrag f\u00f6r ink\u00f6p av en hund. Ska de svenska betongskallarna f\u00f6rst\u00e5 att hunden \u00e4r ett arbetsredskap, som en skoter ungef\u00e4r? Eller ska en same tvingas b\u00f6ja sig f\u00f6r den svenska \u00f6verheten? Kortfilm p\u00e5 samiska i regi av Mara Fredriksson. Filmen ing\u00e5r i Svenska Filminstitutets projekt Gl\u00f6d, d\u00e4r Sveriges urfolk och nationella minoriteter ber\u00e4ttar sina historier.",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/217882/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/217882/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/217882/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/217882/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/217882/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/217882/images/1_hd.jpg"
+                },
+                "year": "2020",
+                "created": "2020-06-01",
+                "articleid": "217882",
+                "description": "Ida-Maria k\u00e4mpar mot svenska myndigheter f\u00f6r r\u00e4tten att g\u00f6ra ett skatteavdrag f\u00f6r ink\u00f6p av en hund. Ska de svenska betongskallarna f\u00f6rst\u00e5 att hunden \u00e4r ett arbetsredskap, som en skoter ungef\u00e4r? Eller ska en same tvingas b\u00f6ja sig f\u00f6r den svenska \u00f6verheten? Kortfilm p\u00e5 samiska i regi av Mara Fredriksson. Filmen ing\u00e5r i Svenska Filminstitutets projekt Gl\u00f6d, d\u00e4r Sveriges urfolk och nationella minoriteter ber\u00e4ttar sina historier.",
+                "language": [
+                    "Nordsamiska"
+                ],
+                "published": "2021-03-07",
+                "source": "http://www.ur.se/id/217882",
+                "title": "Svonni vs Skatteverket",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "F\u00f6r m\u00e5nga samer \u00e4r en hund ett redskap. Men kan skatteverket fatta det?",
+                "publisherid": "",
+                "surtitle": "Gl\u00f6d",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-02-24",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Gymnasieskola"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "S\u00e1pmi, Sverige",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Modersm\u00e5l och minoritetsspr\u00e5k"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Samiska"
+                ],
+                "breadcrumbs": [
+                    "Modersm\u00e5l och minoritetsspr\u00e5k/Samiska"
+                ],
+                "tags": [
+                    "Modersm\u00e5l och minoritetsspr\u00e5k",
+                    "Samiska",
+                    "Samh\u00e4llsvetenskap",
+                    "Sociala fr\u00e5gor",
+                    "Samer",
+                    "Hundar",
+                    "Skatter",
+                    "Byr\u00e5krati",
+                    "Nationella minoriteter",
+                    "Ursprungsbefolkningar"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "217882-4.mp4",
+                "srt": [
+                    "sme",
+                    "swe"
+                ],
+                "size": 73916308,
+                "mime": "",
+                "format": "film",
+                "location": "film/217882",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2021-03-07",
+                "ability": [],
+                "to": "2025-09-01"
+            },
+            "query": {
+                "keywords": [
+                    "modersm\u00e5l och minoritetsspr\u00e5k",
+                    "samiska",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "samer",
+                    "hundar",
+                    "skatter",
+                    "byr\u00e5krati",
+                    "nationella minoriteter",
+                    "ursprungsbefolkningar",
+                    "s\u00e1pmi",
+                    "sverige"
+                ],
+                "freetext": "S\u00e1pmi, Sverige",
+                "articleid": "217882",
+                "title_sort": "Gl\u00f6d: Svonni vs Skatteverket",
+                "language": [
+                    "Nordsamiska"
+                ],
+                "curriculum": [],
+                "title": "Gl\u00f6d: Svonni vs Skatteverket",
+                "title_ngram": "Gl\u00f6d: Svonni vs Skatteverket",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "modersm\u00e5l och minoritetsspr\u00e5k",
+                    "samiska",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "samer",
+                    "hundar",
+                    "skatter",
+                    "byr\u00e5krati",
+                    "nationella minoriteter",
+                    "ursprungsbefolkningar"
+                ],
+                "title_autocomplete": "Gl\u00f6d: Svonni vs Skatteverket",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 0,
+                    "default": -1
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Svenska",
+                    "Nordsamiska"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": "",
+                "mediaid": "KgbR5gdfWmVzphtS_zmVQQ",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 293.08,
+                "season": "",
+                "trailerid": "",
+                "episodes": "",
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 217881,
+                "attachments": [],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    },
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "xp-oznoBGgXZRBqNlQD4",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 217883,
+                "synchronized": "2021-07-22 10:16:25",
+                "creator": "system",
+                "created": "2021-07-22 10:16:25",
+                "modified": "2021-07-30 11:25:31",
+                "source": "",
+                "uri": "local/217883"
+            },
+            "product": {
+                "summary": "Kortfilm i regi av Sanna Kalla. M\u00e5nga flyttar fr\u00e5n Tornedalen i tron om att f\u00e5 leva ett mer h\u00e4ndelserikt liv. Det \u00e4r s\u00e5 l\u00e4tt att aldrig k\u00e4nna sig n\u00f6jd och alltid dr\u00f6mma om n\u00e5got st\u00f6rre. Tv\u00e5 ungdomar sitter p\u00e5 ett kaf\u00e9 i Stockholm och pratar om platser i v\u00e4rlden som \u00e4r st\u00f6rre och b\u00e4ttre. Men \u00e4r gr\u00e4set alltid gr\u00f6nare p\u00e5 andra sidan? Filmen ing\u00e5r i Svenska Filminstitutets projekt Gl\u00f6d, d\u00e4r Sveriges urfolk och nationella minoriteter ber\u00e4ttar sina historier.",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/217883/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/217883/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/217883/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/217883/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/217883/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/217883/images/1_hd.jpg"
+                },
+                "year": "2020",
+                "created": "2020-06-01",
+                "articleid": "217883",
+                "description": "Kortfilm i regi av Sanna Kalla. M\u00e5nga flyttar fr\u00e5n Tornedalen i tron om att f\u00e5 leva ett mer h\u00e4ndelserikt liv. Det \u00e4r s\u00e5 l\u00e4tt att aldrig k\u00e4nna sig n\u00f6jd och alltid dr\u00f6mma om n\u00e5got st\u00f6rre. Tv\u00e5 ungdomar sitter p\u00e5 ett kaf\u00e9 i Stockholm och pratar om platser i v\u00e4rlden som \u00e4r st\u00f6rre och b\u00e4ttre. Men \u00e4r gr\u00e4set alltid gr\u00f6nare p\u00e5 andra sidan? Filmen ing\u00e5r i Svenska Filminstitutets projekt Gl\u00f6d, d\u00e4r Sveriges urfolk och nationella minoriteter ber\u00e4ttar sina historier.",
+                "language": [
+                    "Me\u00e4nkieli"
+                ],
+                "published": "2020-11-15",
+                "source": "http://www.ur.se/id/217883",
+                "title": "Gr\u00e4set \u00e4r alltid gr\u00f6nare",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "Om att dr\u00f6mma st\u00f6rre och att f\u00e5 leva ett mer\u202fh\u00e4ndelserikt\u202fliv.",
+                "publisherid": "",
+                "surtitle": "Gl\u00f6d",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-01-19",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Gymnasieskola"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "Levnadsf\u00f6rh\u00e5llanden, Sverige",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Modersm\u00e5l och minoritetsspr\u00e5k",
+                    "Samh\u00e4llskunskap"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Me\u00e4nkieli",
+                    "Individer och gemenskaper"
+                ],
+                "breadcrumbs": [
+                    "Modersm\u00e5l och minoritetsspr\u00e5k/Me\u00e4nkieli",
+                    "Samh\u00e4llskunskap/Individer och gemenskaper/Nationella minoriteter"
+                ],
+                "tags": [
+                    "Modersm\u00e5l och minoritetsspr\u00e5k",
+                    "Me\u00e4nkieli",
+                    "Samh\u00e4llskunskap",
+                    "Individer och gemenskaper",
+                    "Nationella minoriteter",
+                    "Samh\u00e4llsvetenskap",
+                    "Sociala fr\u00e5gor",
+                    "Minoritetsspr\u00e5k",
+                    "Ungdomar",
+                    "Livsh\u00e4ndelser"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "217883-4.mp4",
+                "srt": [
+                    "swe",
+                    "fiu"
+                ],
+                "size": 66513606,
+                "mime": "",
+                "format": "film",
+                "location": "film/217883",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2020-11-15",
+                "ability": [],
+                "to": "2025-09-01"
+            },
+            "query": {
+                "keywords": [
+                    "modersm\u00e5l och minoritetsspr\u00e5k",
+                    "samh\u00e4llskunskap",
+                    "me\u00e4nkieli",
+                    "individer och gemenskaper",
+                    "nationella minoriteter",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "minoritetsspr\u00e5k",
+                    "ungdomar",
+                    "livsh\u00e4ndelser",
+                    "levnadsf\u00f6rh\u00e5llanden",
+                    "sverige"
+                ],
+                "freetext": "Levnadsf\u00f6rh\u00e5llanden, Sverige",
+                "articleid": "217883",
+                "title_sort": "Gl\u00f6d: Gr\u00e4set \u00e4r alltid gr\u00f6nare",
+                "language": [
+                    "Me\u00e4nkieli"
+                ],
+                "curriculum": [],
+                "title": "Gl\u00f6d: Gr\u00e4set \u00e4r alltid gr\u00f6nare",
+                "title_ngram": "Gl\u00f6d: Gr\u00e4set \u00e4r alltid gr\u00f6nare",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "modersm\u00e5l och minoritetsspr\u00e5k",
+                    "me\u00e4nkieli",
+                    "samh\u00e4llskunskap",
+                    "individer och gemenskaper",
+                    "nationella minoriteter",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "minoritetsspr\u00e5k",
+                    "ungdomar",
+                    "livsh\u00e4ndelser"
+                ],
+                "title_autocomplete": "Gl\u00f6d: Gr\u00e4set \u00e4r alltid gr\u00f6nare",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 0,
+                    "default": -1
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Svenska",
+                    "Me\u00e4nkieli"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": "",
+                "mediaid": "xuFM6O0gWHLoO-8CI64tqA",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 273.48,
+                "season": "",
+                "trailerid": "",
+                "episodes": "",
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 217881,
+                "attachments": [],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    },
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "yJ-oznoBGgXZRBqNlgB6",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 217888,
+                "synchronized": "2021-07-22 10:10:54",
+                "creator": "system",
+                "created": "2021-07-22 10:10:54",
+                "modified": "2021-07-30 11:25:31",
+                "source": "",
+                "uri": "local/217888"
+            },
+            "product": {
+                "summary": "Ett filmpoetiskt m\u00f6te mellan ett heml\u00f6st spr\u00e5k, en bortgl\u00f6md plats, och en profetisk dikt. Spr\u00e5ket \u00e4r jiddisch och platsen den judiska begravningsplatsen i Warszawa med sina 200 000 f\u00f6rfallna gravar. Dikten, av Anna Margoli, publicerades i New York 1929: \"och med ditt isande blod ska du k\u00e4nna, hur jorden \u00f6ppnar sig, och maskarna kallar\". Kortfilm i regi av Gunnar Bergdahl. Filmen ing\u00e5r i Svenska Filminstitutets projekt Gl\u00f6d, d\u00e4r Sveriges urfolk och nationella minoriteter ber\u00e4ttar sina historier.",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/217888/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/217888/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/217888/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/217888/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/217888/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/217888/images/1_hd.jpg"
+                },
+                "year": "2020",
+                "created": "2020-06-01",
+                "articleid": "217888",
+                "description": "Ett filmpoetiskt m\u00f6te mellan ett heml\u00f6st spr\u00e5k, en bortgl\u00f6md plats, och en profetisk dikt. Spr\u00e5ket \u00e4r jiddisch och platsen den judiska begravningsplatsen i Warszawa med sina 200 000 f\u00f6rfallna gravar. Dikten, av Anna Margoli, publicerades i New York 1929: \"och med ditt isande blod ska du k\u00e4nna, hur jorden \u00f6ppnar sig, och maskarna kallar\". Kortfilm i regi av Gunnar Bergdahl. Filmen ing\u00e5r i Svenska Filminstitutets projekt Gl\u00f6d, d\u00e4r Sveriges urfolk och nationella minoriteter ber\u00e4ttar sina historier.",
+                "language": [
+                    "Jiddish"
+                ],
+                "published": "2021-04-19",
+                "source": "http://www.ur.se/id/217888",
+                "title": "Detta \u00e4r natten",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "Ett filmpoetiskt m\u00f6te.",
+                "publisherid": "",
+                "surtitle": "Gl\u00f6d",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-05-04",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Gymnasieskola"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "Fiktiva ber\u00e4ttelser, Judar, Warszawa, Polen",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Historia",
+                    "Samh\u00e4llskunskap",
+                    "Svenska"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Efter ca 1900",
+                    "Individer och gemenskaper",
+                    "Uppl\u00e4sningar och dramatiseringar"
+                ],
+                "breadcrumbs": [
+                    "Historia/Efter ca 1900/Andra v\u00e4rldskriget",
+                    "Samh\u00e4llskunskap/Individer och gemenskaper/Nationella minoriteter",
+                    "Svenska/Uppl\u00e4sningar och dramatiseringar"
+                ],
+                "tags": [
+                    "Historia",
+                    "Efter ca 1900",
+                    "Andra v\u00e4rldskriget",
+                    "Samh\u00e4llskunskap",
+                    "Individer och gemenskaper",
+                    "Nationella minoriteter",
+                    "Svenska",
+                    "Uppl\u00e4sningar och dramatiseringar",
+                    "Begravningsplatser",
+                    "F\u00f6rintelsen"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "217888-4.mp4",
+                "srt": [
+                    "swe",
+                    "yid"
+                ],
+                "size": 70889321,
+                "mime": "",
+                "format": "film",
+                "location": "film/217888",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2021-04-19",
+                "ability": [],
+                "to": "2025-09-15"
+            },
+            "query": {
+                "keywords": [
+                    "historia",
+                    "samh\u00e4llskunskap",
+                    "svenska",
+                    "efter ca 1900",
+                    "individer och gemenskaper",
+                    "uppl\u00e4sningar och dramatiseringar",
+                    "andra v\u00e4rldskriget",
+                    "nationella minoriteter",
+                    "begravningsplatser",
+                    "f\u00f6rintelsen",
+                    "fiktiva ber\u00e4ttelser",
+                    "judar",
+                    "warszawa",
+                    "polen"
+                ],
+                "freetext": "Fiktiva ber\u00e4ttelser, Judar, Warszawa, Polen",
+                "articleid": "217888",
+                "title_sort": "Gl\u00f6d: Detta \u00e4r natten",
+                "language": [
+                    "Jiddish"
+                ],
+                "curriculum": [],
+                "title": "Gl\u00f6d: Detta \u00e4r natten",
+                "title_ngram": "Gl\u00f6d: Detta \u00e4r natten",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "historia",
+                    "efter ca 1900",
+                    "andra v\u00e4rldskriget",
+                    "samh\u00e4llskunskap",
+                    "individer och gemenskaper",
+                    "nationella minoriteter",
+                    "svenska",
+                    "uppl\u00e4sningar och dramatiseringar",
+                    "begravningsplatser",
+                    "f\u00f6rintelsen"
+                ],
+                "title_autocomplete": "Gl\u00f6d: Detta \u00e4r natten",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 0,
+                    "default": -1
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Jiddish",
+                    "Svenska"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": "",
+                "mediaid": "bObFVVck7uUUlDcYc-iGxQ",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 285.24,
+                "season": "",
+                "trailerid": "",
+                "episodes": "",
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 217881,
+                "attachments": [],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    },
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "yp-oznoBGgXZRBqNlgD9",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 222732,
+                "synchronized": "2021-07-22 09:59:20",
+                "creator": "system",
+                "created": "2021-07-22 09:59:20",
+                "modified": "2021-07-30 11:25:31",
+                "source": "",
+                "uri": "local/222732"
+            },
+            "product": {
+                "summary": "Klotus vill inte bada, han vill resa till en tid n\u00e4r man slipper att tv\u00e4tta sig. Cleo och Klotus reser tillbaka till medeltidens Europa. D\u00e4r sprider sig pesten och v\u00e4nnerna flyr fr\u00e5n loppor och stank. I Japan under samma tid badade man i varma k\u00e4llor och i Nigeria f\u00e5r Cleo och Klotus med sig svart tv\u00e5l hem. Cleo l\u00e4r oss varf\u00f6r tv\u00e5l beh\u00f6ver l\u00f6sas upp med varmt vatten f\u00f6r att fungera.",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/222732/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/222732/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/222732/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/222732/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/222732/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/222732/images/1_hd.jpg"
+                },
+                "year": "2021",
+                "created": "2021-05-10",
+                "articleid": "222732",
+                "description": "Klotus vill inte bada, han vill resa till en tid n\u00e4r man slipper att tv\u00e4tta sig. Cleo och Klotus reser tillbaka till medeltidens Europa. D\u00e4r sprider sig pesten och v\u00e4nnerna flyr fr\u00e5n loppor och stank. I Japan under samma tid badade man i varma k\u00e4llor och i Nigeria f\u00e5r Cleo och Klotus med sig svart tv\u00e5l hem. Cleo l\u00e4r oss varf\u00f6r tv\u00e5l beh\u00f6ver l\u00f6sas upp med varmt vatten f\u00f6r att fungera.",
+                "language": [
+                    "Svenskt teckenspr\u00e5k"
+                ],
+                "published": "2021-08-07",
+                "source": "http://www.ur.se/id/222732",
+                "title": "B\u00e4sta tiden! Medeltiden",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "Klotus vill resa till en tid n\u00e4r man slipper att tv\u00e4tta sig.",
+                "publisherid": "",
+                "surtitle": "Historiehopparna - teckenspr\u00e5kstolkat",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-06-21",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Grundskola F-3"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Biologi",
+                    "Historia",
+                    "Teckenspr\u00e5k"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Kropp och h\u00e4lsa",
+                    "Forntid och medeltid"
+                ],
+                "breadcrumbs": [
+                    "Biologi/Kropp och h\u00e4lsa/Sjukdomar och oh\u00e4lsa/Virus och bakterier",
+                    "Historia/Forntid och medeltid/Medeltiden",
+                    "Teckenspr\u00e5k"
+                ],
+                "tags": [
+                    "Biologi",
+                    "Kropp och h\u00e4lsa",
+                    "Sjukdomar och oh\u00e4lsa",
+                    "Virus och bakterier",
+                    "Historia",
+                    "Forntid och medeltid",
+                    "Medeltiden",
+                    "Teckenspr\u00e5k",
+                    "Personlig hygien",
+                    "Hygien",
+                    "Tv\u00e5l",
+                    "Pest"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "222732-6.mp4",
+                "srt": [
+                    "swe"
+                ],
+                "size": 67318124,
+                "mime": "",
+                "format": "film",
+                "location": "film/222732",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2021-06-17",
+                "ability": [],
+                "to": "2025-06-30"
+            },
+            "query": {
+                "keywords": [
+                    "biologi",
+                    "historia",
+                    "teckenspr\u00e5k",
+                    "kropp och h\u00e4lsa",
+                    "forntid och medeltid",
+                    "sjukdomar och oh\u00e4lsa",
+                    "virus och bakterier",
+                    "medeltiden",
+                    "personlig hygien",
+                    "hygien",
+                    "tv\u00e5l",
+                    "pest"
+                ],
+                "freetext": "",
+                "articleid": "222732",
+                "title_sort": "Historiehopparna - teckenspr\u00e5kstolkat: B\u00e4sta tiden! Medeltiden",
+                "language": [
+                    "Svenskt teckenspr\u00e5k"
+                ],
+                "curriculum": [],
+                "title": "Historiehopparna - teckenspr\u00e5kstolkat: B\u00e4sta tiden! Medeltiden",
+                "title_ngram": "Historiehopparna - teckenspr\u00e5kstolkat: B\u00e4sta tiden! Medeltiden",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "biologi",
+                    "kropp och h\u00e4lsa",
+                    "sjukdomar och oh\u00e4lsa",
+                    "virus och bakterier",
+                    "historia",
+                    "forntid och medeltid",
+                    "medeltiden",
+                    "teckenspr\u00e5k",
+                    "personlig hygien",
+                    "hygien",
+                    "tv\u00e5l",
+                    "pest"
+                ],
+                "title_autocomplete": "Historiehopparna - teckenspr\u00e5kstolkat: B\u00e4sta tiden! Medeltiden",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 0,
+                    "default": -1
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Svenska"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": 2,
+                "mediaid": "J41W88YcnL4tabsEug0U_g",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 268.68,
+                "season": "",
+                "trailerid": "",
+                "episodes": 3,
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 222743,
+                "attachments": [],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    },
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "zJ-oznoBGgXZRBqNlwCD",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 222741,
+                "synchronized": "2021-07-22 09:59:20",
+                "creator": "system",
+                "created": "2021-07-22 09:59:20",
+                "modified": "2021-07-30 11:25:31",
+                "source": "",
+                "uri": "local/222741"
+            },
+            "product": {
+                "summary": "Det ska vara kul att bada tycker Klotus! Cleo och Klotus reser tillbaka till 1600-talets Paris och landar i Solkungens slott. De f\u00e5r h\u00f6ra att ingen f\u00e5r l\u00e5na varken kungens badkar eller toalett. I Wien kommer de till ett sjukhus d\u00e4r man f\u00f6r tv\u00e5hundra \u00e5r sedan gjorde en livsviktig uppt\u00e4ckt. Tv\u00e4tta alltid h\u00e4nderna! Det skyddar dig fr\u00e5n att bli sjuk och smitta andra. Tv\u00e5len kan till och med r\u00e4dda liv! Cleo funderar \u00f6ver om den h\u00e5rda eller flytande tv\u00e5len \u00e4r b\u00e4st. Vad tror du?",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/222741/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/222741/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/222741/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/222741/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/222741/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/222741/images/1_hd.jpg"
+                },
+                "year": "2021",
+                "created": "2021-05-10",
+                "articleid": "222741",
+                "description": "Det ska vara kul att bada tycker Klotus! Cleo och Klotus reser tillbaka till 1600-talets Paris och landar i Solkungens slott. De f\u00e5r h\u00f6ra att ingen f\u00e5r l\u00e5na varken kungens badkar eller toalett. I Wien kommer de till ett sjukhus d\u00e4r man f\u00f6r tv\u00e5hundra \u00e5r sedan gjorde en livsviktig uppt\u00e4ckt. Tv\u00e4tta alltid h\u00e4nderna! Det skyddar dig fr\u00e5n att bli sjuk och smitta andra. Tv\u00e5len kan till och med r\u00e4dda liv! Cleo funderar \u00f6ver om den h\u00e5rda eller flytande tv\u00e5len \u00e4r b\u00e4st. Vad tror du?",
+                "language": [
+                    "Svenskt teckenspr\u00e5k"
+                ],
+                "published": "2021-08-14",
+                "source": "http://www.ur.se/id/222741",
+                "title": "V\u00e4rldens viktigaste uppfinning",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "Cleo funderar \u00f6ver om den h\u00e5rda eller flytande tv\u00e5len \u00e4r b\u00e4st.",
+                "publisherid": "",
+                "surtitle": "Historiehopparna - teckenspr\u00e5kstolkat",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-06-21",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Grundskola F-3"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "1600-talet, 1800-talet",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Biologi",
+                    "Historia",
+                    "Teckenspr\u00e5k"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Kropp och h\u00e4lsa",
+                    "Nya tiden - europa och v\u00e4rlden"
+                ],
+                "breadcrumbs": [
+                    "Biologi/Kropp och h\u00e4lsa/Sjukdomar och oh\u00e4lsa/Virus och bakterier",
+                    "Historia/Nya tiden - europa och v\u00e4rlden/1648-1789",
+                    "Historia/Nya tiden - europa och v\u00e4rlden/1815-1914",
+                    "Teckenspr\u00e5k"
+                ],
+                "tags": [
+                    "Biologi",
+                    "Kropp och h\u00e4lsa",
+                    "Sjukdomar och oh\u00e4lsa",
+                    "Virus och bakterier",
+                    "Historia",
+                    "Nya tiden - europa och v\u00e4rlden",
+                    "1648-1789",
+                    "1815-1914",
+                    "Teckenspr\u00e5k",
+                    "Personlig hygien",
+                    "Hygien",
+                    "Tv\u00e5l",
+                    "Virus",
+                    "Bakterier"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "222741-6.mp4",
+                "srt": [
+                    "swe"
+                ],
+                "size": 66163187,
+                "mime": "",
+                "format": "film",
+                "location": "film/222741",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2021-06-17",
+                "ability": [],
+                "to": "2025-06-30"
+            },
+            "query": {
+                "keywords": [
+                    "biologi",
+                    "historia",
+                    "teckenspr\u00e5k",
+                    "kropp och h\u00e4lsa",
+                    "nya tiden - europa och v\u00e4rlden",
+                    "sjukdomar och oh\u00e4lsa",
+                    "virus och bakterier",
+                    "1648-1789",
+                    "1815-1914",
+                    "personlig hygien",
+                    "hygien",
+                    "tv\u00e5l",
+                    "virus",
+                    "bakterier",
+                    "1600-talet",
+                    "1800-talet"
+                ],
+                "freetext": "1600-talet, 1800-talet",
+                "articleid": "222741",
+                "title_sort": "Historiehopparna - teckenspr\u00e5kstolkat: V\u00e4rldens viktigaste uppfinning",
+                "language": [
+                    "Svenskt teckenspr\u00e5k"
+                ],
+                "curriculum": [],
+                "title": "Historiehopparna - teckenspr\u00e5kstolkat: V\u00e4rldens viktigaste uppfinning",
+                "title_ngram": "Historiehopparna - teckenspr\u00e5kstolkat: V\u00e4rldens viktigaste uppfinning",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "biologi",
+                    "kropp och h\u00e4lsa",
+                    "sjukdomar och oh\u00e4lsa",
+                    "virus och bakterier",
+                    "historia",
+                    "nya tiden - europa och v\u00e4rlden",
+                    "1648-1789",
+                    "1815-1914",
+                    "teckenspr\u00e5k",
+                    "personlig hygien",
+                    "hygien",
+                    "tv\u00e5l",
+                    "virus",
+                    "bakterier"
+                ],
+                "title_autocomplete": "Historiehopparna - teckenspr\u00e5kstolkat: V\u00e4rldens viktigaste uppfinning",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 0,
+                    "default": -1
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Svenska"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": 3,
+                "mediaid": "vh4_BDuOCCSKAwMCjlDGRQ",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 263.92,
+                "season": "",
+                "trailerid": "",
+                "episodes": 3,
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 222743,
+                "attachments": [],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    },
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "zp-oznoBGgXZRBqNmAAN",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 222223,
+                "synchronized": "2021-07-22 10:03:13",
+                "creator": "system",
+                "created": "2021-07-22 10:03:13",
+                "modified": "2021-07-30 11:25:32",
+                "source": "",
+                "uri": "local/222223"
+            },
+            "product": {
+                "summary": "Varf\u00f6r finns det diagnoser och vad ska de vara bra f\u00f6r? Charlie har tre barn, varav tv\u00e5 har autism och add. Marlene har dottern Minna som \u00e4r 21 \u00e5r och fick sin diagnos add f\u00f6rst vid 18 \u00e5rs \u00e5lder. Gabriel har tv\u00e5 barn med adhd och det var inte alls sj\u00e4lvklart f\u00f6r honom att hans barn skulle utredas. Samantha pratar med sin son Fidel om den jobbiga tiden f\u00f6re adhd-diagnosen.",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/222223/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/222223/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/222223/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/222223/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/222223/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/222223/images/1_hd.jpg"
+                },
+                "year": "2020",
+                "created": "2021-03-31",
+                "articleid": "222223",
+                "description": "Varf\u00f6r finns det diagnoser och vad ska de vara bra f\u00f6r? Charlie har tre barn, varav tv\u00e5 har autism och add. Marlene har dottern Minna som \u00e4r 21 \u00e5r och fick sin diagnos add f\u00f6rst vid 18 \u00e5rs \u00e5lder. Gabriel har tv\u00e5 barn med adhd och det var inte alls sj\u00e4lvklart f\u00f6r honom att hans barn skulle utredas. Samantha pratar med sin son Fidel om den jobbiga tiden f\u00f6re adhd-diagnosen.",
+                "language": [
+                    "Syntolkat"
+                ],
+                "published": "2021-06-16",
+                "source": "http://www.ur.se/id/222223",
+                "title": "Diagnosen",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "Varf\u00f6r finns det diagnoser och vad ska de vara bra f\u00f6r?",
+                "publisherid": "",
+                "surtitle": "Superf\u00f6r\u00e4ldrar - Syntolkat",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-06-11",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Vuxen\u00f6vergripande"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "Barn och f\u00f6r\u00e4ldrar, Diagnoser (medicin)",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Samh\u00e4llskunskap"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Individer och gemenskaper"
+                ],
+                "breadcrumbs": [
+                    "Samh\u00e4llskunskap/Individer och gemenskaper/Familj och samlevnad",
+                    "Samh\u00e4llskunskap/Individer och gemenskaper/Identitet och livsstil/Personer med funktionsneds\u00e4ttning"
+                ],
+                "tags": [
+                    "Samh\u00e4llskunskap",
+                    "Individer och gemenskaper",
+                    "Familj och samlevnad",
+                    "Identitet och livsstil",
+                    "Personer med funktionsneds\u00e4ttning",
+                    "Samh\u00e4llsvetenskap",
+                    "Sociala fr\u00e5gor",
+                    "Barn med autism",
+                    "Barn med adhd",
+                    "Neuropsykiatriska diagnoser",
+                    "Barn med neuropsykiatrisk funktionsneds\u00e4ttning",
+                    "Familjer",
+                    "Vardagsliv"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "222223-4.mp4",
+                "srt": [
+                    "swe"
+                ],
+                "size": 434217485,
+                "mime": "",
+                "format": "film",
+                "location": "film/222223",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2021-06-10",
+                "ability": [],
+                "to": "2025-06-30"
+            },
+            "query": {
+                "keywords": [
+                    "samh\u00e4llskunskap",
+                    "individer och gemenskaper",
+                    "familj och samlevnad",
+                    "identitet och livsstil",
+                    "personer med funktionsneds\u00e4ttning",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "barn med autism",
+                    "barn med adhd",
+                    "neuropsykiatriska diagnoser",
+                    "barn med neuropsykiatrisk funktionsneds\u00e4ttning",
+                    "familjer",
+                    "vardagsliv",
+                    "barn och f\u00f6r\u00e4ldrar",
+                    "diagnoser (medicin)"
+                ],
+                "freetext": "Barn och f\u00f6r\u00e4ldrar, Diagnoser (medicin)",
+                "articleid": "222223",
+                "title_sort": "Superf\u00f6r\u00e4ldrar - Syntolkat: Diagnosen",
+                "language": [
+                    "Syntolkat"
+                ],
+                "curriculum": [],
+                "title": "Superf\u00f6r\u00e4ldrar - Syntolkat: Diagnosen",
+                "title_ngram": "Superf\u00f6r\u00e4ldrar - Syntolkat: Diagnosen",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "samh\u00e4llskunskap",
+                    "individer och gemenskaper",
+                    "familj och samlevnad",
+                    "identitet och livsstil",
+                    "personer med funktionsneds\u00e4ttning",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "barn med autism",
+                    "barn med adhd",
+                    "neuropsykiatriska diagnoser",
+                    "barn med neuropsykiatrisk funktionsneds\u00e4ttning",
+                    "familjer",
+                    "vardagsliv"
+                ],
+                "title_autocomplete": "Superf\u00f6r\u00e4ldrar - Syntolkat: Diagnosen",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 0,
+                    "default": -1
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Svenska"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": 1,
+                "mediaid": "jo0TAP_I_v3poc7Gs4sUbA",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 1727.44,
+                "season": "",
+                "trailerid": "",
+                "episodes": 8,
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 222221,
+                "attachments": [],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    },
+    {
+        "_index": "search_ur_20210731",
+        "_type": "_doc",
+        "_id": "0J-oznoBGgXZRBqNmACU",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "owner": "system",
+                "uid": 222217,
+                "synchronized": "2021-07-22 10:03:14",
+                "creator": "system",
+                "created": "2021-07-22 10:03:14",
+                "modified": "2021-07-30 11:25:32",
+                "source": "",
+                "uri": "local/222217"
+            },
+            "product": {
+                "summary": "Varf\u00f6r \u00e4r det s\u00e5 vanligt med br\u00e5k i NPF-familjerna och hur kan man som f\u00f6r\u00e4lder l\u00e4ra sig vilken strid man ska ta och vilka man kan sl\u00e4ppa? Nahed \u00e4r mamma till Gabriel och Jacob som har b\u00e5da har adhd. Gabriel har barnen Isak och Ida som b\u00e5da har adhd. David har sonen Simon som har autism. Lotta Borg Skoglund, \u00f6verl\u00e4kare i psykiatri, hj\u00e4lper familjerna f\u00f6rst\u00e5 varf\u00f6r de br\u00e5kar s\u00e5 mycket och ger r\u00e5d kring hur man kan k\u00e4nna igen och f\u00f6rebygga situationerna som ofta leder till konflikt.",
+                "country": [],
+                "creator": [],
+                "thumbnail": {
+                    "small": "https://assets.ur.se/id/222217/images/1_sm.jpg",
+                    "image": "https://assets.ur.se/id/222217/images/1_hd.jpg",
+                    "large": "https://assets.ur.se/id/222217/images/1_l.jpg",
+                    "xlarge": "https://assets.ur.se/id/222217/images/1_xl.jpg",
+                    "medium": "https://assets.ur.se/id/222217/images/1_ml.jpg",
+                    "hd": "https://assets.ur.se/id/222217/images/1_hd.jpg"
+                },
+                "year": "2020",
+                "created": "2021-03-31",
+                "articleid": "222217",
+                "description": "Varf\u00f6r \u00e4r det s\u00e5 vanligt med br\u00e5k i NPF-familjerna och hur kan man som f\u00f6r\u00e4lder l\u00e4ra sig vilken strid man ska ta och vilka man kan sl\u00e4ppa? Nahed \u00e4r mamma till Gabriel och Jacob som har b\u00e5da har adhd. Gabriel har barnen Isak och Ida som b\u00e5da har adhd. David har sonen Simon som har autism. Lotta Borg Skoglund, \u00f6verl\u00e4kare i psykiatri, hj\u00e4lper familjerna f\u00f6rst\u00e5 varf\u00f6r de br\u00e5kar s\u00e5 mycket och ger r\u00e5d kring hur man kan k\u00e4nna igen och f\u00f6rebygga situationerna som ofta leder till konflikt.",
+                "language": [
+                    "Syntolkat"
+                ],
+                "published": "2021-06-23",
+                "source": "http://www.ur.se/id/222217",
+                "title": "Konflikter",
+                "titledescription": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "trailer": "",
+                "logline": "Varf\u00f6r \u00e4r det s\u00e5 vanligt med br\u00e5k i NPF-familjerna?",
+                "publisherid": "",
+                "surtitle": "Superf\u00f6r\u00e4ldrar - Syntolkat",
+                "subtitle": "",
+                "tagline": "",
+                "modified": "2021-06-11",
+                "publisher": [
+                    "UR"
+                ],
+                "producer": [],
+                "group": "UR"
+            },
+            "audience": {
+                "role": [],
+                "level": [
+                    "Vuxen\u00f6vergripande"
+                ],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                }
+            },
+            "keywords": {
+                "sao": [],
+                "freetext": "F\u00f6r\u00e4drar och barn, Familjekonflikter",
+                "mood": [],
+                "barn": [],
+                "subject": [
+                    "Samh\u00e4llskunskap"
+                ],
+                "genre": [],
+                "subsubject": [
+                    "Individer och gemenskaper"
+                ],
+                "breadcrumbs": [
+                    "Samh\u00e4llskunskap/Individer och gemenskaper/Familj och samlevnad",
+                    "Samh\u00e4llskunskap/Individer och gemenskaper/Identitet och livsstil/Personer med funktionsneds\u00e4ttning"
+                ],
+                "tags": [
+                    "Samh\u00e4llskunskap",
+                    "Individer och gemenskaper",
+                    "Familj och samlevnad",
+                    "Identitet och livsstil",
+                    "Personer med funktionsneds\u00e4ttning",
+                    "Samh\u00e4llsvetenskap",
+                    "Sociala fr\u00e5gor",
+                    "Barn med neuropsykiatrisk funktionsneds\u00e4ttning",
+                    "Barn med autism",
+                    "Barn med adhd",
+                    "Familjer",
+                    "Vardagsliv"
+                ],
+                "goals": []
+            },
+            "technical": {
+                "container": "mp4",
+                "filename": "222217-4.mp4",
+                "srt": [
+                    "swe"
+                ],
+                "size": 430684719,
+                "mime": "",
+                "format": "film",
+                "location": "film/222217",
+                "videocodec": "h264",
+                "resolution": [
+                    1280,
+                    720
+                ],
+                "audiocodec": "aac",
+                "aspectratio": "16:9"
+            },
+            "usage": {
+                "difficulty": "",
+                "copyright": [
+                    {
+                        "publisher": "UR",
+                        "logo": "ur.png",
+                        "url": "https://urplay.se"
+                    }
+                ],
+                "activity": [],
+                "accessibility": "Inloggning kr\u00e4vs",
+                "rights": [
+                    ""
+                ],
+                "from": "2021-06-10",
+                "ability": [],
+                "to": "2025-06-30"
+            },
+            "query": {
+                "keywords": [
+                    "samh\u00e4llskunskap",
+                    "individer och gemenskaper",
+                    "familj och samlevnad",
+                    "identitet och livsstil",
+                    "personer med funktionsneds\u00e4ttning",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "barn med neuropsykiatrisk funktionsneds\u00e4ttning",
+                    "barn med autism",
+                    "barn med adhd",
+                    "familjer",
+                    "vardagsliv",
+                    "f\u00f6r\u00e4drar och barn",
+                    "familjekonflikter"
+                ],
+                "freetext": "F\u00f6r\u00e4drar och barn, Familjekonflikter",
+                "articleid": "222217",
+                "title_sort": "Superf\u00f6r\u00e4ldrar - Syntolkat: Konflikter",
+                "language": [
+                    "Syntolkat"
+                ],
+                "curriculum": [],
+                "title": "Superf\u00f6r\u00e4ldrar - Syntolkat: Konflikter",
+                "title_ngram": "Superf\u00f6r\u00e4ldrar - Syntolkat: Konflikter",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "tags": [
+                    "samh\u00e4llskunskap",
+                    "individer och gemenskaper",
+                    "familj och samlevnad",
+                    "identitet och livsstil",
+                    "personer med funktionsneds\u00e4ttning",
+                    "samh\u00e4llsvetenskap",
+                    "sociala fr\u00e5gor",
+                    "barn med neuropsykiatrisk funktionsneds\u00e4ttning",
+                    "barn med autism",
+                    "barn med adhd",
+                    "familjer",
+                    "vardagsliv"
+                ],
+                "title_autocomplete": "Superf\u00f6r\u00e4ldrar - Syntolkat: Konflikter",
+                "publisherid": "",
+                "publisher": [
+                    "UR"
+                ],
+                "goals": [],
+                "ordinal": {
+                    "search": 0,
+                    "default": -1
+                }
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "abilities": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "aim": {
+                            "values": [],
+                            "description": ""
+                        },
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "distribution": {
+                "platforms": [],
+                "platform": []
+            },
+            "catalogue": {
+                "expirydate": null,
+                "derivedfrom": "",
+                "comment": "",
+                "label": []
+            },
+            "evaluation": {
+                "summary": "",
+                "similar": [
+                    ""
+                ],
+                "dealbreaker": "",
+                "betterbuy": [
+                    ""
+                ],
+                "review": "",
+                "betterbuytext": [
+                    ""
+                ],
+                "grade": 0,
+                "modified": "1970-01-01 01:00:00",
+                "comment": "",
+                "quality": {
+                    "detailed": "",
+                    "overall": ""
+                }
+            },
+            "streaming": {
+                "subtitles": [
+                    "Svenska"
+                ],
+                "seasons": "",
+                "original": [],
+                "src": "",
+                "audiosrc": "",
+                "director": [],
+                "audioid": "",
+                "videosrc": "",
+                "format": "video",
+                "voiceover": [],
+                "episode": 2,
+                "mediaid": "hTz6mCTwJcbF1bxuNT1f1Q",
+                "repository": "IDABUR",
+                "languageversion": [
+                    {
+                        "subtitles": "",
+                        "language": "",
+                        "mediaid": ""
+                    }
+                ],
+                "actor": [],
+                "duration": 1713.72,
+                "season": "",
+                "trailerid": "",
+                "episodes": 8,
+                "reused": []
+            },
+            "search": {
+                "subgroup": [
+                    "Utbildningsfilm"
+                ],
+                "autocomplete": "S\u00f6kbar",
+                "searchable": "S\u00f6kbar",
+                "status": "Publicerad",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ]
+            },
+            "library": {
+                "layout": "",
+                "pages": "",
+                "author": [],
+                "isbn": "",
+                "edition": "",
+                "illustrator": [],
+                "category": "",
+                "years": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "games": {
+                "quiz": [
+                    {
+                        "image": "",
+                        "copyright": "",
+                        "question": {
+                            "text": "",
+                            "title": ""
+                        },
+                        "answer": [
+                            {
+                                "correct": false,
+                                "text": "",
+                                "position": 0,
+                                "title": ""
+                            }
+                        ],
+                        "audiosrc": "",
+                        "hint": "",
+                        "videosrc": "",
+                        "comment": "",
+                        "position": 0,
+                        "mediaid": ""
+                    }
+                ]
+            },
+            "relations": {
+                "parent": 222221,
+                "attachments": [],
+                "references": [],
+                "children": [
+                    ""
+                ],
+                "versions": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": 0,
+                        "title": ""
+                    }
+                ],
+                "collection": []
+            }
+        }
+    }
+]

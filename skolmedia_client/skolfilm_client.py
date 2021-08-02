@@ -30,7 +30,8 @@ class Skolfilm:
         "keywords.barn",
         "keywords.sao",
         "audience.level",
-        "relations.versions"
+        "relations.versions",
+        "metadata.modified"
     ]
 
     def __init__(self):
@@ -39,6 +40,7 @@ class Skolfilm:
     def __map_products(self, product):
         return {
             "uid": product["_source"]["metadata"]["uid"],
+            "modified": product["_source"]["metadata"]["modified"],
             "versions": product["_source"]["relations"]["versions"],
             "subject": ", ".join(product["_source"]["keywords"]["subject"]),
             "audience": ", ".join(product["_source"]["audience"]["level"]),
@@ -122,12 +124,63 @@ class Skolfilm:
                 )
         return data
 
-    def merge_new(self, index):
+    def merge_df(self, index):
         full_df = pd.read_csv(f"massive_data/stored_data/{index}_cleaned.csv", sep=',', engine='python')
         new_df = pd.read_csv(f"massive_data/stored_data/interval_cleaned.csv", sep=',', engine='python')
         
         complete_df = full_df.merge(new_df, how='outer')
         complete_df.to_csv(f"./massive_data/stored_data/{index}_cleaned.csv", index=False)
+
+    def run_model(self, start, end, index):
+        full_df = pd.read_csv(f"massive_data/stored_data/{index}.csv", engine='python')
+
+        if start is None and end is None:
+            date_time_start = datetime.now() - timedelta(1)
+            date_time_end = datetime.now()
+        elif start == "all" and end == "all":
+            self.__iterate_model(index, full_df)
+            return 
+        else:
+            date_time_start = datetime.strptime(start, "%Y-%m-%d %H:%M:%S")
+            date_time_end = datetime.strptime(end, "%Y-%m-%d %H:%M:%S")
+
+        columns = list(full_df.columns)
+        matches_df = pd.DataFrame(columns=columns)
+
+        for i, row in full_df.iterrows():
+            date_time_obj = datetime.strptime(row['modified'], "%Y-%m-%d %H:%M:%S")
+            if (date_time_obj > date_time_start) and (date_time_obj < date_time_end):
+                matches_df.loc[len(matches_df)] = row
+
+        self.__iterate_model(index, matches_df)
+        return
+
+
+    def __iterate_model(self, index, df):
+        from models.word2vec import W2v
+        import pickle
+    
+        run_model = W2v(index)
+        list_of_uid = df['~uid'].tolist()
+        model_results = pd.DataFrame(columns=['uid', 'result'])
+
+        for uid in tqdm(list_of_uid):
+            uid = uid.strip('~')
+            result = run_model.predict_CI(uid)
+            model_results = model_results.append({'uid':uid, 'result':result}, ignore_index=True)
+
+        merged_df = self.__merge_df(model_results)
+        with open('massive_data/stored_data/pickles/model_pickle.pickle', 'wb') as f:
+            pickle.dump(merged_df, f)
+
+
+    def __merge_df(self, to_merge_df):
+        import pickle
+        with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:
+            loaded_main = pickle.load(f)
+            df_concat = pd.concat([to_merge_df, loaded_main])
+            df_concat = df_concat.drop_duplicates(subset=['uid'])
+            return df_concat
 
 
     def __write_to_json(self, data, path):

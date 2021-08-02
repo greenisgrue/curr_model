@@ -21,8 +21,11 @@ SampleTable = Database.ratings_opti
 
 # Create flask app and initiate classes
 flask_app = Flask(__name__)
-model_w2v = W2v("search_ur_20210722_cleaned")
+model_w2v = W2v("search_ur_20210731_cleaned")
 #models = defined_models()
+
+# Get teacher type
+teacher_subjects = ['Moderna språk']
 
 
 @flask_app.route("/")
@@ -37,11 +40,13 @@ def recommend():
     provided_id = provided_id[0]
     result_model = model_w2v.predict_CI(provided_id)
 
+    # Handle errors by redirecting to error page
     # try:
     #     result_model = model_w2v.predict_CI(provided_id)
     # except:
     #     return render_template("handle_error.html")
 
+    # Get metadata to display on interface
     content_id = model_w2v.content_id
     keywords = model_w2v.keywords
     title = model_w2v.title
@@ -71,6 +76,7 @@ def random_id():
     random_id = model_w2v.generate_id()
     result_model = model_w2v.predict_CI(random_id)
     
+    # Get metadata to display on interface
     content_id = model_w2v.content_id
     keywords = model_w2v.keywords
     title = model_w2v.title
@@ -99,15 +105,24 @@ def random_id():
 def post_data():    
     if request.method == 'POST':
         data = request.get_json()
-        queryObject = data
-        query = SampleTable.insert_many(queryObject) 
+        data = data[0]
+        ratings_data = []
+        ratings = {}
+        for key, value in data.items():
+            if type(value) == dict:
+                ratings_data.append(value)
+            else:
+                ratings[key] = value
+
+        ratings['ratings'] = ratings_data
+        query = SampleTable.insert_many([ratings]) 
+
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     return render_template("post_data.html")
 
 @flask_app.route("/handle_error")
 def error_handler():    
     return render_template("handle_error.html")
-
 
 if __name__ == "__main__":
     flask_app.run(debug=True)
