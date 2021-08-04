@@ -28,6 +28,7 @@ model_w2v = W2v("search_ur_20210731_cleaned")
 
 # Get teacher type
 teacher_subjects = ['Moderna språk']
+teacher_grades = ['Grundskola 4-6']
 
 
 @flask_app.route("/")
@@ -49,26 +50,26 @@ def recommend():
     selected = df.loc[df['uid'] == provided_id]
     results = selected.iloc[0]['result']
     content_metadata = results[0]
-    audience = content_metadata[1].get('audience')
-    subject = content_metadata[1].get('subject')
     keywords = content_metadata[1].get('keywords')
+    subject = selected.iloc[0]['subject']
     user_id = 'user_id'
-    print(results)
+    subject_adjusted_values = False
+    grades_adjusted_values = False
     if any(sub in subject.split(', ') for sub in teacher_subjects):
-        for key, value in results:
-            teacher_adjusted_value = value.get('value') + (1-value.get('value'))*1.2-(1-value.get('value'))
-            formatted_string = "{:.3f}".format(teacher_adjusted_value)
-            teacher_adjusted_value = float(formatted_string)
-            print(teacher_adjusted_value)
-            value['value'] = teacher_adjusted_value
-
-    print(results)        
+        subject_adjusted_values = True
+    if any(sub in subject.split(', ') for sub in teacher_grades):
+        grades_adjusted_values = True
+    #         formatted_string = "{:.3f}".format(subject_adjusted_value)
+    #         subject_adjusted_value = float(formatted_string)
+    #         value['value'] = subject_adjusted_value
+    # print(results)
     
     # Handle errors by redirecting to error page
     # try:
     #     result_model = model_w2v.predict_CI(provided_id)
     # except:
     #     return render_template("handle_error.html")
+
 
     # Get metadata to display on interface
     # content_id = model_w2v.content_id
@@ -86,13 +87,15 @@ def recommend():
         result_model=results, 
         title=selected.iloc[0]['title'],
         subject=subject,
-        audience=audience,
-        keywords=keywords,
+        audience=selected.iloc[0]['audience'],
+        keywords=selected.iloc[0]['keywords'],
         surtitle=selected.iloc[0]['surtitle'],
         thumbnail=selected.iloc[0]['thumbnail'],
         content_id=selected.iloc[0]['uid'],
         description=selected.iloc[0]['description'],
-        user_id=user_id
+        user_id=user_id,
+        subject_adjusted_values=subject_adjusted_values,
+        grades_adjusted_values=grades_adjusted_values
         )
 
     # return render_template(
@@ -155,6 +158,7 @@ def post_data():
                 ratings[key] = value
 
         ratings['ratings'] = ratings_data
+        print(ratings)
         query = SampleTable.insert_many([ratings]) 
 
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}

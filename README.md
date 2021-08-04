@@ -17,3 +17,11 @@
 5. Alla svar sparas i MongoDB databas. Datan som sparas är: modelltyp, värdet på rekommendationen, rating (-1, 0, 1), content_id, 
 
 
+# Uppdatera modellen
+1. Hämta all data i fetch_all_media eller data från ett valt tidsintervall genom fetch_media_time_interval. All data sparas i en CSV-fil
+2. Kör modellen för valt content. Antingen allt, senaste 24 h eller valt tidsintervall. Metadata för content samt deras resultat i      modellen sparas i en dataframe som en pickle. 
+3. Feedback från användare sparas i en databas. Modellen behöver hämta den datan och lägga i en self learning matrix där keywords får olika viktning i relation till centralt inneåhll baserat på användares feedback. För att uppdatera self learning matrix och få tillgång till all user feedback kör update_self_learning_matrix
+4. För att uppdatera de sparade modellkörningarna på den uppdaterade self learning matrix kör get_recalculated_values
+5. Nu ska allt vara uppdaterat och det är bara att köra vidare i gränssnittet!
+
+

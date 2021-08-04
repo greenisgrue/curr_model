@@ -1,5 +1,4 @@
 import pandas as pd
-from gensim.models.keyedvectors import KeyedVectors
 import re
 from nltk.corpus import stopwords
 from nltk import download
@@ -7,18 +6,18 @@ import stanza
 import math
 import json
 import numpy
+import pickle
 
-from process_data.dictionary import get_dictionary
-from models.self_learning import SelfLearning 
 
 class W2v():
     def __init__(self, index):
-        self.ur_df = pd.read_csv(f"massive_data/stored_data/{index}.csv", engine='python')
-        self.word_vectors = KeyedVectors.load('massive_data/word_vector_models/coNLL17_vectors.kv')
-        self.dictionary = get_dictionary()
-        self.self_learn = SelfLearning()
-        self.self_learn.adjust_weights()
-
+        from skolmedia_client.skolfilm_client import Skolfilm
+        client = Skolfilm(index)
+        self.ur_df = client.ur_df
+        self.word_vectors = client.word_vectors
+        self.dictionary = client.dictionary
+        self.self_learn = client.self_learn
+ 
     def generate_id(self):
         random_row = self.ur_df.sample()
         return random_row.iloc[0]['~uid'].strip('~')
@@ -100,15 +99,16 @@ class W2v():
         self.versions = chosen_content.iloc[0]['versions']
         self.versions_dict = []
 
+        self.primary = None
         if self.versions != '[]':
             versions = [self.versions]
             versions_dict = [json.loads(idx.replace("'", '"')) for idx in versions]
             self.versions_dict = versions_dict[0]
-            primary = next((item for item in self.versions_dict if item['primary'] == 'true'), None)     
-            if not primary: 
+            self.primary = next((item for item in self.versions_dict if item['primary'] == 'true'), None)    
+            if len(self.versions_dict) < 2 or self.primary is None: 
                 return None 
-            if str(primary.get('uid')) != chosen_uid:
-                primary_uid = str(primary.get('uid'))
+            if str(self.primary.get('uid')) != chosen_uid:
+                primary_uid = str(self.primary.get('uid'))
                 primary_uid = f'~{primary_uid}' 
                 chosen_uid = primary_uid
                 primary_content = self.ur_df[self.ur_df['~uid'] == chosen_uid]
@@ -253,7 +253,7 @@ class W2v():
         return len(intersection)/len(union)
 
     def cos_sim(self, keywords, CI_doc):     
-        # calculate cos_sim between documents. If word can not be found, remove from document and try cos_sim again    
+        # calculate cos_sim between documents. If word can not be found, remove from document and try cos_sim again   
         try:
             similarity = self.word_vectors.n_similarity(keywords, CI_doc)
             return similarity
@@ -285,9 +285,6 @@ class W2v():
             return results
 
     def format_result_jaccard(self, uid, CI, title, result):
-        # Format result to remove unneccesary decimals
-        formatted_string = "{:.3f}".format(result)
-        result = float(formatted_string)
         # Save results for "centralt innehåll" in dictionary
         # Also search for previos instance of current "centralt innehåll" in dict. If found but with worse value, replace with current        
         current_CI = self.jaccard_dict.get(uid)
@@ -295,9 +292,6 @@ class W2v():
             self.jaccard_dict[uid] = {'CI': CI, 'title':  title, 'value': result}
     
     def format_result_cos(self, uid, CI, audience, subject, title, result, result_type):
-        # Format result to remove unneccesary decimals
-        formatted_string = "{:.3f}".format(result)
-        result = float(formatted_string)
         # Save results for "centralt innehåll" in dictionary
         # Also search for previos instance of current "centralt innehåll" in dict. If found but with worse value, replace with current        
         current_CI = self.cos_dict.get(uid)
@@ -308,9 +302,6 @@ class W2v():
         current_CI = self.wmd_dict.get(uid)
         # Normalize results to be able to compare with cos_sim results
         norm_result = (1-((result/1.25)-0.5))/0.9
-        # Format result to remove unneccesary decimals
-        formatted_string = "{:.3f}".format(norm_result)
-        norm_result = float(formatted_string)
         # Save results for "centralt innehåll" in dictionary
         # Also search for previos instance of current "centralt innehåll" in dict. If found but with worse value, replace with current
         if current_CI is None or current_CI.get('value') < norm_result:
@@ -364,7 +355,7 @@ class W2v():
         self.content_processed_desc = self.preprocess_texts(self.description)
         self.content_processed_desc_CT = self.preprocess_texts(self.desc_titles)
 
-        if self.versions != '[]':
+        if (self.versions != '[]') & (len(self.versions_dict) > 1) & (self.primary is not None):
             self.content_processed = self.preprocess_texts(self.primary_keywords)
 
         # Iterate rows containing "centralt innehåll" with titles and apply sub-models to compare with content metadata
@@ -409,29 +400,29 @@ class W2v():
 
             # Optimal value is calcualted using the average of cos_sim and wmd and a factor of jaccard value. 
             # Multiply with key_len_factor to adjust for number of keywords of content. Fewer keywords leading to a lower key_len_factor 
-            opti_value = self.key_len_factor * ((wmd_value + cos_value) / 2) + (1 - ((wmd_value + cos_value) / 2)) * 3*jaccard_value
+            pure_score = self.key_len_factor * ((wmd_value + cos_value) / 2) + (1 - ((wmd_value + cos_value) / 2)) * 3*jaccard_value
             
-            # Apply self learning factor. Also adjust score if user has teaching subject that is included in content subject
-            if self.versions != '[]':
-                self_learn_score = self.self_learn.update_score(key, self.primary_keywords, opti_value)  
-                # if any(subject in self.primary_subject for subject in teacher_subjects):
-                #     self_learn_score *= 1.5
+            # Apply self learning factor.
+            if (self.versions != '[]') & (len(self.versions_dict) > 1) & (self.primary is not None):
+                self_learn_score = self.self_learn.update_score(key, self.primary_keywords, pure_score)  
             else:
-                self_learn_score = self.self_learn.update_score(key, self.keywords, opti_value)
-                # if any(subject in self.subject for subject in teacher_subjects):
-                #     self_learn_score *= 1.5
+                self_learn_score = self.self_learn.update_score(key, self.keywords, pure_score)
 
-            opti_value += self_learn_score
+            adjusted_score = pure_score + self_learn_score
 
             # Format final value to remove unneccesary decimals
-            formatted_string = "{:.3f}".format(opti_value)
-            opti_value = float(formatted_string)
+            formatted_string = "{:.3f}".format(pure_score)
+            pure_score = float(formatted_string)
+            formatted_string = "{:.3f}".format(adjusted_score)
+            adjusted_score = float(formatted_string)
 
             # Add new adjusted optimal value to dictionary
-            self.cos_dict[key]['value'] = opti_value
+            self.cos_dict[key]['value'] = pure_score
+            self.cos_dict[key]['adjusted_value'] = adjusted_score
+
 
         # Sort dictionary on value to get the best scored "centralt innehåll" first
-        sorted_dict = sorted(self.cos_dict.items(), reverse=True, key = lambda x: x[1]['value'])       
+        sorted_dict = sorted(self.cos_dict.items(), reverse=True, key = lambda x: x[1]['adjusted_value'])       
 
         return sorted_dict
 

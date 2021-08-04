@@ -1,5 +1,6 @@
 from skolmedia_client.elastic_client import ElasticClient
 
+from gensim.models.keyedvectors import KeyedVectors
 from elasticsearch.helpers import scan
 import json
 import csv
@@ -7,8 +8,12 @@ import pandas as pd
 from datetime import datetime, timedelta
 from tqdm import tqdm
 from math import floor
+import pickle
 
+from process_data.dictionary import get_dictionary
 from process_data import clean_df
+from models.self_learning import SelfLearning 
+
 
 class Skolfilm:
 
@@ -34,8 +39,13 @@ class Skolfilm:
         "metadata.modified"
     ]
 
-    def __init__(self):
+    def __init__(self, index):
         self.es = ElasticClient().connection
+        self.ur_df = pd.read_csv(f"massive_data/stored_data/{index}.csv", engine='python')
+        self.word_vectors = KeyedVectors.load('massive_data/word_vector_models/coNLL17_vectors.kv')
+        self.dictionary = get_dictionary()
+        self.self_learn = SelfLearning()
+
 
     def __map_products(self, product):
         return {
@@ -158,28 +168,27 @@ class Skolfilm:
 
     def __iterate_model(self, index, df):
         from models.word2vec import W2v
-        import pickle
     
-        run_model = W2v(index)
         list_of_uid = df['~uid'].tolist()
-        model_results = pd.DataFrame(columns=['uid', 'result', 'title', 'surtitle', 'thumbnail', 'description'])
+        model_results = pd.DataFrame(columns=['uid', 'result', 'title', 'surtitle', 'subject', 'audience', 'keywords', 'thumbnail', 'description'])
 
         for uid in tqdm(list_of_uid):
             run_model = W2v(index)
             uid = uid.strip('~')
             result = run_model.predict_CI(uid)
-            model_results = model_results.append({'uid':uid, 'result':result, 'title':run_model.title, 'surtitle':run_model.surtitle, 'keywords':run_model.keywords, 'thumbnail':run_model.thumbnail, 'description':run_model.description}, ignore_index=True)
-        
-        # with open('massive_data/stored_data/pickles/model_pickle.pickle', 'wb') as f:
-        #     pickle.dump(model_results, f) 
-        
-        merged_df = self.__merge_df(model_results)
+            model_results = model_results.append({'uid':uid, 'result':result, 'title':run_model.title, 'surtitle':run_model.surtitle, 'subject':run_model.subject, 'audience':run_model.audience, 'keywords':run_model.keywords, 'keywords':run_model.keywords, 'thumbnail':run_model.thumbnail, 'description':run_model.description}, ignore_index=True)
+
+        with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:
+            loaded_main = pickle.load(f)
+            f.close() 
+            df_concat = pd.concat([model_results, loaded_main])
+            merged_df = df_concat.drop_duplicates(subset=['uid'])
+ 
         with open('massive_data/stored_data/pickles/model_pickle.pickle', 'wb') as f:
-            pickle.dump(merged_df, f) 
+            pickle.dump(merged_df, f)  
+            f.close()
 
-
-    def __merge_df(self, to_merge_df):
-        import pickle
+    def __merge_df(self, to_merge_df, loaded_main):
         with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:
             loaded_main = pickle.load(f)
             df_concat = pd.concat([to_merge_df, loaded_main])

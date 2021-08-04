@@ -27,13 +27,15 @@ def clean(index):
 
             if ('Hem- och konsumentkunskap' in row['subject']) & (row['audience'] != 'Grundskola 7-9'):
                 ur_df.at[i,'audience'] = row['audience'] + ', Grundskola 1-6'
+
+            if row['subject'] == 'Övrigt' or row['surtitle'] == 'Orka plugga':
+                ur_df = ur_df.drop(labels=i, axis=0)
             
             #ur_df.at[i,'subject'] = remove_duplicates(ur_df.at[i,'subject'])
         else:
             ur_df = ur_df.drop(labels=i, axis=0)
+        
 
-        if row['subject'] == 'Övrigt':
-            ur_df = ur_df.drop(labels=i, axis=0)
 
     ur_df.to_csv(f'./massive_data/stored_data/{index}_cleaned.csv', index=False)
 
