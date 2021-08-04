@@ -12,7 +12,6 @@ import pickle
 
 from process_data.dictionary import get_dictionary
 from process_data import clean_df
-from models.self_learning import SelfLearning 
 
 
 class Skolfilm:
@@ -39,12 +38,10 @@ class Skolfilm:
         "metadata.modified"
     ]
 
-    def __init__(self, index):
+    def __init__(self):
         self.es = ElasticClient().connection
-        self.ur_df = pd.read_csv(f"massive_data/stored_data/{index}.csv", engine='python')
         self.word_vectors = KeyedVectors.load('massive_data/word_vector_models/coNLL17_vectors.kv')
         self.dictionary = get_dictionary()
-        self.self_learn = SelfLearning()
 
 
     def __map_products(self, product):
@@ -71,6 +68,7 @@ class Skolfilm:
             "sao": ", ".join(product["_source"]["keywords"]["sao"]).replace("\n", ""),
         }
 
+
     def get_data_structures(self, index):
         ur_prod = self.__get_first_ten_from_index(index)
         self.__write_to_json(
@@ -96,7 +94,7 @@ class Skolfilm:
             )
         return data
 
-    def get_interval(self, start, end, index, limit, write_to_json=False, write_to_csv=False):
+    def get_interval(self, start, end, index, limit, write_to_json=False, write_to_csv=True):
         if start is None and end is None:
             start = datetime.now() - timedelta(1)
             start = start.strftime("%Y-%m-%d %H:%M:%S")
@@ -124,7 +122,7 @@ class Skolfilm:
             if write_to_json:
                 self.__write_to_json(
                     response["hits"]["hits"],
-                    f'massive_data/stored_data/interval.json'
+                    f'massive_data/stored_data/interval.csv'
                 )
             if write_to_csv:
                 new_df = self.__write_to_csv(
@@ -141,7 +139,7 @@ class Skolfilm:
         complete_df = full_df.merge(new_df, how='outer')
         complete_df.to_csv(f"./massive_data/stored_data/{index}_cleaned.csv", index=False)
 
-    def run_model(self, start, end, index):
+    def run_model(self, start, end, index, exists):
         full_df = pd.read_csv(f"massive_data/stored_data/{index}.csv", engine='python')
 
         if start is None and end is None:
@@ -162,11 +160,11 @@ class Skolfilm:
             if (date_time_obj > date_time_start) and (date_time_obj < date_time_end):
                 matches_df.loc[len(matches_df)] = row
 
-        self.__iterate_model(index, matches_df)
+        self.__iterate_model(index, matches_df, exists)
         return
 
 
-    def __iterate_model(self, index, df):
+    def __iterate_model(self, index, df, exists):
         from models.word2vec import W2v
     
         list_of_uid = df['~uid'].tolist()
@@ -178,15 +176,20 @@ class Skolfilm:
             result = run_model.predict_CI(uid)
             model_results = model_results.append({'uid':uid, 'result':result, 'title':run_model.title, 'surtitle':run_model.surtitle, 'subject':run_model.subject, 'audience':run_model.audience, 'keywords':run_model.keywords, 'keywords':run_model.keywords, 'thumbnail':run_model.thumbnail, 'description':run_model.description}, ignore_index=True)
 
-        with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:
-            loaded_main = pickle.load(f)
-            f.close() 
-            df_concat = pd.concat([model_results, loaded_main])
-            merged_df = df_concat.drop_duplicates(subset=['uid'])
+        if exists == True:
+            with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:
+                loaded_main = pickle.load(f)
+                f.close() 
+                df_concat = pd.concat([model_results, loaded_main])
+                merged_df = df_concat.drop_duplicates(subset=['uid'])
  
-        with open('massive_data/stored_data/pickles/model_pickle.pickle', 'wb') as f:
-            pickle.dump(merged_df, f)  
-            f.close()
+            with open('massive_data/stored_data/pickles/model_pickle.pickle', 'wb') as f:
+                pickle.dump(merged_df, f)  
+                f.close()
+        else:
+            with open('massive_data/stored_data/pickles/model_pickle.pickle', 'wb') as f:
+                pickle.dump(model_results, f)  
+                f.close()
 
     def __merge_df(self, to_merge_df, loaded_main):
         with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:

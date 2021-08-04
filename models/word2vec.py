@@ -8,19 +8,23 @@ import json
 import numpy
 import pickle
 
+from models.self_learning import SelfLearning 
+
 
 class W2v():
     def __init__(self, index):
         from skolmedia_client.skolfilm_client import Skolfilm
-        client = Skolfilm(index)
-        self.ur_df = client.ur_df
+        client = Skolfilm()
+        self.ur_df = pd.read_csv(f"massive_data/stored_data/{index}.csv", engine='python')
         self.word_vectors = client.word_vectors
         self.dictionary = client.dictionary
-        self.self_learn = client.self_learn
- 
+        self.self_learn = SelfLearning(True)
+
     def generate_id(self):
-        random_row = self.ur_df.sample()
-        return random_row.iloc[0]['~uid'].strip('~')
+        with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:
+            df = pickle.load(f)
+        random_row = df.sample()
+        return random_row.iloc[0]['uid']
 
     def find_CI(self, chosen_uid):
         # Get metadata from content
@@ -239,9 +243,9 @@ class W2v():
     def find_era(self, year):
         # Translate years (int) to era (string)
         era = year
-        if 1800 <= int(year) <= 1859 and int(year) != 1850:
-            era = 'industrialiseringen'
-        elif 1914 <= int(year) <= 1918:
+        # if 1800 <= int(year) <= 1859 and int(year) != 1850:
+        #     era = 'industrialiseringen'
+        if 1914 <= int(year) <= 1918:
             era = 'första världskriget'
         elif 1939 <= int(year) <= 1945:
             era = 'andra världskriget'

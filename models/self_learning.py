@@ -8,10 +8,11 @@ import statistics
 
 
 class SelfLearning:
-    def __init__(self):
+    def __init__(self, matrix_exist):
         self.CI = pd.read_csv("./massive_data/stored_data/CI_vocab_including_titles.csv")
         self.content = pd.read_csv("./massive_data/stored_data/search_ur_20210731_cleaned.csv")
-        self.weights_matrix = pd.read_csv("./massive_data/stored_data/self_learning_matrix.csv")
+        if matrix_exist:
+            self.weights_matrix = pd.read_csv("./massive_data/stored_data/self_learning_matrix.csv")
 
     # Function that creates a matrix with keywords as columns and "centralt innehåll" as rows. The values in each cell is set to 1.
     def create_matrix(self):

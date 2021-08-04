@@ -43,7 +43,6 @@ def recommend():
     provided_id = provided_id[0]
     # result_model = model_w2v.predict_CI(provided_id)
     
-    import pickle
     with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:
         df = pickle.load(f)
 
@@ -59,19 +58,15 @@ def recommend():
         subject_adjusted_values = True
     if any(sub in subject.split(', ') for sub in teacher_grades):
         grades_adjusted_values = True
-    #         formatted_string = "{:.3f}".format(subject_adjusted_value)
-    #         subject_adjusted_value = float(formatted_string)
-    #         value['value'] = subject_adjusted_value
-    # print(results)
     
     # Handle errors by redirecting to error page
     # try:
-    #     result_model = model_w2v.predict_CI(provided_id)
+    #     selected = df.loc[df['uid'] == provided_id]
     # except:
     #     return render_template("handle_error.html")
 
 
-    # Get metadata to display on interface
+    #Get metadata to display on interface
     # content_id = model_w2v.content_id
     # keywords = model_w2v.keywords
     # title = model_w2v.title
@@ -98,7 +93,7 @@ def recommend():
         grades_adjusted_values=grades_adjusted_values
         )
 
-    # return render_template(
+    # return render_template( 
     #     "recommend.html",
     #     result_model=result_model, 
     #     title=title,
@@ -117,32 +112,70 @@ def recommend():
 @flask_app.route("/random", methods = ["POST"])
 def random_id():
     random_id = model_w2v.generate_id()
-    result_model = model_w2v.predict_CI(random_id)
+    # result_model = model_w2v.predict_CI(random_id)
+
+    with open(f'massive_data/stored_data/pickles/model_pickle.pickle', 'rb') as f:
+        df = pickle.load(f)
+
+    selected = df.loc[df['uid'] == random_id]
+    results = selected.iloc[0]['result']
+    content_metadata = results[0]
+    keywords = content_metadata[1].get('keywords')
+    subject = selected.iloc[0]['subject']
+    user_id = 'user_id'
+    subject_adjusted_values = False
+    grades_adjusted_values = False
+    if any(sub in subject.split(', ') for sub in teacher_subjects):
+        subject_adjusted_values = True
+    if any(sub in subject.split(', ') for sub in teacher_grades):
+        grades_adjusted_values = True
+
+    # Handle errors by redirecting to error page
+    # try:
+    #     selected = df.loc[df['uid'] == random_id]
+    # except:
+    #     return render_template("handle_error.html")
     
     # Get metadata to display on interface
-    content_id = model_w2v.content_id
-    keywords = model_w2v.keywords
-    title = model_w2v.title
-    surtitle = model_w2v.surtitle
-    subject = model_w2v.subject
-    audience = model_w2v.audience
-    thumbnail = model_w2v.thumbnail
-    description = model_w2v.description
-    user_id = 'user id'
-        
+    # content_id = model_w2v.content_id
+    # keywords = model_w2v.keywords
+    # title = model_w2v.title
+    # surtitle = model_w2v.surtitle
+    # subject = model_w2v.subject
+    # audience = model_w2v.audience
+    # thumbnail = model_w2v.thumbnail
+    # description = model_w2v.description
+    # user_id = 'user id'
+
     return render_template(
         "recommend.html",
-        result_model=result_model,
+        result_model=results, 
+        title=selected.iloc[0]['title'],
         subject=subject,
-        audience=audience,
-        keywords=keywords,
-        title=title,
-        surtitle=surtitle,
-        thumbnail=thumbnail,
-        content_id=content_id,
-        description=description,
-        user_id=user_id
+        audience=selected.iloc[0]['audience'],
+        keywords=selected.iloc[0]['keywords'],
+        surtitle=selected.iloc[0]['surtitle'],
+        thumbnail=selected.iloc[0]['thumbnail'],
+        content_id=selected.iloc[0]['uid'],
+        description=selected.iloc[0]['description'],
+        user_id=user_id,
+        subject_adjusted_values=subject_adjusted_values,
+        grades_adjusted_values=grades_adjusted_values
         )
+        
+    # return render_template(
+    #     "recommend.html",
+    #     result_model=result_model,
+    #     subject=subject,
+    #     audience=audience,
+    #     keywords=keywords,
+    #     title=title,
+    #     surtitle=surtitle,
+    #     thumbnail=thumbnail,
+    #     content_id=content_id,
+    #     description=description,
+    #     user_id=user_id
+    #     )
 
 @flask_app.route("/post_data", methods = ["GET", "POST"])
 def post_data():    
