@@ -1,0 +1,3552 @@
+[
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "qafaDHsBGgXZRBqN5AkS",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "co20i8cqde",
+                "uri": "local/uid/co20i8cqde",
+                "created": "2019-10-23 20:59:48",
+                "modified": "2021-01-13 14:50:09",
+                "synchronized": "2021-07-28 11:56:17",
+                "source": "skolmedia",
+                "creator": "system",
+                "owner": "system"
+            },
+            "product": {
+                "surtitle": "",
+                "title": "Materialet: Asfalt",
+                "subtitle": "",
+                "titledescription": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "",
+                "description": "<p>Asfalt har anv\u00e4nts av m\u00e4nniskor i flera tusen \u00e5r. I antikens Babylon har den hittats p\u00e5 v\u00e4ggar i husen, liksom som bel\u00e4ggning p\u00e5 skeppens botten. Cirka 70 procent av st\u00e4dernas gator t\u00e4cks i dag av asfalt som \u00e4r en blandning av bitumen, krossat grus, sand och andra mineraltillsatser. N\u00e4r asfalt framst\u00e4lls bidrar det tyv\u00e4rr till utsl\u00e4pp av skadliga \u00e4mnen i atmosf\u00e4ren och grundvattnet. Milj\u00f6v\u00e4nliga alternativ beh\u00f6vs. En ny typ av asfalt med \u00e5tervunnen plast i st\u00e4llet f\u00f6r bitumen har utvecklats. Oljeutvinningen och m\u00e4ngden plastskr\u00e4p i v\u00e5r milj\u00f6 minskar d\u00e5.</p>",
+                "creator": [],
+                "language": [
+                    "Svenska"
+                ],
+                "created": null,
+                "modified": null,
+                "published": null,
+                "year": "2017",
+                "country": [
+                    "Ukraina"
+                ],
+                "articleid": "EDU0122",
+                "publisherid": "EDU0122",
+                "publisher": [
+                    "Cinebox"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "",
+                "thumbnail": {
+                    "small": "https://csp.screen9.com/img/H/V/v/H/image_HVvHhQOQT2BoibCnsd2nEA/2.jpg?v=0",
+                    "image": "https://csp.screen9.com/img/H/V/v/H/image_HVvHhQOQT2BoibCnsd2nEA/2.jpg?v=0",
+                    "large": "https://csp.screen9.com/img/H/V/v/H/image_HVvHhQOQT2BoibCnsd2nEA/2.jpg?v=0",
+                    "xlarge": "https://csp.screen9.com/img/H/V/v/H/image_HVvHhQOQT2BoibCnsd2nEA/2.jpg?v=0",
+                    "medium": "https://csp.screen9.com/img/H/V/v/H/image_HVvHhQOQT2BoibCnsd2nEA/2.jpg?v=0",
+                    "hd": "https://csp.screen9.com/img/H/V/v/H/image_HVvHhQOQT2BoibCnsd2nEA/2.jpg?v=0"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "Cinebox",
+                        "logo": "cinebox.png",
+                        "url": "https://www.filmochskola.se"
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": null,
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "audioid": "",
+                "mediaid": "HVvHhQOQT2BoibCnsd2nEA",
+                "audiosrc": "",
+                "videosrc": "",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "",
+                "episodes": "",
+                "season": "",
+                "seasons": "",
+                "duration": "428",
+                "subtitles": [
+                    "Svenska"
+                ]
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "layout": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "Materialet: Asfalt, asfalt, olja, kol, skiffer, granit, D\u00f6da havet, Trinidad, v\u00e4gar, bygga v\u00e4gar, EDU0122",
+                "subject": [
+                    "Kemi",
+                    "Milj\u00f6"
+                ],
+                "subsubject": [
+                    "Kemikalier i hem och samh\u00e4lle",
+                    "F\u00f6roreningar och milj\u00f6gifter"
+                ],
+                "tags": [
+                    "Kemi",
+                    "Kemikalier i hem och samh\u00e4lle",
+                    "Milj\u00f6",
+                    "F\u00f6roreningar och milj\u00f6gifter"
+                ],
+                "breadcrumbs": [
+                    "Kemi/Kemikalier i hem och samh\u00e4lle",
+                    "Milj\u00f6/F\u00f6roreningar och milj\u00f6gifter"
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "from": "",
+                    "to": ""
+                },
+                "level": [
+                    "Grundskola 4-6",
+                    "Grundskola 7-9"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "Ej s\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Utbildningsfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [
+                    "Saknar centralt inneh\u00e5ll",
+                    "Passar f\u00f6r skolan"
+                ],
+                "comment": "",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "33unh51eno",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": "0",
+                        "title": ""
+                    }
+                ],
+                "references": [],
+                "attachments": []
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/co20i8cqde",
+                "mime": "",
+                "filename": "EDU0122_Materialet_asfalt_15000.mp4",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [
+                    "sv"
+                ],
+                "size": "418738369",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "aim": {
+                            "description": "",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "",
+                            "values": []
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": [],
+                "title": "Materialet: Asfalt",
+                "title_sort": "Materialet: Asfalt",
+                "title_ngram": "Materialet: Asfalt",
+                "title_autocomplete": "Materialet: Asfalt",
+                "tags": [
+                    "kemi",
+                    "kemikalier i hem och samh\u00e4lle",
+                    "milj\u00f6",
+                    "f\u00f6roreningar och milj\u00f6gifter"
+                ],
+                "keywords": [
+                    "kemi",
+                    "milj\u00f6",
+                    "kemikalier i hem och samh\u00e4lle",
+                    "f\u00f6roreningar och milj\u00f6gifter",
+                    "materialet: asfalt",
+                    "asfalt",
+                    "olja",
+                    "kol",
+                    "skiffer",
+                    "granit",
+                    "d\u00f6da havet",
+                    "trinidad",
+                    "v\u00e4gar",
+                    "bygga v\u00e4gar",
+                    "edu0122"
+                ],
+                "freetext": "Materialet: Asfalt, asfalt, olja, kol, skiffer, granit, D\u00f6da havet, Trinidad, v\u00e4gar, bygga v\u00e4gar, EDU0122",
+                "goals": [],
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "language": [
+                    "Svenska"
+                ],
+                "publisher": [
+                    "Cinebox"
+                ],
+                "articleid": "EDU0122",
+                "publisherid": "EDU0122",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    },
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "qqfaDHsBGgXZRBqN5AlV",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "kf3y4j1b6m",
+                "uri": "local/uid/kf3y4j1b6m",
+                "created": "2019-10-23 21:07:26",
+                "modified": "2020-06-03 15:27:36",
+                "synchronized": "2021-07-28 11:56:17",
+                "source": "skolmedia",
+                "creator": "system",
+                "owner": "system"
+            },
+            "product": {
+                "surtitle": "",
+                "title": "Materialet: Gummi",
+                "subtitle": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "",
+                "description": "<p>De som uppt\u00e4ckte materialet gummi var m\u00e4nniskor som bodde i omr\u00e5det kring Amazonfloden. Med hj\u00e4lp av saft fr\u00e5n gummitr\u00e4det blev deras b\u00e5tar vattent\u00e4ta. Christofer Columbus f\u00f6rde senare med sig naturgummit latex till Europa. Av gummi tillverkades till exempel bollar som blev f\u00f6reg\u00e5ngare till fotbollar och basketbollar. I dag anv\u00e4nds gummi i allt fr\u00e5n regnkl\u00e4der, bild\u00e4ck, gummislangar till sudd- och tuggummi. Det \u00e4r viktigt att \u00e5tervinna gummi f\u00f6r om materialet sm\u00e4lter eller brinner sprids giftiga \u00e4mnen. Men kan m\u00e4nniskor tillverka gummi och hur g\u00e5r det till i s\u00e5 fall?</p>",
+                "creator": [],
+                "language": [
+                    "Svenska"
+                ],
+                "created": null,
+                "modified": null,
+                "published": null,
+                "year": "2017",
+                "country": [
+                    "Ukraina"
+                ],
+                "articleid": "CIN1797",
+                "publisherid": "",
+                "publisher": [
+                    "Cinebox"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "",
+                "thumbnail": {
+                    "small": "https://csp.screen9.com/img/f/o/a/z/image_foazNM5aV8LuH9xG8lDdaQ/5.jpg?v=0",
+                    "image": "https://csp.screen9.com/img/f/o/a/z/image_foazNM5aV8LuH9xG8lDdaQ/5.jpg?v=0",
+                    "large": "https://csp.screen9.com/img/f/o/a/z/image_foazNM5aV8LuH9xG8lDdaQ/5.jpg?v=0",
+                    "xlarge": "https://csp.screen9.com/img/f/o/a/z/image_foazNM5aV8LuH9xG8lDdaQ/5.jpg?v=0",
+                    "medium": "https://csp.screen9.com/img/f/o/a/z/image_foazNM5aV8LuH9xG8lDdaQ/5.jpg?v=0",
+                    "hd": "https://csp.screen9.com/img/f/o/a/z/image_foazNM5aV8LuH9xG8lDdaQ/5.jpg?v=0"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "Cinebox",
+                        "logo": "cinebox.png",
+                        "url": "https://www.filmochskola.se"
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": null,
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "mediaid": "foazNM5aV8LuH9xG8lDdaQ",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "",
+                "episodes": "",
+                "season": "",
+                "seasons": "",
+                "duration": "428.04",
+                "subtitles": [
+                    "Svenska"
+                ]
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "CIN1797, syntetiskt gummi, \u00e5tervinna, \u00e5tervinning, latex, h\u00e5llbar\nutveckling, vulkanisering, d\u00e4ck, bild\u00e4ck, vattent\u00e4t",
+                "subject": [
+                    "Milj\u00f6",
+                    "Geografi",
+                    "Kemi"
+                ],
+                "subsubject": [
+                    "Avfall och \u00e5tervinning",
+                    "Naturresurser, varor och tj\u00e4nster",
+                    "H\u00e5llbar utveckling",
+                    "Materiens uppbyggnad och kretslopp"
+                ],
+                "tags": [
+                    "Milj\u00f6",
+                    "Avfall och \u00e5tervinning",
+                    "Geografi",
+                    "Naturresurser, varor och tj\u00e4nster",
+                    "H\u00e5llbar utveckling",
+                    "Kemi",
+                    "Materiens uppbyggnad och kretslopp",
+                    "Gummi"
+                ],
+                "breadcrumbs": [
+                    "Milj\u00f6/Avfall och \u00e5tervinning",
+                    "Geografi/Naturresurser, varor och tj\u00e4nster",
+                    "Milj\u00f6/H\u00e5llbar utveckling",
+                    "Kemi/Materiens uppbyggnad och kretslopp"
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "from": "",
+                    "to": ""
+                },
+                "level": [
+                    "Grundskola 4-6",
+                    "Grundskola 7-9"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "Ej s\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Utbildningsfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [
+                    "Passar f\u00f6r skolan"
+                ],
+                "comment": "/Sara 200603",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "33unh51eno",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "references": [
+                    {
+                        "uid": "",
+                        "position": 0
+                    }
+                ],
+                "attachments": [
+                    {
+                        "title": "",
+                        "location": "https://skolmedia.s3.amazonaws.com/digitalpedagogik/docs/c1adc600ad.pdf",
+                        "type": "Handledning"
+                    }
+                ]
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/kf3y4j1b6m",
+                "mime": "",
+                "filename": "CIN1797_150.mp4",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [
+                    "sv"
+                ],
+                "size": "417875054",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "Naturvetenskapen har sitt ursprung i m\u00e4nniskans nyfikenhet och behov av att veta mer om sig sj\u00e4lv och sin omv\u00e4rld. Kunskaper i biologi har stor betydelse f\u00f6r samh\u00e4llsutvecklingen inom s\u00e5 skilda omr\u00e5den som h\u00e4lsa, naturbruk och milj\u00f6. Med kunskaper om naturen och m\u00e4nniskan f\u00e5r m\u00e4nniskor redskap f\u00f6r att p\u00e5verka sitt eget v\u00e4lbefinnande, men ocks\u00e5 f\u00f6r att kunna bidra till en h\u00e5llbar utveckling.",
+                            "label": "Biologi",
+                            "value": "bb8dc4bf-8ac7-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet biologi ska syfta till att eleverna utvecklar kunskaper om biologiska sammanhang och nyfikenhet p\u00e5 och intresse f\u00f6r att veta mer om sig sj\u00e4lva och naturen. Genom undervisningen ska eleverna ges m\u00f6jlighet att st\u00e4lla fr\u00e5gor om naturen och m\u00e4nniskan utifr\u00e5n egna upplevelser och aktuella h\u00e4ndelser. Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att s\u00f6ka svar p\u00e5 fr\u00e5gor med hj\u00e4lp av systematiska unders\u00f6kningar. Som en del av systematiska unders\u00f6kningar ska eleverna, genom praktiskt unders\u00f6kande arbete, ges m\u00f6jlighet att utveckla f\u00e4rdigheter i att hantera s\u00e5v\u00e4l digitala verktyg som annan utrustning. Eleverna ska ges f\u00f6ruts\u00e4ttningar att s\u00f6ka svar p\u00e5 fr\u00e5gor med hj\u00e4lp av olika typer av k\u00e4llor. P\u00e5 s\u00e5 s\u00e4tt ska undervisningen bidra till att eleverna utvecklar ett kritiskt t\u00e4nkande kring sina egna resultat, andras argument och olika informationsk\u00e4llor. Genom undervisningen ska eleverna ocks\u00e5 utveckla f\u00f6rst\u00e5else f\u00f6r att p\u00e5st\u00e5enden kan pr\u00f6vas och v\u00e4rderas med hj\u00e4lp av naturvetenskapliga arbetsmetoder.</p>\n\n<p>Undervisningen ska ge eleverna m\u00f6jlighet att anv\u00e4nda och utveckla kunskaper och redskap f\u00f6r att formulera egna och granska andras argument i sammanhang d\u00e4r kunskaper i biologi har betydelse. D\u00e4rigenom ska eleverna ges f\u00f6ruts\u00e4ttningar att hantera praktiska, etiska och estetiska valsituationer som r\u00f6r h\u00e4lsa, naturbruk och ekologisk h\u00e5llbarhet.</p>\n\n<p>Undervisningen ska \u00e4ven bidra till att eleverna utvecklar f\u00f6rtrogenhet med biologins begrepp, modeller och teorier samt f\u00f6rst\u00e5else f\u00f6r hur dessa utvecklas i samspel med erfarenheter fr\u00e5n unders\u00f6kningar av naturen och m\u00e4nniskan. Vidare ska undervisningen bidra till att eleverna utvecklar f\u00f6rm\u00e5gan att samtala om, tolka och framst\u00e4lla texter och olika estetiska uttryck med naturvetenskapligt inneh\u00e5ll.</p>\n\n<p>Undervisningen ska skapa f\u00f6ruts\u00e4ttningar f\u00f6r eleverna att kunna skilja mellan naturvetenskapliga och andra s\u00e4tt att skildra omv\u00e4rlden. Genom undervisningen ska eleverna f\u00e5 inblick i naturvetenskapens v\u00e4rldsbild med evolutionsteorin som grund samt f\u00e5 perspektiv p\u00e5 hur den har utvecklats och vilken kulturell p\u00e5verkan den har haft.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet biologi ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 4\u20136": {
+                                "value": "fbf16c21-8b35-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 4\u20136",
+                                "categories": {
+                                    "Natur och samh\u00e4lle": {
+                                        "value": "b108b00e-8b39-11e9-a987-0ae95472d63c",
+                                        "label": "Natur och samh\u00e4lle",
+                                        "core_content": [
+                                            {
+                                                "value": "1122bacc-8b3b-11e9-a987-0ae95472d63c",
+                                                "label": "M\u00e4nniskans beroende av och p\u00e5verkan p\u00e5 naturen och vad detta inneb\u00e4r f\u00f6r en h\u00e5llbar utveckling. Ekosystemtj\u00e4nster, till exempel nedbrytning, pollinering och rening av vatten och luft."
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "I \u00e5rskurs 7\u20139": {
+                                "value": "fefcbab5-8b35-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 7\u20139",
+                                "categories": {
+                                    "Natur och samh\u00e4lle": {
+                                        "value": "b9dd305c-8b39-11e9-a987-0ae95472d63c",
+                                        "label": "Natur och samh\u00e4lle",
+                                        "core_content": [
+                                            {
+                                                "value": "35795baf-8b3b-11e9-a987-0ae95472d63c",
+                                                "label": "M\u00e4nniskans p\u00e5verkan p\u00e5 naturen lokalt och globalt. M\u00f6jligheter att som konsument och samh\u00e4llsmedborgare bidra till en h\u00e5llbar utveckling."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "subject": {
+                            "description": "Naturvetenskapen har sitt ursprung i m\u00e4nniskans nyfikenhet och behov av att veta mer om sig sj\u00e4lv och sin omv\u00e4rld. Kunskaper i kemi har stor betydelse f\u00f6r samh\u00e4llsutvecklingen inom s\u00e5 skilda omr\u00e5den som h\u00e4lsa, resurshush\u00e5llning, materialutveckling och milj\u00f6teknik. Med kunskaper om materiens uppbyggnad och of\u00f6rst\u00f6rbarhet f\u00e5r m\u00e4nniskor redskap f\u00f6r att kunna bidra till en h\u00e5llbar utveckling.",
+                            "label": "Kemi",
+                            "value": "d7110317-8ac7-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet kemi ska syfta till att eleverna utvecklar kunskaper om kemiska sammanhang och nyfikenhet p\u00e5 och intresse f\u00f6r att unders\u00f6ka omv\u00e4rlden. Genom undervisningen ska eleverna ges m\u00f6jlighet att st\u00e4lla fr\u00e5gor om kemiska processer och materiens egenskaper och uppbyggnad utifr\u00e5n egna upplevelser och aktuella h\u00e4ndelser. Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att s\u00f6ka svar p\u00e5 fr\u00e5gor med hj\u00e4lp av systematiska unders\u00f6kningar. Som en del av systematiska unders\u00f6kningar ska eleverna, genom praktiskt unders\u00f6kande arbete, ges m\u00f6jlighet att utveckla f\u00e4rdigheter i att hantera s\u00e5v\u00e4l digitala verktyg som annan utrustning. Eleverna ska ges f\u00f6ruts\u00e4ttningar att s\u00f6ka svar p\u00e5 fr\u00e5gor med hj\u00e4lp av olika typer av k\u00e4llor. P\u00e5 s\u00e5 s\u00e4tt ska undervisningen bidra till att eleverna utvecklar ett kritiskt t\u00e4nkande kring sina egna resultat, andras argument och olika informationsk\u00e4llor. Genom undervisningen ska eleverna ocks\u00e5 utveckla f\u00f6rst\u00e5else f\u00f6r att p\u00e5st\u00e5enden kan pr\u00f6vas och v\u00e4rderas med hj\u00e4lp av naturvetenskapliga arbetsmetoder.</p>\n\n<p>Undervisningen ska ge eleverna m\u00f6jligheter att anv\u00e4nda och utveckla kunskaper och redskap f\u00f6r att formulera egna och granska andras argument i sammanhang d\u00e4r kunskaper i kemi har betydelse. D\u00e4rigenom ska eleverna ges f\u00f6ruts\u00e4ttningar att hantera praktiska, etiska och estetiska valsituationer som r\u00f6r energi, milj\u00f6, h\u00e4lsa och samh\u00e4lle.</p>\n\n<p>Undervisningen ska bidra till att eleverna utvecklar f\u00f6rtrogenhet med kemins begrepp, modeller och teorier samt f\u00f6rst\u00e5else f\u00f6r hur dessa formas i samspel med erfarenheter fr\u00e5n unders\u00f6kningar av omv\u00e4rlden. Vidare ska undervisningen bidra till att eleverna utvecklar f\u00f6rm\u00e5gan att samtala om, tolka och framst\u00e4lla texter och olika estetiska uttryck med naturvetenskapligt inneh\u00e5ll.</p>\n\n<p>Undervisningen ska skapa f\u00f6ruts\u00e4ttningar f\u00f6r eleverna att kunna skilja mellan naturvetenskapliga och andra s\u00e4tt att skildra omv\u00e4rlden. Genom undervisningen ska eleverna \u00e4ven ges m\u00f6jlighet att utveckla perspektiv p\u00e5 utvecklingen av naturvetenskapens v\u00e4rldsbild och ges inblick i hur naturvetenskapen och kulturen \u00f6msesidigt har p\u00e5verkat varandra.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet kemi ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 4\u20136": {
+                                "value": "58861217-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 4\u20136",
+                                "categories": {
+                                    "Kemin och v\u00e4rldsbilden": {
+                                        "value": "7f943c13-8b51-11e9-a987-0ae95472d63c",
+                                        "label": "Kemin och v\u00e4rldsbilden",
+                                        "core_content": [
+                                            {
+                                                "value": "d6d4ec18-8b51-11e9-a987-0ae95472d63c",
+                                                "label": "N\u00e5gra historiska och nutida uppt\u00e4ckter inom kemiomr\u00e5det och deras betydelse f\u00f6r m\u00e4nniskans levnadsvillkor och syn p\u00e5 v\u00e4rlden."
+                                            }
+                                        ]
+                                    },
+                                    "Kemin i vardagen och samh\u00e4llet": {
+                                        "value": "7d92e3ce-8b51-11e9-a987-0ae95472d63c",
+                                        "label": "Kemin i vardagen och samh\u00e4llet",
+                                        "core_content": [
+                                            {
+                                                "value": "cb77069a-8b51-11e9-a987-0ae95472d63c",
+                                                "label": "Materiens kretslopp genom r\u00e5varors f\u00f6r\u00e4dling till produkter, hur de blir avfall som hanteras och sedan \u00e5terg\u00e5r till naturen."
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "I \u00e5rskurs 7\u20139": {
+                                "value": "5a483e07-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 7\u20139",
+                                "categories": {
+                                    "Kemin i vardagen och samh\u00e4llet": {
+                                        "value": "87c94ddc-8b51-11e9-a987-0ae95472d63c",
+                                        "label": "Kemin i vardagen och samh\u00e4llet",
+                                        "core_content": [
+                                            {
+                                                "value": "f6bc9618-8b51-11e9-a987-0ae95472d63c",
+                                                "label": "M\u00e4nniskans anv\u00e4ndning av energi- och naturresurser lokalt och globalt samt vad det inneb\u00e4r f\u00f6r en h\u00e5llbar utveckling."
+                                            }
+                                        ]
+                                    },
+                                    "Kemin och v\u00e4rldsbilden": {
+                                        "value": "89d81166-8b51-11e9-a987-0ae95472d63c",
+                                        "label": "Kemin och v\u00e4rldsbilden",
+                                        "core_content": [
+                                            {
+                                                "value": "06da9920-8b52-11e9-a987-0ae95472d63c",
+                                                "label": "Historiska och nutida uppt\u00e4ckter inom kemiomr\u00e5det och deras betydelse f\u00f6r v\u00e4rldsbild, teknik, milj\u00f6, samh\u00e4lle och m\u00e4nniskors levnadsvillkor."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": {
+                    "subject": [
+                        "bb8dc4bf-8ac7-11e9-a987-0ae95472d63c",
+                        "d7110317-8ac7-11e9-a987-0ae95472d63c"
+                    ],
+                    "level": [
+                        "fbf16c21-8b35-11e9-a987-0ae95472d63c",
+                        "fefcbab5-8b35-11e9-a987-0ae95472d63c",
+                        "58861217-8b36-11e9-a987-0ae95472d63c",
+                        "5a483e07-8b36-11e9-a987-0ae95472d63c"
+                    ],
+                    "category": [
+                        "b108b00e-8b39-11e9-a987-0ae95472d63c",
+                        "b9dd305c-8b39-11e9-a987-0ae95472d63c",
+                        "7f943c13-8b51-11e9-a987-0ae95472d63c",
+                        "7d92e3ce-8b51-11e9-a987-0ae95472d63c",
+                        "87c94ddc-8b51-11e9-a987-0ae95472d63c",
+                        "89d81166-8b51-11e9-a987-0ae95472d63c"
+                    ],
+                    "core_content": [
+                        "1122bacc-8b3b-11e9-a987-0ae95472d63c",
+                        "35795baf-8b3b-11e9-a987-0ae95472d63c",
+                        "d6d4ec18-8b51-11e9-a987-0ae95472d63c",
+                        "cb77069a-8b51-11e9-a987-0ae95472d63c",
+                        "f6bc9618-8b51-11e9-a987-0ae95472d63c",
+                        "06da9920-8b52-11e9-a987-0ae95472d63c"
+                    ]
+                },
+                "title": "Materialet: Gummi",
+                "title_sort": "Materialet: Gummi",
+                "title_ngram": "Materialet: Gummi",
+                "title_autocomplete": "Materialet: Gummi",
+                "tags": [
+                    "milj\u00f6",
+                    "avfall och \u00e5tervinning",
+                    "geografi",
+                    "naturresurser, varor och tj\u00e4nster",
+                    "h\u00e5llbar utveckling",
+                    "kemi",
+                    "materiens uppbyggnad och kretslopp",
+                    "gummi"
+                ],
+                "keywords": [
+                    "milj\u00f6",
+                    "geografi",
+                    "kemi",
+                    "avfall och \u00e5tervinning",
+                    "naturresurser, varor och tj\u00e4nster",
+                    "h\u00e5llbar utveckling",
+                    "materiens uppbyggnad och kretslopp",
+                    "gummi",
+                    "cin1797",
+                    "syntetiskt gummi",
+                    "\u00e5tervinna",
+                    "\u00e5tervinning",
+                    "latex",
+                    "h\u00e5llbar\nutveckling",
+                    "vulkanisering",
+                    "d\u00e4ck",
+                    "bild\u00e4ck",
+                    "vattent\u00e4t"
+                ],
+                "freetext": "CIN1797, syntetiskt gummi, \u00e5tervinna, \u00e5tervinning, latex, h\u00e5llbar\nutveckling, vulkanisering, d\u00e4ck, bild\u00e4ck, vattent\u00e4t",
+                "goals": [],
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "language": [
+                    "Svenska"
+                ],
+                "publisher": [
+                    "Cinebox"
+                ],
+                "articleid": "CIN1797",
+                "publisherid": "",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    },
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "sKfaDHsBGgXZRBqN5QnW",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "r58f3wwjpm",
+                "uri": "local/uid/r58f3wwjpm",
+                "created": "2019-10-23 21:13:41",
+                "modified": "2019-11-19 12:04:06",
+                "synchronized": "2021-07-28 11:56:20",
+                "source": "skolmedia",
+                "creator": "system",
+                "owner": "system"
+            },
+            "product": {
+                "surtitle": "",
+                "title": "Arbetsmilj\u00f6 - Mobbad p\u00e5 jobbet",
+                "subtitle": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "",
+                "description": "<p>Mellan 100-300 personer beg\u00e5r sj\u00e4lvmord i Sverige varje \u00e5r p\u00e5 grund av mobbning i arbetslivet. Lasse Persson \u00e4r en av dem. I den h\u00e4r filmen f\u00e5r du tr\u00e4ffa hans fru Maria Lundqvist-Persson och hans dotter Lovisa Persson som ber\u00e4ttar hur Lasse upplevde sin sista tid i arbetslivet. Efter hans d\u00f6d best\u00e4mde sig familjen att driva en r\u00e4ttsprocess mot hans arbetsgivare, Krokoms kommun. I februari 2014 d\u00f6mdes tv\u00e5 arbetsledare i kommunen f\u00f6r arbetsmilj\u00f6brott av \u00d6stersunds Tingr\u00e4tt. Domen \u00f6verklagades och Hovr\u00e4tten i Sundsvall friade cheferna 2015. H\u00f6gsta domstolen valde att inte ta upp fallet.</p>",
+                "creator": [],
+                "language": [
+                    "Svenska"
+                ],
+                "created": null,
+                "modified": null,
+                "published": null,
+                "year": "2015",
+                "country": [],
+                "articleid": "V7060",
+                "publisherid": "",
+                "publisher": [
+                    "\u00d6vriga"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "",
+                "thumbnail": {
+                    "small": "https://d225ilamp70atk.cloudfront.net/images/temalador/81109161.png",
+                    "image": "https://d225ilamp70atk.cloudfront.net/images/temalador/81109161.png",
+                    "large": "https://d225ilamp70atk.cloudfront.net/images/temalador/81109161.png",
+                    "xlarge": "https://d225ilamp70atk.cloudfront.net/images/temalador/81109161.png",
+                    "medium": "https://d225ilamp70atk.cloudfront.net/images/temalador/81109161.png",
+                    "hd": "https://d225ilamp70atk.cloudfront.net/images/temalador/81109161.png"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "\u00d6vriga",
+                        "logo": "",
+                        "url": ""
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": null,
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "mediaid": "w5Td8Vv1XKSAyTr3YDg8hQ",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "",
+                "episodes": "",
+                "season": "",
+                "seasons": "",
+                "duration": "2264.84"
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "mobbing, kr\u00e4nkande, kr\u00e4nkt, diskriminering, v7060",
+                "subject": [
+                    "V\u00e4rdegrund",
+                    "Samh\u00e4llskunskap",
+                    "Psykologi och filosofi"
+                ],
+                "subsubject": [
+                    "Mobbning",
+                    "Arbetsmarknad och arbetsliv",
+                    "Psykologi"
+                ],
+                "tags": [
+                    "V\u00e4rdegrund",
+                    "Mobbning",
+                    "Samh\u00e4llskunskap",
+                    "Arbetsmarknad och arbetsliv",
+                    "Psykologi och filosofi",
+                    "Psykologi"
+                ],
+                "breadcrumbs": [
+                    "V\u00e4rdegrund/Mobbning",
+                    "Samh\u00e4llskunskap/Arbetsmarknad och arbetsliv",
+                    "Psykologi och filosofi/Psykologi"
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "from": "13",
+                    "to": ""
+                },
+                "level": [
+                    "Vuxen\u00f6vergripande"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "S\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Utbildningsfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [],
+                "comment": "",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "references": [
+                    {
+                        "uid": "",
+                        "position": 0
+                    }
+                ],
+                "attachments": [
+                    {
+                        "title": "",
+                        "location": "http://www.mediapoolen.se/handledningar/V7062.pdf",
+                        "type": "Handledning"
+                    }
+                ]
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/r58f3wwjpm",
+                "mime": "",
+                "filename": "V7060.mp4",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [],
+                "size": "673529710",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "aim": {
+                            "description": "",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "",
+                            "values": []
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": [],
+                "title": "Arbetsmilj\u00f6 - Mobbad p\u00e5 jobbet",
+                "title_sort": "Arbetsmilj\u00f6 - Mobbad p\u00e5 jobbet",
+                "title_ngram": "Arbetsmilj\u00f6 - Mobbad p\u00e5 jobbet",
+                "title_autocomplete": "Arbetsmilj\u00f6 - Mobbad p\u00e5 jobbet",
+                "tags": [
+                    "v\u00e4rdegrund",
+                    "mobbning",
+                    "samh\u00e4llskunskap",
+                    "arbetsmarknad och arbetsliv",
+                    "psykologi och filosofi",
+                    "psykologi"
+                ],
+                "keywords": [
+                    "v\u00e4rdegrund",
+                    "samh\u00e4llskunskap",
+                    "psykologi och filosofi",
+                    "mobbning",
+                    "arbetsmarknad och arbetsliv",
+                    "psykologi",
+                    "mobbing",
+                    "kr\u00e4nkande",
+                    "kr\u00e4nkt",
+                    "diskriminering",
+                    "v7060"
+                ],
+                "freetext": "mobbing, kr\u00e4nkande, kr\u00e4nkt, diskriminering, v7060",
+                "goals": [],
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "language": [
+                    "Svenska"
+                ],
+                "publisher": [
+                    "\u00d6vriga"
+                ],
+                "articleid": "V7060",
+                "publisherid": "",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    },
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "tKfaDHsBGgXZRBqN5gni",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "a558566f6a",
+                "uri": "local/uid/a558566f6a",
+                "created": "2020-01-20 07:12:24",
+                "modified": "2020-04-28 08:13:07",
+                "synchronized": "2021-07-28 11:56:21",
+                "source": "skolmedia",
+                "creator": "9bd7364b-6ced-3332-161f-17e8d14ac987",
+                "owner": "9bd7364b-6ced-3332-161f-17e8d14ac987"
+            },
+            "product": {
+                "surtitle": "",
+                "title": "Vintertullen",
+                "subtitle": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "",
+                "description": "<p>Bayanbat, Mirna, Masa och Shadia \u00e4r n\u00e5gra av de barn som bor p\u00e5 Vintertullen i Stockholm. Huset var fram tills nyligen ett \u00e5lderdomshem men anv\u00e4nds nu som ett tillf\u00e4lligt etableringsboende f\u00f6r familjer som tvingats p\u00e5 flykt. Genom barnen tar oss filmen med till en lekfull m\u00f6tesplats som inrymmer b\u00e5de skratt och allvar. Vintertullen \u2013 huset och filmen \u2013 \u00e4r en f\u00f6rtrolig p\u00e5minnelse om livsomv\u00e4lvande f\u00f6r\u00e4ndringar, och hur livet fortg\u00e5r efter m\u00e4nskliga trauman och f\u00f6rluster.<em><br><br></em><em>Den h\u00e4r filmen g\u00e5r rakt in i hj\u00e4rtat som borde ses av publik v\u00e4rlden \u00f6ver. Vi f\u00e5r ta del av sm\u00e4rta, k\u00e4rlek, de hj\u00e4rtsk\u00e4rande konsekvenserna av krig, s\u00e5v\u00e4l som barnens sprudlande lek och visa ord. Genom filmen f\u00e5r vi en glimt av en unik gemenskap portr\u00e4tterad med ett stort hj\u00e4rta.</em></p><p>- Vinnare av b\u00e4sta dokument\u00e4rfilm, Live at Heart 2019</p>",
+                "creator": [],
+                "language": [
+                    "Svenska",
+                    "Engelska",
+                    "Arabiska"
+                ],
+                "created": null,
+                "modified": null,
+                "published": null,
+                "year": "2019",
+                "country": [
+                    "Sverige"
+                ],
+                "articleid": "FC1014",
+                "publisherid": "",
+                "publisher": [
+                    "FilmCentrum"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "https://filmcentrum.se/stream/ebc467c3-276a-4ba0-bfba-cd7241917cc4_trailer_vp8_480p.webm",
+                "thumbnail": {
+                    "small": "https://cfcdn.screen9.com/img/r/5/r56jWr095VimqmddALDejA_image/240p.jpg?v=0",
+                    "image": "https://cfcdn.screen9.com/img/r/5/r56jWr095VimqmddALDejA_image/image.jpg?v=0",
+                    "large": "https://cfcdn.screen9.com/img/r/5/r56jWr095VimqmddALDejA_image/480p.jpg?v=0",
+                    "xlarge": "https://cfcdn.screen9.com/img/r/5/r56jWr095VimqmddALDejA_image/image.jpg?v=0",
+                    "medium": "https://cfcdn.screen9.com/img/r/5/r56jWr095VimqmddALDejA_image/360p.jpg?v=0",
+                    "hd": "https://cfcdn.screen9.com/img/r/5/r56jWr095VimqmddALDejA_image/image.jpg?v=0"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "FilmCentrum",
+                        "logo": "filmcentrum.png",
+                        "url": "https://www.filmcentrum.se"
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": "2020-01-23",
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "mediaid": "r56jWr095VimqmddALDejA",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "",
+                "episodes": "",
+                "season": "",
+                "seasons": "",
+                "duration": "1422.12",
+                "subtitles": [
+                    "Svenska"
+                ]
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "FC1014, Vintertullen, flykt, flykting, asyl, asyls\u00f6kande, Vintertullen, barns r\u00e4ttigheter,",
+                "subject": [
+                    "Samh\u00e4llskunskap"
+                ],
+                "subsubject": [
+                    "Barns r\u00e4ttigheter",
+                    "Individer och gemenskaper",
+                    "Sociala fr\u00e5gor",
+                    "M\u00e4nskliga r\u00e4ttigheter"
+                ],
+                "tags": [
+                    "Samh\u00e4llskunskap",
+                    "Barns r\u00e4ttigheter",
+                    "Individer och gemenskaper",
+                    "Familj och samlevnad",
+                    "Sociala fr\u00e5gor",
+                    "M\u00e4nskliga r\u00e4ttigheter",
+                    "Migration",
+                    "Asylr\u00e4tt"
+                ],
+                "breadcrumbs": [
+                    "Samh\u00e4llskunskap/Barns r\u00e4ttigheter",
+                    "Samh\u00e4llskunskap/Individer och gemenskaper/Familj och samlevnad",
+                    "Samh\u00e4llskunskap/Sociala fr\u00e5gor",
+                    "Samh\u00e4llskunskap/M\u00e4nskliga r\u00e4ttigheter"
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                },
+                "level": [
+                    "Grundskola 4-6",
+                    "Grundskola 7-9"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "S\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Utbildningsfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [],
+                "comment": "",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "references": [
+                    {
+                        "uid": "",
+                        "position": 0
+                    }
+                ],
+                "attachments": []
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/a558566f6a",
+                "mime": "",
+                "filename": "Vintertullen",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [
+                    "sv"
+                ],
+                "size": "1448112502",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "M\u00e4nniskor har alltid varit beroende av att samarbeta n\u00e4r de skapar och utvecklar samh\u00e4llen. I dag st\u00e5r m\u00e4nniskor i olika delar av v\u00e4rlden inf\u00f6r b\u00e5de m\u00f6jligheter och problem kopplade till digitalisering, globalisering, h\u00e5llbar samh\u00e4llsutveckling och interkulturella relationer. Kunskaper om samh\u00e4llet ger oss verktyg s\u00e5 att vi kan orientera oss och ta ansvar f\u00f6r v\u00e5rt handlande i en komplex v\u00e4rld.",
+                            "label": "Samh\u00e4llskunskap",
+                            "value": "f7a2cdbc-8ac7-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet samh\u00e4llskunskap ska syfta till att eleverna utvecklar kunskaper om hur individen och samh\u00e4llet p\u00e5verkar varandra. Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla en helhetssyn p\u00e5 samh\u00e4llsfr\u00e5gor och samh\u00e4llsstrukturer. I en s\u00e5dan helhetssyn \u00e4r sociala, ekonomiska, milj\u00f6m\u00e4ssiga, r\u00e4ttsliga, mediala och politiska aspekter centrala.</p>\n\n<p>Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att se samh\u00e4llsfr\u00e5gor ur olika perspektiv. P\u00e5 s\u00e5 s\u00e4tt ska eleverna utveckla f\u00f6rst\u00e5else f\u00f6r sina egna och andra m\u00e4nniskors levnadsvillkor, betydelsen av j\u00e4mst\u00e4lldhet, hur olika intressen och \u00e5sikter uppst\u00e5r och kommer till uttryck och hur olika akt\u00f6rer f\u00f6rs\u00f6ker p\u00e5verka samh\u00e4llsutvecklingen. Vidare ska undervisningen ge eleverna m\u00f6jlighet att f\u00f6rst\u00e5 digitaliseringens betydelse f\u00f6r samh\u00e4llsutvecklingen och f\u00f6r den personliga integriteten.</p>\n\n<p>Undervisningen ska ge eleverna verktyg att hantera information i vardagsliv och studier och kunskaper om hur man s\u00f6ker och v\u00e4rderar information om samh\u00e4llet fr\u00e5n olika k\u00e4llor. Genom undervisningen ska eleverna ocks\u00e5 ges f\u00f6ruts\u00e4ttningar att utveckla kunskaper om hur man kritiskt granskar samh\u00e4llsfr\u00e5gor och samh\u00e4llsstrukturer. Eleverna ska vidare ges m\u00f6jlighet att utveckla kunskaper om samh\u00e4llsvetenskapliga begrepp och modeller.</p>\n\n<p>Undervisningen ska bidra till att eleverna utvecklar f\u00f6rtrogenhet med de m\u00e4nskliga r\u00e4ttigheterna och med demokratiska processer och arbetss\u00e4tt. Den ska ocks\u00e5 bidra till att eleverna till\u00e4gnar sig kunskaper om, och f\u00f6rm\u00e5gan att reflektera \u00f6ver, v\u00e4rden och principer som utm\u00e4rker ett demokratiskt samh\u00e4lle. Vidare ska undervisningen ge eleverna m\u00f6jlighet att utveckla sin f\u00f6rst\u00e5else f\u00f6r vad det inneb\u00e4r att vara en aktiv och ansvarstagande medborgare i ett snabbt f\u00f6r\u00e4nderligt samh\u00e4lle.</p>\n\n<p>Genom undervisningen ska eleverna ges m\u00f6jlighet att utifr\u00e5n personliga erfarenheter och aktuella h\u00e4ndelser uttrycka och pr\u00f6va sina st\u00e4llningstaganden i m\u00f6ten med andra uppfattningar. D\u00e4rigenom ska eleverna stimuleras att engagera sig och delta i ett \u00f6ppet meningsutbyte om samh\u00e4llsfr\u00e5gor.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet samh\u00e4llskunskap ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 4\u20136": {
+                                "value": "c4228172-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 4\u20136",
+                                "categories": {
+                                    "Samh\u00e4llsresurser och f\u00f6rdelning": {
+                                        "value": "b1561d5f-8b6a-11e9-a987-0ae95472d63c",
+                                        "label": "Samh\u00e4llsresurser och f\u00f6rdelning",
+                                        "core_content": [
+                                            {
+                                                "value": "26d3629f-8b6b-11e9-a987-0ae95472d63c",
+                                                "label": "Ekonomiska villkor f\u00f6r barn i Sverige och i olika delar av v\u00e4rlden. N\u00e5gra orsaker till, och konsekvenser av, v\u00e4lst\u00e5nd och fattigdom."
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "I \u00e5rskurs 7\u20139": {
+                                "value": "c6167c53-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 7\u20139",
+                                "categories": {
+                                    "Individer och gemenskaper": {
+                                        "value": "b7b9f0b4-8b6a-11e9-a987-0ae95472d63c",
+                                        "label": "Individer och gemenskaper",
+                                        "core_content": [
+                                            {
+                                                "value": "3b05e36f-8b6b-11e9-a987-0ae95472d63c",
+                                                "label": "Immigration till Sverige f\u00f6rr och nu. Integration och segregation i samh\u00e4llet."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "subject": {
+                            "description": "F\u00f6ruts\u00e4ttningarna f\u00f6r liv p\u00e5 jorden \u00e4r unika, f\u00f6r\u00e4nderliga och s\u00e5rbara. Det \u00e4r d\u00e4rf\u00f6r alla m\u00e4nniskors ansvar att f\u00f6rvalta jorden s\u00e5 att en h\u00e5llbar utveckling blir m\u00f6jlig. Samspelet mellan m\u00e4nniskan och hennes omgivning har gett upphov till m\u00e5nga olika livsmilj\u00f6er. Geografi ger oss kunskap om dessa milj\u00f6er och kan bidra till f\u00f6rst\u00e5else av m\u00e4nniskans levnadsvillkor.",
+                            "label": "Geografi",
+                            "value": "c8ced9cf-8ac7-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet geografi ska syfta till att eleverna utvecklar kunskaper om geografiska f\u00f6rh\u00e5llanden och utvecklar en geografisk referensram och ett rumsligt medvetande. Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla kunskaper om, och kunna g\u00f6ra j\u00e4mf\u00f6relser mellan, olika platser, regioner och levnadsvillkor. Eleverna ska \u00e4ven ges f\u00f6ruts\u00e4ttningar att utveckla en medvetenhet om de sammanhang d\u00e4r geografiska kunskaper \u00e4r viktiga och anv\u00e4ndbara.</p>\n\n<p>Undervisningen ska ge eleverna m\u00f6jlighet att utveckla kunskaper om vilka m\u00e4nskliga verksamheter, och av naturen framkallade processer, som p\u00e5verkar jordytans former och m\u00f6nster. Den ska \u00e4ven bidra till att eleverna f\u00e5r erfarenheter av att tolka och bed\u00f6ma konsekvenser av olika f\u00f6r\u00e4ndringar som sker i det geografiska rummet.</p>\n\n<p>Undervisningen ska bidra till att eleverna utvecklar f\u00f6rtrogenhet med hur man v\u00e4xlar mellan olika tids- och rumsperspektiv. Genom undervisningen ska eleverna utveckla kunskaper om hur m\u00e4nniska, samh\u00e4lle och natur samspelar och vilka konsekvenser det f\u00e5r f\u00f6r naturen och m\u00e4nniskors levnadsvillkor. Undervisningen ska ge eleverna kunskap om kartan och k\u00e4nnedom om viktiga namn, l\u00e4ges- och storleksrelationer s\u00e5 att de kan orientera sig och dra slutsatser om natur- och kulturlandskap och om m\u00e4nniskors levnadsvillkor. P\u00e5 s\u00e5 s\u00e4tt ska eleverna ges m\u00f6jlighet att se v\u00e4rlden ur ett helhetsperspektiv. Undervisningen ska \u00e4ven ge eleverna f\u00f6ruts\u00e4ttningar att utveckla kunskaper i att g\u00f6ra geografiska analyser av omv\u00e4rlden och att presentera resultaten med hj\u00e4lp av geografiska begrepp.</p>\n\n<p>Genom undervisningen ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla kunskaper om varf\u00f6r intressekonflikter om naturresurser uppst\u00e5r. Undervisningen ska ocks\u00e5 medverka till att eleverna utvecklar kunskaper om hur vi kan p\u00e5verka framtiden i riktning mot en mer acceptabel levnadsmilj\u00f6 f\u00f6r alla.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet geografi ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 4\u20136": {
+                                "value": "2f089769-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 4\u20136",
+                                "categories": {
+                                    "Milj\u00f6, m\u00e4nniskor och h\u00e5llbarhetsfr\u00e5gor": {
+                                        "value": "3d0f462b-8b4d-11e9-a987-0ae95472d63c",
+                                        "label": "Milj\u00f6, m\u00e4nniskor och h\u00e5llbarhetsfr\u00e5gor",
+                                        "core_content": [
+                                            {
+                                                "value": "a1f72e63-8b4d-11e9-a987-0ae95472d63c",
+                                                "label": "Oj\u00e4mlika levnadsvillkor i v\u00e4rlden, till exempel olika tillg\u00e5ng till utbildning, h\u00e4lsov\u00e5rd och naturresurser samt n\u00e5gra bakomliggande orsaker till detta. Enskilda m\u00e4nniskors och organisationers arbete f\u00f6r att f\u00f6rb\u00e4ttra m\u00e4nniskors levnadsvillkor."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": {
+                    "subject": [
+                        "f7a2cdbc-8ac7-11e9-a987-0ae95472d63c",
+                        "c8ced9cf-8ac7-11e9-a987-0ae95472d63c"
+                    ],
+                    "level": [
+                        "c4228172-8b36-11e9-a987-0ae95472d63c",
+                        "c6167c53-8b36-11e9-a987-0ae95472d63c",
+                        "2f089769-8b36-11e9-a987-0ae95472d63c"
+                    ],
+                    "category": [
+                        "b1561d5f-8b6a-11e9-a987-0ae95472d63c",
+                        "b7b9f0b4-8b6a-11e9-a987-0ae95472d63c",
+                        "3d0f462b-8b4d-11e9-a987-0ae95472d63c"
+                    ],
+                    "core_content": [
+                        "26d3629f-8b6b-11e9-a987-0ae95472d63c",
+                        "3b05e36f-8b6b-11e9-a987-0ae95472d63c",
+                        "a1f72e63-8b4d-11e9-a987-0ae95472d63c"
+                    ]
+                },
+                "title": "Vintertullen",
+                "title_sort": "Vintertullen",
+                "title_ngram": "Vintertullen",
+                "title_autocomplete": "Vintertullen",
+                "tags": [
+                    "samh\u00e4llskunskap",
+                    "barns r\u00e4ttigheter",
+                    "individer och gemenskaper",
+                    "familj och samlevnad",
+                    "sociala fr\u00e5gor",
+                    "m\u00e4nskliga r\u00e4ttigheter",
+                    "migration",
+                    "asylr\u00e4tt"
+                ],
+                "keywords": [
+                    "samh\u00e4llskunskap",
+                    "barns r\u00e4ttigheter",
+                    "individer och gemenskaper",
+                    "sociala fr\u00e5gor",
+                    "m\u00e4nskliga r\u00e4ttigheter",
+                    "familj och samlevnad",
+                    "migration",
+                    "asylr\u00e4tt",
+                    "fc1014",
+                    "vintertullen",
+                    "flykt",
+                    "flykting",
+                    "asyl",
+                    "asyls\u00f6kande"
+                ],
+                "freetext": "FC1014, Vintertullen, flykt, flykting, asyl, asyls\u00f6kande, Vintertullen, barns r\u00e4ttigheter,",
+                "goals": [],
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "language": [
+                    "Svenska",
+                    "Engelska",
+                    "Arabiska"
+                ],
+                "publisher": [
+                    "FilmCentrum"
+                ],
+                "articleid": "FC1014",
+                "publisherid": "",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    },
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "E6fbDHsBGgXZRBqNAgqi",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "9f05351bab",
+                "uri": "local/uid/9f05351bab",
+                "created": "2020-02-14 11:25:31",
+                "modified": "2020-08-14 13:20:33",
+                "synchronized": "2021-07-28 11:56:32",
+                "source": "skolmedia",
+                "creator": "9bd7364b-6ced-3332-161f-17e8d14ac987",
+                "owner": "9bd7364b-6ced-3332-161f-17e8d14ac987"
+            },
+            "product": {
+                "surtitle": "",
+                "title": "De f\u00f6rsta svenskarna - pionj\u00e4rerna (f\u00f6rkortad version)",
+                "subtitle": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "",
+                "description": "<p>Hur mycket is fanns det p\u00e5 istiden? Och vilka var det som bodde i det som var Sverige p\u00e5 den tiden? Arkeologen Jonathan Lindstr\u00f6m reser i sp\u00e5ren efter de som befolkat Sverige och Norge efter istiden. Han m\u00f6ter forskare som ber\u00e4ttar om m\u00e4nniskor som str\u00f6mmat in i Skandinavien under tusentals \u00e5r. Denna film \u00e4r en f\u00f6rkortad version av dokument\u00e4rfilmen De f\u00f6rsta svenskarna - \"Pionj\u00e4rerna\".<br><br><em>\"De var moderna m\u00e4nniskor, men de liknade inga som lever i Europa i dag. De hade m\u00f6rk hud och bl\u00e5 \u00f6gon.\"\u00a0</em>Genetikprofessorn Mattias Jakobsson</p><p><br></p>",
+                "creator": [],
+                "language": [
+                    "Svenska"
+                ],
+                "created": null,
+                "modified": null,
+                "published": null,
+                "year": "2019",
+                "country": [
+                    "Sverige"
+                ],
+                "articleid": "",
+                "publisherid": "EDU0210",
+                "publisher": [
+                    "Cinebox"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "",
+                "thumbnail": {
+                    "small": "https://cfcdn.screen9.com/img/X/-/X-e8tCc2SzeUt2nGPJEiOQ_image/240p.jpg?v=0",
+                    "image": "https://cfcdn.screen9.com/img/X/-/X-e8tCc2SzeUt2nGPJEiOQ_image/image.jpg?v=0",
+                    "large": "https://cfcdn.screen9.com/img/X/-/X-e8tCc2SzeUt2nGPJEiOQ_image/480p.jpg?v=0",
+                    "xlarge": "https://cfcdn.screen9.com/img/X/-/X-e8tCc2SzeUt2nGPJEiOQ_image/image.jpg?v=0",
+                    "medium": "https://cfcdn.screen9.com/img/X/-/X-e8tCc2SzeUt2nGPJEiOQ_image/360p.jpg?v=0",
+                    "hd": "https://cfcdn.screen9.com/img/X/-/X-e8tCc2SzeUt2nGPJEiOQ_image/image.jpg?v=0"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "Cinebox",
+                        "logo": "cinebox.png",
+                        "url": "https://www.filmochskola.se"
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": "2020-02-14",
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "mediaid": "X-e8tCc2SzeUt2nGPJEiOQ",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "",
+                "episodes": "",
+                "season": "",
+                "seasons": "",
+                "duration": "1194",
+                "subtitles": [
+                    "Svenska"
+                ]
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "EDU0210, De f\u00f6rsta svenskarna \u2013 m\u00f6rk hy och bl\u00e5 \u00f6gon, arkeologi, sten\u00e5ldern, brons\u00e5ldern, flinta, istiden,",
+                "subject": [
+                    "Historia",
+                    "Biologi"
+                ],
+                "subsubject": [
+                    "Forntid och medeltid",
+                    "Genetik och genteknik"
+                ],
+                "tags": [
+                    "Historia",
+                    "Forntid och medeltid",
+                    "Biologi",
+                    "Genetik och genteknik",
+                    "Sten\u00e5ldern",
+                    "Brons\u00e5ldern",
+                    "Istiden"
+                ],
+                "breadcrumbs": [
+                    "Historia/Forntid och medeltid",
+                    "Biologi/Genetik och genteknik"
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                },
+                "level": [
+                    "Grundskola 7-9",
+                    "Grundskola 4-6",
+                    "Gymnasieskola"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "S\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Utbildningsfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [
+                    "Passar f\u00f6r skolan"
+                ],
+                "comment": "159 visningar (\"vinter 20\"-juni 20)\nSp\u00e4nnande och intressant (Svt-produktion)\n/Sara 200622\nAndra gallringen: full\u00e4ngd finns p\u00e5 Svt play/Sara 200812\nBeh\u00e5ller kortversionen men gallrar de l\u00e5nga avsnitten /Karl",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "references": [
+                    {
+                        "uid": "f59a868aa2",
+                        "position": 0
+                    },
+                    {
+                        "uid": "d1ae7eff7a",
+                        "position": 0
+                    },
+                    {
+                        "uid": "b99ba75f20",
+                        "position": 0
+                    }
+                ],
+                "attachments": [
+                    {
+                        "title": "",
+                        "location": "https://skolmedia.s3.amazonaws.com/digitalpedagogik/docs/352aa24d4b.pdf",
+                        "type": "L\u00e4rarhandledning"
+                    }
+                ]
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/9f05351bab",
+                "mime": "",
+                "filename": "De f\u00f6rsta svenskarna - m\u00f6rk hy och bl\u00e5 \u00f6gon",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [
+                    "sv"
+                ],
+                "size": "1163253450",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "M\u00e4nniskans f\u00f6rst\u00e5else av det f\u00f6rflutna \u00e4r infl\u00e4tad i hennes f\u00f6rest\u00e4llningar om samtiden och perspektiv p\u00e5 framtiden. P\u00e5 s\u00e5 s\u00e4tt p\u00e5verkar det f\u00f6rflutna b\u00e5de v\u00e5ra liv i dag och v\u00e5ra val inf\u00f6r framtiden. Kvinnor och m\u00e4n har i alla tider skapat historiska ber\u00e4ttelser f\u00f6r att tolka verkligheten och p\u00e5verka sin omgivning. Ett historiskt perspektiv ger oss redskap att f\u00f6rst\u00e5 och f\u00f6r\u00e4ndra v\u00e5r egen tid.",
+                            "label": "Historia",
+                            "value": "cf95b27c-8ac7-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet historia ska syfta till att eleverna utvecklar s\u00e5v\u00e4l kunskaper om historiska sammanhang, som sin historiska bildning och sitt historiemedvetande. Detta inneb\u00e4r en insikt om att det f\u00f6rflutna pr\u00e4glar v\u00e5r syn p\u00e5 nutiden och d\u00e4rmed uppfattningen om framtiden. Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att utveckla kunskaper om historiska f\u00f6rh\u00e5llanden, historiska begrepp och metoder och om hur historia kan anv\u00e4ndas f\u00f6r olika syften. Den ska ocks\u00e5 bidra till att eleverna utvecklar historiska kunskaper om likheter och skillnader i m\u00e4nniskors levnadsvillkor och v\u00e4rderingar. D\u00e4rigenom ska eleverna f\u00e5 f\u00f6rst\u00e5else f\u00f6r olika kulturella sammanhang och levnadss\u00e4tt.</p>\n\n<p>Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att till\u00e4gna sig en historisk referensram och en f\u00f6rdjupad f\u00f6rst\u00e5else f\u00f6r nutiden. De ska ocks\u00e5 f\u00e5 m\u00f6jlighet att utveckla en kronologisk \u00f6verblick \u00f6ver hur kvinnor och m\u00e4n genom tiderna har skapat och f\u00f6r\u00e4ndrat samh\u00e4llen och kulturer.</p>\n\n<p>Undervisningen ska stimulera elevernas nyfikenhet p\u00e5 historia och bidra till att de utvecklar kunskaper om hur vi kan veta n\u00e5got om det f\u00f6rflutna genom historiskt k\u00e4llmaterial och m\u00f6ten med platser och m\u00e4nniskors ber\u00e4ttelser. Eleverna ska genom undervisningen \u00e4ven ges f\u00f6ruts\u00e4ttningar att utveckla f\u00f6rm\u00e5gan att st\u00e4lla fr\u00e5gor till och v\u00e4rdera k\u00e4llor som ligger till grund f\u00f6r historisk kunskap. Undervisningen ska vidare bidra till att eleverna utvecklar f\u00f6rst\u00e5else f\u00f6r att varje tids m\u00e4nniskor m\u00e5ste bed\u00f6mas utifr\u00e5n sin samtids villkor och v\u00e4rderingar.</p>\n\n<p>Undervisningen ska bidra till att eleverna utvecklar f\u00f6rst\u00e5else f\u00f6r hur historiska ber\u00e4ttelser anv\u00e4nds i samh\u00e4llet och i vardagslivet. D\u00e4rigenom ska eleverna f\u00e5 olika perspektiv p\u00e5 sina egna och andras identiteter, v\u00e4rderingar och f\u00f6rest\u00e4llningar.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet historia ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 4\u20136": {
+                                "value": "44e4512b-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 4\u20136",
+                                "categories": {
+                                    "Hur historia anv\u00e4nds och historiska begrepp": {
+                                        "value": "e6ce6c54-8b4e-11e9-a987-0ae95472d63c",
+                                        "label": "Hur historia anv\u00e4nds och historiska begrepp",
+                                        "core_content": [
+                                            {
+                                                "value": "57eaa2ef-8b4f-11e9-a987-0ae95472d63c",
+                                                "label": "Exempel p\u00e5 hur forntiden, medeltiden, 1500-talet, 1600-talet och 1700-talet kan avl\u00e4sas i v\u00e5ra dagar genom traditioner, namn, spr\u00e5kliga uttryck, byggnader, st\u00e4der och gr\u00e4nser."
+                                            }
+                                        ]
+                                    },
+                                    "Kring forntiden och medeltiden, till cirka 1500": {
+                                        "value": "da19e39c-8b4e-11e9-a987-0ae95472d63c",
+                                        "label": "Kring forntiden och medeltiden, till cirka 1500",
+                                        "core_content": [
+                                            {
+                                                "value": "362fbfd8-8b4f-11e9-a987-0ae95472d63c",
+                                                "label": "Norden befolkas. De utm\u00e4rkande dragen f\u00f6r sten\u00e5ldern, brons\u00e5ldern och j\u00e4rn\u00e5ldern."
+                                            },
+                                            {
+                                                "value": "405a6654-8b4f-11e9-a987-0ae95472d63c",
+                                                "label": "Vad arkeologiska fynd, till exempel myntskatter och fynd av f\u00f6rem\u00e5l fr\u00e5n andra kulturer kan ber\u00e4tta om kulturm\u00f6ten och om likheter och skillnader i levnadsvillkor f\u00f6r barn, kvinnor och m\u00e4n."
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "I \u00e5rskurs 7\u20139": {
+                                "value": "47fcb3f4-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 7\u20139",
+                                "categories": {
+                                    "Hur historia anv\u00e4nds och historiska begrepp": {
+                                        "value": "f70c9eb8-8b4e-11e9-a987-0ae95472d63c",
+                                        "label": "Hur historia anv\u00e4nds och historiska begrepp",
+                                        "core_content": [
+                                            {
+                                                "value": "99fa8e6c-8b4f-11e9-a987-0ae95472d63c",
+                                                "label": "Hur historia kan anv\u00e4ndas f\u00f6r att skapa eller st\u00e4rka nationella identiteter."
+                                            },
+                                            {
+                                                "value": "9c159eeb-8b4f-11e9-a987-0ae95472d63c",
+                                                "label": "Hur historia kan anv\u00e4ndas f\u00f6r att f\u00f6rst\u00e5 hur den tid som m\u00e4nniskor lever i p\u00e5verkar deras villkor och v\u00e4rderingar."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "subject": {
+                            "description": "Naturvetenskapen har sitt ursprung i m\u00e4nniskans nyfikenhet och behov av att veta mer om sig sj\u00e4lv och sin omv\u00e4rld. Kunskaper i biologi har stor betydelse f\u00f6r samh\u00e4llsutvecklingen inom s\u00e5 skilda omr\u00e5den som h\u00e4lsa, naturbruk och milj\u00f6. Med kunskaper om naturen och m\u00e4nniskan f\u00e5r m\u00e4nniskor redskap f\u00f6r att p\u00e5verka sitt eget v\u00e4lbefinnande, men ocks\u00e5 f\u00f6r att kunna bidra till en h\u00e5llbar utveckling.",
+                            "label": "Biologi",
+                            "value": "bb8dc4bf-8ac7-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet biologi ska syfta till att eleverna utvecklar kunskaper om biologiska sammanhang och nyfikenhet p\u00e5 och intresse f\u00f6r att veta mer om sig sj\u00e4lva och naturen. Genom undervisningen ska eleverna ges m\u00f6jlighet att st\u00e4lla fr\u00e5gor om naturen och m\u00e4nniskan utifr\u00e5n egna upplevelser och aktuella h\u00e4ndelser. Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att s\u00f6ka svar p\u00e5 fr\u00e5gor med hj\u00e4lp av systematiska unders\u00f6kningar. Som en del av systematiska unders\u00f6kningar ska eleverna, genom praktiskt unders\u00f6kande arbete, ges m\u00f6jlighet att utveckla f\u00e4rdigheter i att hantera s\u00e5v\u00e4l digitala verktyg som annan utrustning. Eleverna ska ges f\u00f6ruts\u00e4ttningar att s\u00f6ka svar p\u00e5 fr\u00e5gor med hj\u00e4lp av olika typer av k\u00e4llor. P\u00e5 s\u00e5 s\u00e4tt ska undervisningen bidra till att eleverna utvecklar ett kritiskt t\u00e4nkande kring sina egna resultat, andras argument och olika informationsk\u00e4llor. Genom undervisningen ska eleverna ocks\u00e5 utveckla f\u00f6rst\u00e5else f\u00f6r att p\u00e5st\u00e5enden kan pr\u00f6vas och v\u00e4rderas med hj\u00e4lp av naturvetenskapliga arbetsmetoder.</p>\n\n<p>Undervisningen ska ge eleverna m\u00f6jlighet att anv\u00e4nda och utveckla kunskaper och redskap f\u00f6r att formulera egna och granska andras argument i sammanhang d\u00e4r kunskaper i biologi har betydelse. D\u00e4rigenom ska eleverna ges f\u00f6ruts\u00e4ttningar att hantera praktiska, etiska och estetiska valsituationer som r\u00f6r h\u00e4lsa, naturbruk och ekologisk h\u00e5llbarhet.</p>\n\n<p>Undervisningen ska \u00e4ven bidra till att eleverna utvecklar f\u00f6rtrogenhet med biologins begrepp, modeller och teorier samt f\u00f6rst\u00e5else f\u00f6r hur dessa utvecklas i samspel med erfarenheter fr\u00e5n unders\u00f6kningar av naturen och m\u00e4nniskan. Vidare ska undervisningen bidra till att eleverna utvecklar f\u00f6rm\u00e5gan att samtala om, tolka och framst\u00e4lla texter och olika estetiska uttryck med naturvetenskapligt inneh\u00e5ll.</p>\n\n<p>Undervisningen ska skapa f\u00f6ruts\u00e4ttningar f\u00f6r eleverna att kunna skilja mellan naturvetenskapliga och andra s\u00e4tt att skildra omv\u00e4rlden. Genom undervisningen ska eleverna f\u00e5 inblick i naturvetenskapens v\u00e4rldsbild med evolutionsteorin som grund samt f\u00e5 perspektiv p\u00e5 hur den har utvecklats och vilken kulturell p\u00e5verkan den har haft.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet biologi ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 4\u20136": {
+                                "value": "fbf16c21-8b35-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 4\u20136",
+                                "categories": {
+                                    "Biologin och v\u00e4rldsbilden": {
+                                        "value": "b4ea9cb9-8b39-11e9-a987-0ae95472d63c",
+                                        "label": "Biologin och v\u00e4rldsbilden",
+                                        "core_content": [
+                                            {
+                                                "value": "27de7294-8b3b-11e9-a987-0ae95472d63c",
+                                                "label": "Livets utveckling och organismers anpassningar till olika livsmilj\u00f6er."
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "I \u00e5rskurs 7\u20139": {
+                                "value": "fefcbab5-8b35-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 7\u20139",
+                                "categories": {
+                                    "Kropp och h\u00e4lsa": {
+                                        "value": "bc9c4eb2-8b39-11e9-a987-0ae95472d63c",
+                                        "label": "Kropp och h\u00e4lsa",
+                                        "core_content": [
+                                            {
+                                                "value": "4a01f821-8b3b-11e9-a987-0ae95472d63c",
+                                                "label": "Evolutionens mekanismer och uttryck, samt \u00e4rftlighet och f\u00f6rh\u00e5llandet mellan arv och milj\u00f6. Genteknikens m\u00f6jligheter och risker och etiska fr\u00e5gor som tekniken v\u00e4cker."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": {
+                    "subject": [
+                        "cf95b27c-8ac7-11e9-a987-0ae95472d63c",
+                        "bb8dc4bf-8ac7-11e9-a987-0ae95472d63c"
+                    ],
+                    "level": [
+                        "44e4512b-8b36-11e9-a987-0ae95472d63c",
+                        "47fcb3f4-8b36-11e9-a987-0ae95472d63c",
+                        "fbf16c21-8b35-11e9-a987-0ae95472d63c",
+                        "fefcbab5-8b35-11e9-a987-0ae95472d63c"
+                    ],
+                    "category": [
+                        "e6ce6c54-8b4e-11e9-a987-0ae95472d63c",
+                        "da19e39c-8b4e-11e9-a987-0ae95472d63c",
+                        "f70c9eb8-8b4e-11e9-a987-0ae95472d63c",
+                        "b4ea9cb9-8b39-11e9-a987-0ae95472d63c",
+                        "bc9c4eb2-8b39-11e9-a987-0ae95472d63c"
+                    ],
+                    "core_content": [
+                        "57eaa2ef-8b4f-11e9-a987-0ae95472d63c",
+                        "362fbfd8-8b4f-11e9-a987-0ae95472d63c",
+                        "405a6654-8b4f-11e9-a987-0ae95472d63c",
+                        "99fa8e6c-8b4f-11e9-a987-0ae95472d63c",
+                        "9c159eeb-8b4f-11e9-a987-0ae95472d63c",
+                        "27de7294-8b3b-11e9-a987-0ae95472d63c",
+                        "4a01f821-8b3b-11e9-a987-0ae95472d63c"
+                    ]
+                },
+                "title": "De f\u00f6rsta svenskarna - pionj\u00e4rerna (f\u00f6rkortad version)",
+                "title_sort": "De f\u00f6rsta svenskarna - pionj\u00e4rerna (f\u00f6rkortad version)",
+                "title_ngram": "De f\u00f6rsta svenskarna - pionj\u00e4rerna (f\u00f6rkortad version)",
+                "title_autocomplete": "De f\u00f6rsta svenskarna - pionj\u00e4rerna (f\u00f6rkortad version)",
+                "tags": [
+                    "historia",
+                    "forntid och medeltid",
+                    "biologi",
+                    "genetik och genteknik",
+                    "sten\u00e5ldern",
+                    "brons\u00e5ldern",
+                    "istiden"
+                ],
+                "keywords": [
+                    "historia",
+                    "biologi",
+                    "forntid och medeltid",
+                    "genetik och genteknik",
+                    "sten\u00e5ldern",
+                    "brons\u00e5ldern",
+                    "istiden",
+                    "edu0210",
+                    "de f\u00f6rsta svenskarna \u2013 m\u00f6rk hy och bl\u00e5 \u00f6gon",
+                    "arkeologi",
+                    "flinta"
+                ],
+                "freetext": "EDU0210, De f\u00f6rsta svenskarna \u2013 m\u00f6rk hy och bl\u00e5 \u00f6gon, arkeologi, sten\u00e5ldern, brons\u00e5ldern, flinta, istiden,",
+                "goals": [],
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "language": [
+                    "Svenska"
+                ],
+                "publisher": [
+                    "Cinebox"
+                ],
+                "articleid": "",
+                "publisherid": "EDU0210",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    },
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "GqfbDHsBGgXZRBqNBApo",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "i62kdsl86x",
+                "uri": "local/uid/i62kdsl86x",
+                "created": "2019-10-23 21:05:06",
+                "modified": "2020-06-24 10:45:18",
+                "synchronized": "2021-07-28 11:56:33",
+                "source": "skolmedia",
+                "creator": "system",
+                "owner": "system"
+            },
+            "product": {
+                "surtitle": "",
+                "title": "Att vara serietecknare",
+                "subtitle": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "Hur \u00e4r det att teckna serier och arbeta som serietecknare? Det f\u00e5r man veta i denna inspirerande film om hur det \u00e4r att jobba som serieskapare i Sverige",
+                "description": "<p>Hur \u00e4r det att teckna serier och arbeta som serietecknare? Det f\u00e5r man veta i denna inspirerande film om hur det \u00e4r att jobba som serieskapare i Sverige. I filmen m\u00f6ter du b\u00e5de verksamma serietecknare och l\u00e4rare fr\u00e5n Serieskolan i Malm\u00f6. Tecknarna delar tips och tankar ang\u00e5ende sj\u00e4lva tecknandet, och de ber\u00e4ttar \u00e4ven var de finner sin inspiration och motivation till serierna.</p>",
+                "creator": [],
+                "language": [
+                    "Svenska"
+                ],
+                "created": null,
+                "modified": null,
+                "published": null,
+                "year": "2016",
+                "country": [
+                    "Sverige"
+                ],
+                "articleid": "",
+                "publisherid": "CIN1738",
+                "publisher": [
+                    "Cinebox"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "",
+                "thumbnail": {
+                    "small": "https://d225ilamp70atk.cloudfront.net/images/temalador/1496681395.png",
+                    "image": "https://d225ilamp70atk.cloudfront.net/images/temalador/1496681395.png",
+                    "large": "https://d225ilamp70atk.cloudfront.net/images/temalador/1496681395.png",
+                    "xlarge": "https://d225ilamp70atk.cloudfront.net/images/temalador/1496681395.png",
+                    "medium": "https://d225ilamp70atk.cloudfront.net/images/temalador/1496681395.png",
+                    "hd": "https://d225ilamp70atk.cloudfront.net/images/temalador/1496681395.png"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "Cinebox",
+                        "logo": "cinebox.png",
+                        "url": "https://www.filmochskola.se"
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": null,
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "mediaid": "OCr0ROygG-k5rTmhmdkslg",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "",
+                "episodes": "",
+                "season": "",
+                "seasons": "",
+                "duration": "1081.833",
+                "subtitles": [
+                    "Svenska"
+                ]
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "serier, serie, serieteckning, f\u00f6rfattare, konstn\u00e4r, bildkonstn\u00e4r, serieruta, kartago, CIN1738, tusch, collage, teckna, tecknare, grafiskt,",
+                "subject": [
+                    "Bild",
+                    "Svenska"
+                ],
+                "subsubject": [
+                    "M\u00e5la och skapa",
+                    "Skrivande"
+                ],
+                "tags": [
+                    "Bild",
+                    "M\u00e5la och skapa",
+                    "Svenska",
+                    "Skrivande",
+                    "Serietecknare",
+                    "Tecknare"
+                ],
+                "breadcrumbs": [
+                    "Bild/M\u00e5la och skapa",
+                    "Svenska/Skrivande"
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "from": "",
+                    "to": ""
+                },
+                "level": [
+                    "Gymnasieskola",
+                    "Grundskola 4-6",
+                    "Grundskola 7-9"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "S\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Utbildningsfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [
+                    "Passar f\u00f6r skolan"
+                ],
+                "comment": "78 visningar /\u00e5r. reportage \"yrkesbiografi\" Har inget liknande. \n/Sara 200624",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "references": [
+                    {
+                        "uid": "",
+                        "position": 0
+                    }
+                ],
+                "attachments": [
+                    {
+                        "title": "",
+                        "location": "https://skolmedia.s3.amazonaws.com/digitalpedagogik/docs/7b6bd6a489.pdf",
+                        "type": "Handledning"
+                    }
+                ]
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/i62kdsl86x",
+                "mime": "",
+                "filename": "CIN1738.mp4",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [
+                    "sv"
+                ],
+                "size": "241119843",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "Bilder har stor betydelse fo\u0308r ma\u0308nniskors sa\u0308tt att ta\u0308nka, la\u0308ra och uppleva sig sja\u0308lva och omva\u0308rlden. Vi omges sta\u0308ndigt av bilder som har till syfte att informera, o\u0308vertala, underha\u030alla och ge oss estetiska och ka\u0308nsloma\u0308ssiga upplevelser. Kunskaper om bilder och bildkommunikation a\u0308r betydelsefulla fo\u0308r att kunna uttrycka egna a\u030asikter och delta aktivt i samha\u0308llslivet. Genom att arbeta med olika typer av bilder kan ma\u0308nniskor utveckla sin kreativitet och bildskapande fo\u0308rma\u030aga.",
+                            "label": "Bild",
+                            "value": "b87db91f-8ac7-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet bild ska syfta till att eleverna utvecklar kunskaper om hur bilder skapas och kan tolkas. Genom undervisningen ska eleverna f\u00e5 erfarenheter av visuell kultur d\u00e4r film, foto, design, konst, arkitektur och milj\u00f6er ing\u00e5r.</p>\n\n<p>I undervisningen ska eleverna ges m\u00f6jligheter att utveckla kunskaper om hur man framst\u00e4ller och presenterar egna bilder med olika metoder, material och uttrycksformer. Undervisningen ska bidra till att eleverna utvecklar sin kreativitet och sitt intresse f\u00f6r att skapa. Den ska ocks\u00e5 uppmuntra eleverna att ta egna initiativ och att arbeta p\u00e5 ett unders\u00f6kande och probleml\u00f6sande s\u00e4tt.</p>\n\n<p>Undervisningen ska bidra till att eleverna utvecklar f\u00f6rst\u00e5else f\u00f6r hur bildbudskap utformas i olika medier. Undervisningen ska ocks\u00e5 ge eleverna m\u00f6jligheter att diskutera och kritiskt granska olika bildbudskap och bidra till att eleverna utvecklar kunskaper om bilder i olika kulturer, b\u00e5de historiskt och i nutid. Genom undervisningen ska eleverna \u00e4ven ges m\u00f6jlighet att anv\u00e4nda sina kunskaper om olika typer av bilder i det egna bildskapandet.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i a\u0308mnet bild ska eleverna ges fo\u0308rutsa\u0308ttningar att utveckla sin fo\u0308rma\u030aga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 7\u20139": {
+                                "value": "568a54fc-8acb-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 7\u20139",
+                                "categories": {
+                                    "Redskap f\u00f6r bildframst\u00e4llning": {
+                                        "value": "485e6d58-8b37-11e9-a987-0ae95472d63c",
+                                        "label": "Redskap f\u00f6r bildframst\u00e4llning",
+                                        "core_content": [
+                                            {
+                                                "value": "c15164d4-8b37-11e9-a987-0ae95472d63c",
+                                                "label": "Former, f\u00e4rger och bildkompositioner samt deras betydelseb\u00e4rande egenskaper och hur dessa kan anv\u00e4ndas i bildskapande arbete."
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "I \u00e5rskurs 4\u20136": {
+                                "value": "5434adfa-8acb-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 4\u20136",
+                                "categories": {
+                                    "Bildframst\u00e4llning": {
+                                        "value": "3c12ac7c-8b37-11e9-a987-0ae95472d63c",
+                                        "label": "Bildframst\u00e4llning",
+                                        "core_content": [
+                                            {
+                                                "value": "8702e464-8b37-11e9-a987-0ae95472d63c",
+                                                "label": "Framst\u00e4llning av ber\u00e4ttande och informativa bilder, till exempel serier och illustrationer till text."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": {
+                    "subject": [
+                        "b87db91f-8ac7-11e9-a987-0ae95472d63c"
+                    ],
+                    "level": [
+                        "568a54fc-8acb-11e9-a987-0ae95472d63c",
+                        "5434adfa-8acb-11e9-a987-0ae95472d63c"
+                    ],
+                    "category": [
+                        "485e6d58-8b37-11e9-a987-0ae95472d63c",
+                        "3c12ac7c-8b37-11e9-a987-0ae95472d63c"
+                    ],
+                    "core_content": [
+                        "c15164d4-8b37-11e9-a987-0ae95472d63c",
+                        "8702e464-8b37-11e9-a987-0ae95472d63c"
+                    ]
+                },
+                "title": "Att vara serietecknare",
+                "title_sort": "Att vara serietecknare",
+                "title_ngram": "Att vara serietecknare",
+                "title_autocomplete": "Att vara serietecknare",
+                "tags": [
+                    "bild",
+                    "m\u00e5la och skapa",
+                    "svenska",
+                    "skrivande",
+                    "serietecknare",
+                    "tecknare"
+                ],
+                "keywords": [
+                    "bild",
+                    "svenska",
+                    "m\u00e5la och skapa",
+                    "skrivande",
+                    "serietecknare",
+                    "tecknare",
+                    "serier",
+                    "serie",
+                    "serieteckning",
+                    "f\u00f6rfattare",
+                    "konstn\u00e4r",
+                    "bildkonstn\u00e4r",
+                    "serieruta",
+                    "kartago",
+                    "cin1738",
+                    "tusch",
+                    "collage",
+                    "teckna",
+                    "grafiskt"
+                ],
+                "freetext": "serier, serie, serieteckning, f\u00f6rfattare, konstn\u00e4r, bildkonstn\u00e4r, serieruta, kartago, CIN1738, tusch, collage, teckna, tecknare, grafiskt,",
+                "goals": [],
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "language": [
+                    "Svenska"
+                ],
+                "publisher": [
+                    "Cinebox"
+                ],
+                "articleid": "",
+                "publisherid": "CIN1738",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    },
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "G6fbDHsBGgXZRBqNBAqm",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "zqhtfc4c2z",
+                "uri": "local/uid/zqhtfc4c2z",
+                "created": "2019-10-23 21:21:49",
+                "modified": "2020-12-17 10:12:29",
+                "synchronized": "2021-07-28 11:56:33",
+                "source": "skolmedia",
+                "creator": "system",
+                "owner": "system"
+            },
+            "product": {
+                "surtitle": "",
+                "title": "#Hashtag",
+                "subtitle": "",
+                "titledescription": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "Maryam h\u00f6r en sak som h\u00e4nt en tjej i hennes klass och l\u00e4gger upp den p\u00e5 n\u00e4tet",
+                "description": "<p>Maryam h\u00f6r en sak som h\u00e4nt en tjej i hennes klass och l\u00e4gger upp den p\u00e5 n\u00e4tet. Men vad h\u00e4nder n\u00e4r hundratals ungdomar vill d\u00f6da den som publicerat historien? Hur k\u00e4nns det f\u00f6r den som drabbas?</p><p>I serien #hashtag skapas ett instagramkonto, @Paaach, d\u00e4r tjejer och killar h\u00e4ngs ut som horor. V\u00e4nner v\u00e4nds mot varandra och de uth\u00e4ngda ropar efter h\u00e4mnd. Allt urartar snabbt och slutar med upplopp. Vuxen\u00adv\u00e4rlden vaknar och f\u00f6rs\u00f6ker skapa r\u00e4ttvisa, men det \u00e4r redan f\u00f6r sent.</p>",
+                "creator": [],
+                "language": [
+                    "Svenska"
+                ],
+                "created": null,
+                "modified": null,
+                "published": null,
+                "year": "2016",
+                "country": [
+                    "Sverige"
+                ],
+                "articleid": "",
+                "publisherid": "CIN17042",
+                "publisher": [
+                    "Cinebox"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Spelfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "",
+                "thumbnail": {
+                    "small": "https://csp.screen9.com/img/0/l/u/8/image_0lu8JZ9sd_Bf2be4nZNhPw/5.jpg?v=0",
+                    "image": "https://csp.screen9.com/img/0/l/u/8/image_0lu8JZ9sd_Bf2be4nZNhPw/5.jpg?v=0",
+                    "large": "https://csp.screen9.com/img/0/l/u/8/image_0lu8JZ9sd_Bf2be4nZNhPw/5.jpg?v=0",
+                    "xlarge": "https://csp.screen9.com/img/0/l/u/8/image_0lu8JZ9sd_Bf2be4nZNhPw/5.jpg?v=0",
+                    "medium": "https://csp.screen9.com/img/0/l/u/8/image_0lu8JZ9sd_Bf2be4nZNhPw/5.jpg?v=0",
+                    "hd": "https://csp.screen9.com/img/0/l/u/8/image_0lu8JZ9sd_Bf2be4nZNhPw/5.jpg?v=0"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "Cinebox",
+                        "logo": "cinebox.png",
+                        "url": "https://www.filmochskola.se"
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": null,
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "audioid": "",
+                "mediaid": "0lu8JZ9sd_Bf2be4nZNhPw",
+                "audiosrc": "",
+                "videosrc": "",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "2",
+                "episodes": "8",
+                "season": "",
+                "seasons": "",
+                "duration": "607.68",
+                "subtitles": [
+                    "Svenska"
+                ]
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "layout": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "CIN17042",
+                "subject": [
+                    "Svenska som andraspr\u00e5k och SFI",
+                    "V\u00e4rdegrund",
+                    "Svenska",
+                    "Samh\u00e4llskunskap",
+                    "Information och media",
+                    "Psykologi och filosofi"
+                ],
+                "subsubject": [
+                    "Sfi - svenska f\u00f6r invandrare",
+                    "Svenska som andraspr\u00e5k"
+                ],
+                "tags": [
+                    "Svenska som andraspr\u00e5k och SFI",
+                    "Sfi - svenska f\u00f6r invandrare",
+                    "Svenska som andraspr\u00e5k",
+                    "V\u00e4rdegrund",
+                    "Svenska",
+                    "Samh\u00e4llskunskap",
+                    "Information och media",
+                    "Psykologi och filosofi"
+                ],
+                "breadcrumbs": [
+                    "Svenska som andraspr\u00e5k och SFI/Sfi - svenska f\u00f6r invandrare",
+                    "Svenska som andraspr\u00e5k och SFI/Svenska som andraspr\u00e5k",
+                    "V\u00e4rdegrund",
+                    "Svenska",
+                    "Samh\u00e4llskunskap",
+                    "Information och media",
+                    "Psykologi och filosofi"
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "from": "",
+                    "to": ""
+                },
+                "level": [
+                    "Gymnasieskola",
+                    "Grundskola 7-9"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "Ej s\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Utbildningsfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [
+                    "Passar f\u00f6r skolan"
+                ],
+                "comment": "",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "bgzcep1tnh",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "slideshow": [
+                    {
+                        "uid": "",
+                        "image": "",
+                        "thumbnail": "",
+                        "caption": "",
+                        "position": "0",
+                        "title": ""
+                    }
+                ],
+                "references": [],
+                "attachments": [
+                    {
+                        "title": "",
+                        "location": "https://mediapoolen.se/handledningar/CIN1704.pdf",
+                        "type": "Handledning"
+                    }
+                ]
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/zqhtfc4c2z",
+                "mime": "",
+                "filename": "CIN1704_2.mp4",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [
+                    "sv"
+                ],
+                "size": "135509608",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "aim": {
+                            "description": "",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "",
+                            "values": []
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": [],
+                "title": "#Hashtag",
+                "title_sort": "#Hashtag",
+                "title_ngram": "#Hashtag",
+                "title_autocomplete": "#Hashtag",
+                "tags": [
+                    "svenska som andraspr\u00e5k och sfi",
+                    "sfi - svenska f\u00f6r invandrare",
+                    "svenska som andraspr\u00e5k",
+                    "v\u00e4rdegrund",
+                    "svenska",
+                    "samh\u00e4llskunskap",
+                    "information och media",
+                    "psykologi och filosofi"
+                ],
+                "keywords": [
+                    "svenska som andraspr\u00e5k och sfi",
+                    "v\u00e4rdegrund",
+                    "svenska",
+                    "samh\u00e4llskunskap",
+                    "information och media",
+                    "psykologi och filosofi",
+                    "sfi - svenska f\u00f6r invandrare",
+                    "svenska som andraspr\u00e5k",
+                    "cin17042"
+                ],
+                "freetext": "CIN17042",
+                "goals": [],
+                "type": [
+                    "Spelfilm"
+                ],
+                "language": [
+                    "Svenska"
+                ],
+                "publisher": [
+                    "Cinebox"
+                ],
+                "articleid": "",
+                "publisherid": "CIN17042",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    },
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "HqfbDHsBGgXZRBqNBQpd",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "k020kjpmn3",
+                "uri": "local/uid/k020kjpmn3",
+                "created": "2019-10-23 21:06:58",
+                "modified": "2019-12-13 10:05:38",
+                "synchronized": "2021-07-28 11:56:34",
+                "source": "skolmedia",
+                "creator": "system",
+                "owner": "system"
+            },
+            "product": {
+                "surtitle": "",
+                "title": "Julnatten",
+                "subtitle": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "",
+                "description": "<p class=\"fr-tag\">Ute faller sn\u00f6n. I vardagsrummet st\u00e5r julgranen pyntad. Sasha, flickan i filmen, har skrivit sin \u00f6nskelista, men har ett bekymmer - familjens nya hus har ingen skorsten och hur ska d\u00e5 tomten ta sig in med klapparna?</p>",
+                "creator": [],
+                "language": [
+                    "Svenska"
+                ],
+                "created": null,
+                "modified": null,
+                "published": null,
+                "year": "1992",
+                "country": [
+                    "Storbritannien"
+                ],
+                "articleid": "V1470",
+                "publisherid": "v1470",
+                "publisher": [
+                    "Interfilm"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Spelfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "",
+                "thumbnail": {
+                    "small": "https://d225ilamp70atk.cloudfront.net/images/temalador/80934290.jpg",
+                    "image": "https://d225ilamp70atk.cloudfront.net/images/temalador/80934290.jpg",
+                    "large": "https://d225ilamp70atk.cloudfront.net/images/temalador/80934290.jpg",
+                    "xlarge": "https://d225ilamp70atk.cloudfront.net/images/temalador/80934290.jpg",
+                    "medium": "https://d225ilamp70atk.cloudfront.net/images/temalador/80934290.jpg",
+                    "hd": "https://d225ilamp70atk.cloudfront.net/images/temalador/80934290.jpg"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "Interfilm",
+                        "logo": "interfilm.png",
+                        "url": ""
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": null,
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "mediaid": "BGvQoQcqS-L8-Z3cvZLVaA",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "",
+                "episodes": "",
+                "season": "",
+                "seasons": "",
+                "duration": "3378.36"
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "jul,julfilm,julklapp,Skorsten,Sk\u00f6nlitteratur,spelfilm,tecknat,tomten, Julnatten, V1470",
+                "subject": [],
+                "subsubject": [],
+                "tags": [
+                    "Julen"
+                ],
+                "breadcrumbs": [
+                    ""
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [
+                    "Animerat"
+                ],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "from": "4",
+                    "to": "9"
+                },
+                "level": [
+                    "F\u00f6rskola",
+                    "Grundskola F-3"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "S\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Spelfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [],
+                "comment": "",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "references": [
+                    {
+                        "uid": "",
+                        "position": 0
+                    }
+                ],
+                "attachments": []
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/k020kjpmn3",
+                "mime": "",
+                "filename": "V1470.mp4",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [],
+                "size": "288951317",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "",
+                            "label": "",
+                            "value": ""
+                        },
+                        "aim": {
+                            "description": "",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "",
+                            "values": []
+                        },
+                        "core_content": null
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": [],
+                "title": "Julnatten",
+                "title_sort": "Julnatten",
+                "title_ngram": "Julnatten",
+                "title_autocomplete": "Julnatten",
+                "tags": [
+                    "julen"
+                ],
+                "keywords": [
+                    "julen",
+                    "jul",
+                    "julfilm",
+                    "julklapp",
+                    "skorsten",
+                    "sk\u00f6nlitteratur",
+                    "spelfilm",
+                    "tecknat",
+                    "tomten",
+                    "julnatten",
+                    "v1470"
+                ],
+                "freetext": "jul,julfilm,julklapp,Skorsten,Sk\u00f6nlitteratur,spelfilm,tecknat,tomten, Julnatten, V1470",
+                "goals": [],
+                "type": [
+                    "Spelfilm"
+                ],
+                "language": [
+                    "Svenska"
+                ],
+                "publisher": [
+                    "Interfilm"
+                ],
+                "articleid": "V1470",
+                "publisherid": "v1470",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    },
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "H6fbDHsBGgXZRBqNBQqZ",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "8ae758a31c",
+                "uri": "local/uid/8ae758a31c",
+                "created": "2020-04-29 08:19:57",
+                "modified": "2020-05-25 10:06:31",
+                "synchronized": "2021-07-28 11:56:34",
+                "source": "skolmedia",
+                "creator": "f277073d-4e2c-6443-7807-ffcac8260d88",
+                "owner": "f277073d-4e2c-6443-7807-ffcac8260d88"
+            },
+            "product": {
+                "surtitle": "Vikingasagor",
+                "title": "Sagan om Tor och tvekampen",
+                "subtitle": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "",
+                "description": "<p>Den kringvandrande ber\u00e4ttaren Bj\u00f6rn Skald stannar till och ber\u00e4ttar sagan om Tor och tvekampen.</p>",
+                "creator": [],
+                "language": [
+                    "Svenska"
+                ],
+                "created": "2020-04-29",
+                "modified": "2020-04-29",
+                "published": null,
+                "year": "2020",
+                "country": [
+                    "Sverige"
+                ],
+                "articleid": "",
+                "publisherid": "",
+                "publisher": [
+                    "Mediapoolen V\u00e4stra G\u00f6taland"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "",
+                "thumbnail": {
+                    "small": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/7990d57445_256x144.png",
+                    "image": "https://d225ilamp70atk.cloudfront.net/images/originals/7990d57445.png",
+                    "large": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/7990d57445_640x360.png",
+                    "xlarge": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/7990d57445_854x480.png",
+                    "medium": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/7990d57445_427x240.png",
+                    "hd": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/7990d57445_1280x720.png"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "Mediapoolen V\u00e4stra G\u00f6taland",
+                        "logo": "mediapoolen.png",
+                        "url": "https://mediapoolen.se"
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": "2020-05-04",
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "mediaid": "JgyEko-rPZSvON1P8_784g",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "2",
+                "episodes": "2",
+                "season": "",
+                "seasons": "",
+                "duration": "550.36"
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "Tor och tvekampen, Tor, J\u00e4ttar",
+                "subject": [
+                    "Svenska",
+                    "Historia"
+                ],
+                "subsubject": [
+                    "Uppl\u00e4sningar och dramatiseringar",
+                    "Forntid och medeltid"
+                ],
+                "tags": [
+                    "Svenska",
+                    "Uppl\u00e4sningar och dramatiseringar",
+                    "Historia",
+                    "Forntid och medeltid",
+                    "Vikingatiden",
+                    "Fornnordisk mytologi"
+                ],
+                "breadcrumbs": [
+                    "Svenska/Uppl\u00e4sningar och dramatiseringar",
+                    "Historia/Forntid och medeltid/Vikingatiden"
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                },
+                "level": [
+                    "Grundskola F-3",
+                    "Grundskola 4-6"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "S\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Utbildningsfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [],
+                "comment": "",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "references": [
+                    {
+                        "uid": "7990d57445",
+                        "position": 0
+                    }
+                ],
+                "attachments": []
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/8ae758a31c",
+                "mime": "",
+                "filename": "Vikingaber\u00e4ttelser  - Thor och tvekampen Del2_klar.mp4",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [],
+                "size": "707895756",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "Spr\u00e5k \u00e4r m\u00e4nniskans fr\u00e4msta redskap f\u00f6r att t\u00e4nka, kommunicera och l\u00e4ra. Genom spr\u00e5ket utvecklar m\u00e4nniskor sin identitet, uttrycker k\u00e4nslor och tankar och f\u00f6rst\u00e5r hur andra k\u00e4nner och t\u00e4nker. Att ha ett rikt och varierat spr\u00e5k \u00e4r betydelsefullt f\u00f6r att kunna f\u00f6rst\u00e5 och verka i ett samh\u00e4lle d\u00e4r kulturer, livs\u00e5sk\u00e5dningar, generationer och spr\u00e5k m\u00f6ts.",
+                            "label": "Svenska",
+                            "value": "073aa2e5-8ac8-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet svenska ska syfta till att eleverna utvecklar kunskaper i och om svenska spr\u00e5ket. Genom undervisningen ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sitt tal- och skriftspr\u00e5k s\u00e5 att de f\u00e5r tilltro till sin spr\u00e5kf\u00f6rm\u00e5ga och kan uttrycka sig i olika sammanhang och f\u00f6r skilda syften. Det inneb\u00e4r att eleverna genom undervisningen ska ges m\u00f6jlighet att utveckla spr\u00e5ket f\u00f6r att t\u00e4nka, kommunicera och l\u00e4ra.</p>\n\n<p>Undervisningen ska stimulera elevernas intresse f\u00f6r att l\u00e4sa och skriva. Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla kunskaper om hur man formulerar egna \u00e5sikter och tankar i olika slags texter och genom skilda medier. Undervisningen ska \u00e4ven syfta till att eleverna utvecklar f\u00f6rm\u00e5ga att skapa och bearbeta texter, enskilt och tillsammans med andra. Eleverna ska ges m\u00f6jligheter att kommunicera i digitala milj\u00f6er med interaktiva och f\u00f6r\u00e4nderliga texter. Eleverna ska \u00e4ven stimuleras till att uttrycka sig genom olika estetiska uttrycksformer. Vidare ska undervisningen bidra till att eleverna utvecklar kunskaper om hur man s\u00f6ker och kritiskt v\u00e4rderar information fr\u00e5n olika k\u00e4llor.</p>\n\n<p>I undervisningen ska eleverna m\u00f6ta samt f\u00e5 kunskaper om sk\u00f6nlitteratur fr\u00e5n olika tider och skilda delar av v\u00e4rlden. Undervisningen ska ocks\u00e5 bidra till att eleverna utvecklar kunskaper om olika former av sakprosa. I m\u00f6tet med olika typer av texter, scenkonst och annat estetiskt ber\u00e4ttande ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sitt spr\u00e5k, den egna identiteten och sin f\u00f6rst\u00e5else f\u00f6r omv\u00e4rlden.</p>\n\n<p>Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla sina kunskaper om svenska spr\u00e5ket, dess normer, uppbyggnad, historia och utveckling samt om hur spr\u00e5kbruk varierar beroende p\u00e5 sociala sammanhang och medier. P\u00e5 s\u00e5 s\u00e4tt ska undervisningen bidra till att st\u00e4rka elevernas medvetenhet om och tilltro till den egna spr\u00e5kliga och kommunikativa f\u00f6rm\u00e5gan. Undervisningen ska ocks\u00e5 bidra till att eleverna f\u00e5r f\u00f6rst\u00e5else f\u00f6r att s\u00e4ttet man kommunicerar p\u00e5 kan f\u00e5 konsekvenser f\u00f6r en sj\u00e4lv och f\u00f6r andra m\u00e4nniskor. D\u00e4rigenom ska eleverna ges f\u00f6ruts\u00e4ttningar att ta ansvar f\u00f6r det egna spr\u00e5kbruket i olika sammanhang och medier.</p>\n\n<p>Undervisningen ska \u00e4ven bidra till att eleverna f\u00e5r m\u00f6ta och bekanta sig med s\u00e5v\u00e4l de nordiska grannspr\u00e5ken som de nationella minoritetsspr\u00e5ken.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet svenska ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 1\u20133": {
+                                "value": "d8e8d149-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 1\u20133",
+                                "categories": {
+                                    "Ber\u00e4ttande texter och sakprosatexter": {
+                                        "value": "5e2deb96-8b6f-11e9-a987-0ae95472d63c",
+                                        "label": "Ber\u00e4ttande texter och sakprosatexter",
+                                        "core_content": [
+                                            {
+                                                "value": "27bf9f17-8b73-11e9-a987-0ae95472d63c",
+                                                "label": "Ber\u00e4ttande texter och poetiska texter f\u00f6r barn fr\u00e5n olika tider och skilda delar av v\u00e4rlden. Texter i form av rim, ramsor, s\u00e5nger, bilderb\u00f6cker, kapitelb\u00f6cker, lyrik, dramatik, sagor och myter. Ber\u00e4ttande och poetiska texter som belyser m\u00e4nniskors upplevelser och erfarenheter."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "subject": {
+                            "description": "M\u00e4nniskans f\u00f6rst\u00e5else av det f\u00f6rflutna \u00e4r infl\u00e4tad i hennes f\u00f6rest\u00e4llningar om samtiden och perspektiv p\u00e5 framtiden. P\u00e5 s\u00e5 s\u00e4tt p\u00e5verkar det f\u00f6rflutna b\u00e5de v\u00e5ra liv i dag och v\u00e5ra val inf\u00f6r framtiden. Kvinnor och m\u00e4n har i alla tider skapat historiska ber\u00e4ttelser f\u00f6r att tolka verkligheten och p\u00e5verka sin omgivning. Ett historiskt perspektiv ger oss redskap att f\u00f6rst\u00e5 och f\u00f6r\u00e4ndra v\u00e5r egen tid.",
+                            "label": "Historia",
+                            "value": "cf95b27c-8ac7-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet historia ska syfta till att eleverna utvecklar s\u00e5v\u00e4l kunskaper om historiska sammanhang, som sin historiska bildning och sitt historiemedvetande. Detta inneb\u00e4r en insikt om att det f\u00f6rflutna pr\u00e4glar v\u00e5r syn p\u00e5 nutiden och d\u00e4rmed uppfattningen om framtiden. Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att utveckla kunskaper om historiska f\u00f6rh\u00e5llanden, historiska begrepp och metoder och om hur historia kan anv\u00e4ndas f\u00f6r olika syften. Den ska ocks\u00e5 bidra till att eleverna utvecklar historiska kunskaper om likheter och skillnader i m\u00e4nniskors levnadsvillkor och v\u00e4rderingar. D\u00e4rigenom ska eleverna f\u00e5 f\u00f6rst\u00e5else f\u00f6r olika kulturella sammanhang och levnadss\u00e4tt.</p>\n\n<p>Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att till\u00e4gna sig en historisk referensram och en f\u00f6rdjupad f\u00f6rst\u00e5else f\u00f6r nutiden. De ska ocks\u00e5 f\u00e5 m\u00f6jlighet att utveckla en kronologisk \u00f6verblick \u00f6ver hur kvinnor och m\u00e4n genom tiderna har skapat och f\u00f6r\u00e4ndrat samh\u00e4llen och kulturer.</p>\n\n<p>Undervisningen ska stimulera elevernas nyfikenhet p\u00e5 historia och bidra till att de utvecklar kunskaper om hur vi kan veta n\u00e5got om det f\u00f6rflutna genom historiskt k\u00e4llmaterial och m\u00f6ten med platser och m\u00e4nniskors ber\u00e4ttelser. Eleverna ska genom undervisningen \u00e4ven ges f\u00f6ruts\u00e4ttningar att utveckla f\u00f6rm\u00e5gan att st\u00e4lla fr\u00e5gor till och v\u00e4rdera k\u00e4llor som ligger till grund f\u00f6r historisk kunskap. Undervisningen ska vidare bidra till att eleverna utvecklar f\u00f6rst\u00e5else f\u00f6r att varje tids m\u00e4nniskor m\u00e5ste bed\u00f6mas utifr\u00e5n sin samtids villkor och v\u00e4rderingar.</p>\n\n<p>Undervisningen ska bidra till att eleverna utvecklar f\u00f6rst\u00e5else f\u00f6r hur historiska ber\u00e4ttelser anv\u00e4nds i samh\u00e4llet och i vardagslivet. D\u00e4rigenom ska eleverna f\u00e5 olika perspektiv p\u00e5 sina egna och andras identiteter, v\u00e4rderingar och f\u00f6rest\u00e4llningar.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet historia ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 1\u20133": {
+                                "value": "4287b223-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 1\u20133",
+                                "categories": {
+                                    "Att leva i v\u00e4rlden": {
+                                        "value": "d4b8c030-8b4e-11e9-a987-0ae95472d63c",
+                                        "label": "Att leva i v\u00e4rlden",
+                                        "core_content": [
+                                            {
+                                                "value": "1ced2391-8b4f-11e9-a987-0ae95472d63c",
+                                                "label": "Ber\u00e4ttelser om gudar och hj\u00e4ltar i antik och nordisk mytologi och hur man kan se p\u00e5 dem i v\u00e5r egen tid."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "subject": {
+                            "description": "Spr\u00e5k \u00e4r m\u00e4nniskans fr\u00e4msta redskap f\u00f6r att t\u00e4nka, kommunicera och l\u00e4ra. Genom spr\u00e5ket utvecklar m\u00e4nniskor sin identitet, uttrycker k\u00e4nslor och tankar och f\u00f6rst\u00e5r hur andra k\u00e4nner och t\u00e4nker. Att ha ett rikt och varierat spr\u00e5k \u00e4r betydelsefullt f\u00f6r att kunna f\u00f6rst\u00e5 och verka i ett samh\u00e4lle d\u00e4r kulturer, livs\u00e5sk\u00e5dningar, generationer och spr\u00e5k m\u00f6ts.",
+                            "label": "Svenska",
+                            "value": "073aa2e5-8ac8-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet svenska ska syfta till att eleverna utvecklar kunskaper i och om svenska spr\u00e5ket. Genom undervisningen ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sitt tal- och skriftspr\u00e5k s\u00e5 att de f\u00e5r tilltro till sin spr\u00e5kf\u00f6rm\u00e5ga och kan uttrycka sig i olika sammanhang och f\u00f6r skilda syften. Det inneb\u00e4r att eleverna genom undervisningen ska ges m\u00f6jlighet att utveckla spr\u00e5ket f\u00f6r att t\u00e4nka, kommunicera och l\u00e4ra.</p>\n\n<p>Undervisningen ska stimulera elevernas intresse f\u00f6r att l\u00e4sa och skriva. Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla kunskaper om hur man formulerar egna \u00e5sikter och tankar i olika slags texter och genom skilda medier. Undervisningen ska \u00e4ven syfta till att eleverna utvecklar f\u00f6rm\u00e5ga att skapa och bearbeta texter, enskilt och tillsammans med andra. Eleverna ska ges m\u00f6jligheter att kommunicera i digitala milj\u00f6er med interaktiva och f\u00f6r\u00e4nderliga texter. Eleverna ska \u00e4ven stimuleras till att uttrycka sig genom olika estetiska uttrycksformer. Vidare ska undervisningen bidra till att eleverna utvecklar kunskaper om hur man s\u00f6ker och kritiskt v\u00e4rderar information fr\u00e5n olika k\u00e4llor.</p>\n\n<p>I undervisningen ska eleverna m\u00f6ta samt f\u00e5 kunskaper om sk\u00f6nlitteratur fr\u00e5n olika tider och skilda delar av v\u00e4rlden. Undervisningen ska ocks\u00e5 bidra till att eleverna utvecklar kunskaper om olika former av sakprosa. I m\u00f6tet med olika typer av texter, scenkonst och annat estetiskt ber\u00e4ttande ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sitt spr\u00e5k, den egna identiteten och sin f\u00f6rst\u00e5else f\u00f6r omv\u00e4rlden.</p>\n\n<p>Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla sina kunskaper om svenska spr\u00e5ket, dess normer, uppbyggnad, historia och utveckling samt om hur spr\u00e5kbruk varierar beroende p\u00e5 sociala sammanhang och medier. P\u00e5 s\u00e5 s\u00e4tt ska undervisningen bidra till att st\u00e4rka elevernas medvetenhet om och tilltro till den egna spr\u00e5kliga och kommunikativa f\u00f6rm\u00e5gan. Undervisningen ska ocks\u00e5 bidra till att eleverna f\u00e5r f\u00f6rst\u00e5else f\u00f6r att s\u00e4ttet man kommunicerar p\u00e5 kan f\u00e5 konsekvenser f\u00f6r en sj\u00e4lv och f\u00f6r andra m\u00e4nniskor. D\u00e4rigenom ska eleverna ges f\u00f6ruts\u00e4ttningar att ta ansvar f\u00f6r det egna spr\u00e5kbruket i olika sammanhang och medier.</p>\n\n<p>Undervisningen ska \u00e4ven bidra till att eleverna f\u00e5r m\u00f6ta och bekanta sig med s\u00e5v\u00e4l de nordiska grannspr\u00e5ken som de nationella minoritetsspr\u00e5ken.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet svenska ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 4\u20136": {
+                                "value": "e8e4a097-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 4\u20136",
+                                "categories": {
+                                    "Ber\u00e4ttande texter och sakprosatexter": {
+                                        "value": "69c7802a-8b6f-11e9-a987-0ae95472d63c",
+                                        "label": "Ber\u00e4ttande texter och sakprosatexter",
+                                        "core_content": [
+                                            {
+                                                "value": "60041568-8b73-11e9-a987-0ae95472d63c",
+                                                "label": "Ber\u00e4ttande texter och poetiska texter f\u00f6r barn och unga fr\u00e5n olika tider, fr\u00e5n Sverige, Norden och \u00f6vriga v\u00e4rlden. Texter i form av sk\u00f6nlitteratur, lyrik, dramatik, sagor och myter som belyser m\u00e4nniskors villkor och identitets- och livsfr\u00e5gor."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": {
+                    "subject": [
+                        "073aa2e5-8ac8-11e9-a987-0ae95472d63c",
+                        "cf95b27c-8ac7-11e9-a987-0ae95472d63c"
+                    ],
+                    "level": [
+                        "d8e8d149-8b36-11e9-a987-0ae95472d63c",
+                        "4287b223-8b36-11e9-a987-0ae95472d63c",
+                        "e8e4a097-8b36-11e9-a987-0ae95472d63c"
+                    ],
+                    "category": [
+                        "5e2deb96-8b6f-11e9-a987-0ae95472d63c",
+                        "d4b8c030-8b4e-11e9-a987-0ae95472d63c",
+                        "69c7802a-8b6f-11e9-a987-0ae95472d63c"
+                    ],
+                    "core_content": [
+                        "27bf9f17-8b73-11e9-a987-0ae95472d63c",
+                        "1ced2391-8b4f-11e9-a987-0ae95472d63c",
+                        "60041568-8b73-11e9-a987-0ae95472d63c"
+                    ]
+                },
+                "title": "Vikingasagor: Sagan om Tor och tvekampen",
+                "title_sort": "Vikingasagor: Sagan om Tor och tvekampen",
+                "title_ngram": "Vikingasagor: Sagan om Tor och tvekampen",
+                "title_autocomplete": "Vikingasagor: Sagan om Tor och tvekampen",
+                "tags": [
+                    "svenska",
+                    "uppl\u00e4sningar och dramatiseringar",
+                    "historia",
+                    "forntid och medeltid",
+                    "vikingatiden",
+                    "fornnordisk mytologi"
+                ],
+                "keywords": [
+                    "svenska",
+                    "historia",
+                    "uppl\u00e4sningar och dramatiseringar",
+                    "forntid och medeltid",
+                    "vikingatiden",
+                    "fornnordisk mytologi",
+                    "tor och tvekampen",
+                    "tor",
+                    "j\u00e4ttar"
+                ],
+                "freetext": "Tor och tvekampen, Tor, J\u00e4ttar",
+                "goals": [],
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "language": [
+                    "Svenska"
+                ],
+                "publisher": [
+                    "Mediapoolen V\u00e4stra G\u00f6taland"
+                ],
+                "articleid": "",
+                "publisherid": "",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    },
+    {
+        "_index": "rek_search_20210805",
+        "_type": "_doc",
+        "_id": "IKfbDHsBGgXZRBqNBQrZ",
+        "_score": 1.0,
+        "_source": {
+            "metadata": {
+                "uid": "94fa54d75a",
+                "uri": "local/uid/94fa54d75a",
+                "created": "2020-04-29 08:28:13",
+                "modified": "2020-05-25 10:03:25",
+                "synchronized": "2021-07-28 11:56:34",
+                "source": "skolmedia",
+                "creator": "f277073d-4e2c-6443-7807-ffcac8260d88",
+                "owner": "f277073d-4e2c-6443-7807-ffcac8260d88"
+            },
+            "product": {
+                "surtitle": "Vikingasagor",
+                "title": "Sagan om Utg\u00e5rdaloke",
+                "subtitle": "",
+                "tagline": "",
+                "logline": "",
+                "summary": "",
+                "description": "<p>Den kringvandrande ber\u00e4ttaren Bj\u00f6rn Skald stannar till och ber\u00e4ttar sagan om resan till Utg\u00e5rdaloke.\u00a0</p>",
+                "creator": [],
+                "language": [
+                    "Svenska"
+                ],
+                "created": "2020-04-29",
+                "modified": "2020-04-29",
+                "published": null,
+                "year": "2020",
+                "country": [
+                    "Sverige"
+                ],
+                "articleid": "",
+                "publisherid": "",
+                "publisher": [
+                    "Mediapoolen V\u00e4stra G\u00f6taland"
+                ],
+                "producer": [],
+                "source": "",
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "group": "Str\u00f6mmande film",
+                "trailer": "",
+                "thumbnail": {
+                    "small": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/94fa54d75a_256x144.png",
+                    "image": "https://d225ilamp70atk.cloudfront.net/images/originals/94fa54d75a.png",
+                    "large": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/94fa54d75a_640x360.png",
+                    "xlarge": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/94fa54d75a_854x480.png",
+                    "medium": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/94fa54d75a_427x240.png",
+                    "hd": "https://d225ilamp70atk.cloudfront.net/images/thumbnails/94fa54d75a_1280x720.png"
+                }
+            },
+            "usage": {
+                "copyright": [
+                    {
+                        "publisher": "Mediapoolen V\u00e4stra G\u00f6taland",
+                        "logo": "mediapoolen.png",
+                        "url": "https://mediapoolen.se"
+                    }
+                ],
+                "rights": [
+                    ""
+                ],
+                "difficulty": "",
+                "ability": [],
+                "activity": [],
+                "accessibility": "",
+                "from": "2020-05-04",
+                "to": null
+            },
+            "streaming": {
+                "src": "",
+                "mediaid": "MPVYoTI1Y1N3uZrLPwLYZw",
+                "trailerid": "",
+                "repository": "MP",
+                "format": "video",
+                "director": [],
+                "actor": [],
+                "voiceover": [],
+                "languageversion": [
+                    {
+                        "mediaid": "",
+                        "language": "",
+                        "subtitles": ""
+                    }
+                ],
+                "episode": "1",
+                "episodes": "3",
+                "season": "",
+                "seasons": "",
+                "duration": "420.36"
+            },
+            "library": {
+                "isbn": "",
+                "author": [],
+                "pages": "",
+                "edition": "",
+                "illustrator": []
+            },
+            "keywords": {
+                "freetext": "Utg\u00e5rdaloke, J\u00e4ttar, Tor, Loke, vikingasagor",
+                "subject": [
+                    "Svenska",
+                    "Historia"
+                ],
+                "subsubject": [
+                    "Uppl\u00e4sningar och dramatiseringar",
+                    "Forntid och medeltid"
+                ],
+                "tags": [
+                    "Svenska",
+                    "Uppl\u00e4sningar och dramatiseringar",
+                    "Historia",
+                    "Forntid och medeltid",
+                    "Vikingatiden",
+                    "Fornnordisk mytologi"
+                ],
+                "breadcrumbs": [
+                    "Svenska/Uppl\u00e4sningar och dramatiseringar",
+                    "Historia/Forntid och medeltid/Vikingatiden"
+                ],
+                "barn": [],
+                "sao": [],
+                "genre": [],
+                "goals": [],
+                "mood": []
+            },
+            "audience": {
+                "role": [],
+                "age": {
+                    "limit": "",
+                    "from": "",
+                    "to": ""
+                },
+                "level": [
+                    "Grundskola F-3",
+                    "Grundskola 4-6"
+                ]
+            },
+            "search": {
+                "status": "Publicerad",
+                "searchable": "S\u00f6kbar",
+                "autocomplete": "S\u00f6kbar",
+                "promotion": [],
+                "group": [
+                    "Film och TV-program"
+                ],
+                "subgroup": [
+                    "Utbildningsfilm"
+                ]
+            },
+            "distribution": {
+                "platform": []
+            },
+            "catalogue": {
+                "label": [],
+                "comment": "",
+                "derivedfrom": "",
+                "expirydate": null
+            },
+            "evaluation": {
+                "modified": null,
+                "grade": 0,
+                "review": "",
+                "comment": "",
+                "summary": "",
+                "dealbreaker": "",
+                "similar": [
+                    ""
+                ],
+                "betterbuy": [
+                    ""
+                ],
+                "betterbuytext": [
+                    ""
+                ],
+                "quality": {
+                    "overall": "",
+                    "detailed": ""
+                }
+            },
+            "relations": {
+                "parent": "",
+                "children": [
+                    ""
+                ],
+                "collection": [],
+                "references": [
+                    {
+                        "uid": "b36392cd3d",
+                        "position": 0
+                    },
+                    {
+                        "uid": "5cb344bffa",
+                        "position": 0
+                    }
+                ],
+                "attachments": []
+            },
+            "technical": {
+                "format": "film",
+                "location": "film/94fa54d75a",
+                "mime": "",
+                "filename": "Utg\u00e5rdaloke del1.mp4",
+                "container": "mp4",
+                "videocodec": "h264",
+                "audiocodec": "aac",
+                "srt": [],
+                "size": "543465752",
+                "resolution": "",
+                "aspectratio": ""
+            },
+            "circulation": {
+                "units": []
+            },
+            "curriculum": {
+                "lgr11": [
+                    {
+                        "subject": {
+                            "description": "Spr\u00e5k \u00e4r m\u00e4nniskans fr\u00e4msta redskap f\u00f6r att t\u00e4nka, kommunicera och l\u00e4ra. Genom spr\u00e5ket utvecklar m\u00e4nniskor sin identitet, uttrycker k\u00e4nslor och tankar och f\u00f6rst\u00e5r hur andra k\u00e4nner och t\u00e4nker. Att ha ett rikt och varierat spr\u00e5k \u00e4r betydelsefullt f\u00f6r att kunna f\u00f6rst\u00e5 och verka i ett samh\u00e4lle d\u00e4r kulturer, livs\u00e5sk\u00e5dningar, generationer och spr\u00e5k m\u00f6ts.",
+                            "label": "Svenska",
+                            "value": "073aa2e5-8ac8-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet svenska ska syfta till att eleverna utvecklar kunskaper i och om svenska spr\u00e5ket. Genom undervisningen ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sitt tal- och skriftspr\u00e5k s\u00e5 att de f\u00e5r tilltro till sin spr\u00e5kf\u00f6rm\u00e5ga och kan uttrycka sig i olika sammanhang och f\u00f6r skilda syften. Det inneb\u00e4r att eleverna genom undervisningen ska ges m\u00f6jlighet att utveckla spr\u00e5ket f\u00f6r att t\u00e4nka, kommunicera och l\u00e4ra.</p>\n\n<p>Undervisningen ska stimulera elevernas intresse f\u00f6r att l\u00e4sa och skriva. Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla kunskaper om hur man formulerar egna \u00e5sikter och tankar i olika slags texter och genom skilda medier. Undervisningen ska \u00e4ven syfta till att eleverna utvecklar f\u00f6rm\u00e5ga att skapa och bearbeta texter, enskilt och tillsammans med andra. Eleverna ska ges m\u00f6jligheter att kommunicera i digitala milj\u00f6er med interaktiva och f\u00f6r\u00e4nderliga texter. Eleverna ska \u00e4ven stimuleras till att uttrycka sig genom olika estetiska uttrycksformer. Vidare ska undervisningen bidra till att eleverna utvecklar kunskaper om hur man s\u00f6ker och kritiskt v\u00e4rderar information fr\u00e5n olika k\u00e4llor.</p>\n\n<p>I undervisningen ska eleverna m\u00f6ta samt f\u00e5 kunskaper om sk\u00f6nlitteratur fr\u00e5n olika tider och skilda delar av v\u00e4rlden. Undervisningen ska ocks\u00e5 bidra till att eleverna utvecklar kunskaper om olika former av sakprosa. I m\u00f6tet med olika typer av texter, scenkonst och annat estetiskt ber\u00e4ttande ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sitt spr\u00e5k, den egna identiteten och sin f\u00f6rst\u00e5else f\u00f6r omv\u00e4rlden.</p>\n\n<p>Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla sina kunskaper om svenska spr\u00e5ket, dess normer, uppbyggnad, historia och utveckling samt om hur spr\u00e5kbruk varierar beroende p\u00e5 sociala sammanhang och medier. P\u00e5 s\u00e5 s\u00e4tt ska undervisningen bidra till att st\u00e4rka elevernas medvetenhet om och tilltro till den egna spr\u00e5kliga och kommunikativa f\u00f6rm\u00e5gan. Undervisningen ska ocks\u00e5 bidra till att eleverna f\u00e5r f\u00f6rst\u00e5else f\u00f6r att s\u00e4ttet man kommunicerar p\u00e5 kan f\u00e5 konsekvenser f\u00f6r en sj\u00e4lv och f\u00f6r andra m\u00e4nniskor. D\u00e4rigenom ska eleverna ges f\u00f6ruts\u00e4ttningar att ta ansvar f\u00f6r det egna spr\u00e5kbruket i olika sammanhang och medier.</p>\n\n<p>Undervisningen ska \u00e4ven bidra till att eleverna f\u00e5r m\u00f6ta och bekanta sig med s\u00e5v\u00e4l de nordiska grannspr\u00e5ken som de nationella minoritetsspr\u00e5ken.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet svenska ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 1\u20133": {
+                                "value": "d8e8d149-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 1\u20133",
+                                "categories": {
+                                    "Ber\u00e4ttande texter och sakprosatexter": {
+                                        "value": "5e2deb96-8b6f-11e9-a987-0ae95472d63c",
+                                        "label": "Ber\u00e4ttande texter och sakprosatexter",
+                                        "core_content": [
+                                            {
+                                                "value": "27bf9f17-8b73-11e9-a987-0ae95472d63c",
+                                                "label": "Ber\u00e4ttande texter och poetiska texter f\u00f6r barn fr\u00e5n olika tider och skilda delar av v\u00e4rlden. Texter i form av rim, ramsor, s\u00e5nger, bilderb\u00f6cker, kapitelb\u00f6cker, lyrik, dramatik, sagor och myter. Ber\u00e4ttande och poetiska texter som belyser m\u00e4nniskors upplevelser och erfarenheter."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "subject": {
+                            "description": "M\u00e4nniskans f\u00f6rst\u00e5else av det f\u00f6rflutna \u00e4r infl\u00e4tad i hennes f\u00f6rest\u00e4llningar om samtiden och perspektiv p\u00e5 framtiden. P\u00e5 s\u00e5 s\u00e4tt p\u00e5verkar det f\u00f6rflutna b\u00e5de v\u00e5ra liv i dag och v\u00e5ra val inf\u00f6r framtiden. Kvinnor och m\u00e4n har i alla tider skapat historiska ber\u00e4ttelser f\u00f6r att tolka verkligheten och p\u00e5verka sin omgivning. Ett historiskt perspektiv ger oss redskap att f\u00f6rst\u00e5 och f\u00f6r\u00e4ndra v\u00e5r egen tid.",
+                            "label": "Historia",
+                            "value": "cf95b27c-8ac7-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet historia ska syfta till att eleverna utvecklar s\u00e5v\u00e4l kunskaper om historiska sammanhang, som sin historiska bildning och sitt historiemedvetande. Detta inneb\u00e4r en insikt om att det f\u00f6rflutna pr\u00e4glar v\u00e5r syn p\u00e5 nutiden och d\u00e4rmed uppfattningen om framtiden. Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att utveckla kunskaper om historiska f\u00f6rh\u00e5llanden, historiska begrepp och metoder och om hur historia kan anv\u00e4ndas f\u00f6r olika syften. Den ska ocks\u00e5 bidra till att eleverna utvecklar historiska kunskaper om likheter och skillnader i m\u00e4nniskors levnadsvillkor och v\u00e4rderingar. D\u00e4rigenom ska eleverna f\u00e5 f\u00f6rst\u00e5else f\u00f6r olika kulturella sammanhang och levnadss\u00e4tt.</p>\n\n<p>Undervisningen ska ge eleverna f\u00f6ruts\u00e4ttningar att till\u00e4gna sig en historisk referensram och en f\u00f6rdjupad f\u00f6rst\u00e5else f\u00f6r nutiden. De ska ocks\u00e5 f\u00e5 m\u00f6jlighet att utveckla en kronologisk \u00f6verblick \u00f6ver hur kvinnor och m\u00e4n genom tiderna har skapat och f\u00f6r\u00e4ndrat samh\u00e4llen och kulturer.</p>\n\n<p>Undervisningen ska stimulera elevernas nyfikenhet p\u00e5 historia och bidra till att de utvecklar kunskaper om hur vi kan veta n\u00e5got om det f\u00f6rflutna genom historiskt k\u00e4llmaterial och m\u00f6ten med platser och m\u00e4nniskors ber\u00e4ttelser. Eleverna ska genom undervisningen \u00e4ven ges f\u00f6ruts\u00e4ttningar att utveckla f\u00f6rm\u00e5gan att st\u00e4lla fr\u00e5gor till och v\u00e4rdera k\u00e4llor som ligger till grund f\u00f6r historisk kunskap. Undervisningen ska vidare bidra till att eleverna utvecklar f\u00f6rst\u00e5else f\u00f6r att varje tids m\u00e4nniskor m\u00e5ste bed\u00f6mas utifr\u00e5n sin samtids villkor och v\u00e4rderingar.</p>\n\n<p>Undervisningen ska bidra till att eleverna utvecklar f\u00f6rst\u00e5else f\u00f6r hur historiska ber\u00e4ttelser anv\u00e4nds i samh\u00e4llet och i vardagslivet. D\u00e4rigenom ska eleverna f\u00e5 olika perspektiv p\u00e5 sina egna och andras identiteter, v\u00e4rderingar och f\u00f6rest\u00e4llningar.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet historia ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 1\u20133": {
+                                "value": "4287b223-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 1\u20133",
+                                "categories": {
+                                    "Att leva i v\u00e4rlden": {
+                                        "value": "d4b8c030-8b4e-11e9-a987-0ae95472d63c",
+                                        "label": "Att leva i v\u00e4rlden",
+                                        "core_content": [
+                                            {
+                                                "value": "1ced2391-8b4f-11e9-a987-0ae95472d63c",
+                                                "label": "Ber\u00e4ttelser om gudar och hj\u00e4ltar i antik och nordisk mytologi och hur man kan se p\u00e5 dem i v\u00e5r egen tid."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "subject": {
+                            "description": "Spr\u00e5k \u00e4r m\u00e4nniskans fr\u00e4msta redskap f\u00f6r att t\u00e4nka, kommunicera och l\u00e4ra. Genom spr\u00e5ket utvecklar m\u00e4nniskor sin identitet, uttrycker k\u00e4nslor och tankar och f\u00f6rst\u00e5r hur andra k\u00e4nner och t\u00e4nker. Att ha ett rikt och varierat spr\u00e5k \u00e4r betydelsefullt f\u00f6r att kunna f\u00f6rst\u00e5 och verka i ett samh\u00e4lle d\u00e4r kulturer, livs\u00e5sk\u00e5dningar, generationer och spr\u00e5k m\u00f6ts.",
+                            "label": "Svenska",
+                            "value": "073aa2e5-8ac8-11e9-a987-0ae95472d63c"
+                        },
+                        "aim": {
+                            "description": "<p>Undervisningen i \u00e4mnet svenska ska syfta till att eleverna utvecklar kunskaper i och om svenska spr\u00e5ket. Genom undervisningen ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sitt tal- och skriftspr\u00e5k s\u00e5 att de f\u00e5r tilltro till sin spr\u00e5kf\u00f6rm\u00e5ga och kan uttrycka sig i olika sammanhang och f\u00f6r skilda syften. Det inneb\u00e4r att eleverna genom undervisningen ska ges m\u00f6jlighet att utveckla spr\u00e5ket f\u00f6r att t\u00e4nka, kommunicera och l\u00e4ra.</p>\n\n<p>Undervisningen ska stimulera elevernas intresse f\u00f6r att l\u00e4sa och skriva. Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla kunskaper om hur man formulerar egna \u00e5sikter och tankar i olika slags texter och genom skilda medier. Undervisningen ska \u00e4ven syfta till att eleverna utvecklar f\u00f6rm\u00e5ga att skapa och bearbeta texter, enskilt och tillsammans med andra. Eleverna ska ges m\u00f6jligheter att kommunicera i digitala milj\u00f6er med interaktiva och f\u00f6r\u00e4nderliga texter. Eleverna ska \u00e4ven stimuleras till att uttrycka sig genom olika estetiska uttrycksformer. Vidare ska undervisningen bidra till att eleverna utvecklar kunskaper om hur man s\u00f6ker och kritiskt v\u00e4rderar information fr\u00e5n olika k\u00e4llor.</p>\n\n<p>I undervisningen ska eleverna m\u00f6ta samt f\u00e5 kunskaper om sk\u00f6nlitteratur fr\u00e5n olika tider och skilda delar av v\u00e4rlden. Undervisningen ska ocks\u00e5 bidra till att eleverna utvecklar kunskaper om olika former av sakprosa. I m\u00f6tet med olika typer av texter, scenkonst och annat estetiskt ber\u00e4ttande ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sitt spr\u00e5k, den egna identiteten och sin f\u00f6rst\u00e5else f\u00f6r omv\u00e4rlden.</p>\n\n<p>Genom undervisningen ska eleverna ges m\u00f6jlighet att utveckla sina kunskaper om svenska spr\u00e5ket, dess normer, uppbyggnad, historia och utveckling samt om hur spr\u00e5kbruk varierar beroende p\u00e5 sociala sammanhang och medier. P\u00e5 s\u00e5 s\u00e4tt ska undervisningen bidra till att st\u00e4rka elevernas medvetenhet om och tilltro till den egna spr\u00e5kliga och kommunikativa f\u00f6rm\u00e5gan. Undervisningen ska ocks\u00e5 bidra till att eleverna f\u00e5r f\u00f6rst\u00e5else f\u00f6r att s\u00e4ttet man kommunicerar p\u00e5 kan f\u00e5 konsekvenser f\u00f6r en sj\u00e4lv och f\u00f6r andra m\u00e4nniskor. D\u00e4rigenom ska eleverna ges f\u00f6ruts\u00e4ttningar att ta ansvar f\u00f6r det egna spr\u00e5kbruket i olika sammanhang och medier.</p>\n\n<p>Undervisningen ska \u00e4ven bidra till att eleverna f\u00e5r m\u00f6ta och bekanta sig med s\u00e5v\u00e4l de nordiska grannspr\u00e5ken som de nationella minoritetsspr\u00e5ken.</p>",
+                            "values": []
+                        },
+                        "abilities": {
+                            "description": "Genom undervisningen i \u00e4mnet svenska ska eleverna ges f\u00f6ruts\u00e4ttningar att utveckla sin f\u00f6rm\u00e5ga att",
+                            "values": []
+                        },
+                        "core_content": {
+                            "I \u00e5rskurs 4\u20136": {
+                                "value": "e8e4a097-8b36-11e9-a987-0ae95472d63c",
+                                "label": "I \u00e5rskurs 4\u20136",
+                                "categories": {
+                                    "Ber\u00e4ttande texter och sakprosatexter": {
+                                        "value": "69c7802a-8b6f-11e9-a987-0ae95472d63c",
+                                        "label": "Ber\u00e4ttande texter och sakprosatexter",
+                                        "core_content": [
+                                            {
+                                                "value": "60041568-8b73-11e9-a987-0ae95472d63c",
+                                                "label": "Ber\u00e4ttande texter och poetiska texter f\u00f6r barn och unga fr\u00e5n olika tider, fr\u00e5n Sverige, Norden och \u00f6vriga v\u00e4rlden. Texter i form av sk\u00f6nlitteratur, lyrik, dramatik, sagor och myter som belyser m\u00e4nniskors villkor och identitets- och livsfr\u00e5gor."
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "query": {
+                "curriculum": {
+                    "subject": [
+                        "073aa2e5-8ac8-11e9-a987-0ae95472d63c",
+                        "cf95b27c-8ac7-11e9-a987-0ae95472d63c"
+                    ],
+                    "level": [
+                        "d8e8d149-8b36-11e9-a987-0ae95472d63c",
+                        "4287b223-8b36-11e9-a987-0ae95472d63c",
+                        "e8e4a097-8b36-11e9-a987-0ae95472d63c"
+                    ],
+                    "category": [
+                        "5e2deb96-8b6f-11e9-a987-0ae95472d63c",
+                        "d4b8c030-8b4e-11e9-a987-0ae95472d63c",
+                        "69c7802a-8b6f-11e9-a987-0ae95472d63c"
+                    ],
+                    "core_content": [
+                        "27bf9f17-8b73-11e9-a987-0ae95472d63c",
+                        "1ced2391-8b4f-11e9-a987-0ae95472d63c",
+                        "60041568-8b73-11e9-a987-0ae95472d63c"
+                    ]
+                },
+                "title": "Vikingasagor: Sagan om Utg\u00e5rdaloke",
+                "title_sort": "Vikingasagor: Sagan om Utg\u00e5rdaloke",
+                "title_ngram": "Vikingasagor: Sagan om Utg\u00e5rdaloke",
+                "title_autocomplete": "Vikingasagor: Sagan om Utg\u00e5rdaloke",
+                "tags": [
+                    "svenska",
+                    "uppl\u00e4sningar och dramatiseringar",
+                    "historia",
+                    "forntid och medeltid",
+                    "vikingatiden",
+                    "fornnordisk mytologi"
+                ],
+                "keywords": [
+                    "svenska",
+                    "historia",
+                    "uppl\u00e4sningar och dramatiseringar",
+                    "forntid och medeltid",
+                    "vikingatiden",
+                    "fornnordisk mytologi",
+                    "utg\u00e5rdaloke",
+                    "j\u00e4ttar",
+                    "tor",
+                    "loke",
+                    "vikingasagor"
+                ],
+                "freetext": "Utg\u00e5rdaloke, J\u00e4ttar, Tor, Loke, vikingasagor",
+                "goals": [],
+                "type": [
+                    "Utbildningsfilm"
+                ],
+                "language": [
+                    "Svenska"
+                ],
+                "publisher": [
+                    "Mediapoolen V\u00e4stra G\u00f6taland"
+                ],
+                "articleid": "",
+                "publisherid": "",
+                "ordinal": {
+                    "search": 1,
+                    "default": 1
+                }
+            }
+        }
+    }
+]

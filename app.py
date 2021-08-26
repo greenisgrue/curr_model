@@ -60,10 +60,10 @@ def recommend():
         grades_adjusted_values = True
     
     # Handle errors by redirecting to error page
-    # try:
-    #     selected = df.loc[df['uid'] == provided_id]
-    # except:
-    #     return render_template("handle_error.html")
+    try:
+        selected = df.loc[df['uid'] == provided_id]
+    except:
+        return render_template("handle_error.html")
 
 
     #Get metadata to display on interface
@@ -128,13 +128,13 @@ def random_id():
     if any(sub in subject.split(', ') for sub in teacher_subjects):
         subject_adjusted_values = True
     if any(sub in subject.split(', ') for sub in teacher_grades):
-        grades_adjusted_values = True
+        grades_adjusted_values = True 
 
     # Handle errors by redirecting to error page
-    # try:
-    #     selected = df.loc[df['uid'] == random_id]
-    # except:
-    #     return render_template("handle_error.html")
+    try:
+        selected = df.loc[df['uid'] == random_id]
+    except:
+        return render_template("handle_error.html")
     
     # Get metadata to display on interface
     # content_id = model_w2v.content_id
@@ -191,7 +191,6 @@ def post_data():
                 ratings[key] = value
 
         ratings['ratings'] = ratings_data
-        print(ratings)
         query = SampleTable.insert_many([ratings]) 
 
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}

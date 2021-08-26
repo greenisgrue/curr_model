@@ -34,12 +34,12 @@ class SelfLearning:
         for i, row in df.iterrows():
             df.at[i,'CI'] = rows[i][0]
         df.to_csv("./massive_data/stored_data/self_learning_matrix.csv", index=False)
+        return df
 
     # Function for adjusting the weights in the self learning matrix. If a user rates a "centralt innehåll" point positively the keywords
     # associated with its contents metadata gains some score. For negative ratings a corresponding negative score is added to associated keywords. 
     def adjust_weights(self):
-        from datetime import datetime, timedelta
-        self.create_matrix()
+        self.weights_matrix = self.create_matrix()
         connection_url = 'mongodb+srv://dbUser:dbUserPassword@cluster0.ifjkb.mongodb.net/CI_ratings?retryWrites=true&w=majority'
         client = pymongo.MongoClient(connection_url)
         db = client.get_database('CI_ratings')
@@ -48,7 +48,7 @@ class SelfLearning:
             for i in item.get('ratings'):
                 if type(i.get('rating')) != type(None):
                     # Determine how much each rating affects content keywords weight in self learning matrix
-                    weight = (i.get('rating'))/10
+                    weight = (i.get('rating'))/200
                     keywords = item.get('keywords').split(', ')
                     for k in keywords:
                         k = k.lower()
@@ -84,15 +84,17 @@ class SelfLearning:
             loaded_main = pickle.load(f)
 
         for i, row in tqdm(loaded_main.iterrows()):
+            index = 0
             for key, value in row['result']:
                 self_learn_score = self.update_score(key, row['keywords'], value.get('value'))
                 adjusted_score = value.get('value') + self_learn_score
                 formatted_string = "{:.3f}".format(adjusted_score)
                 adjusted_score = float(formatted_string)
-                value['adjusted_value'] = adjusted_score
+                loaded_main.at[i,'result'][index][1]['adjusted_value'] = adjusted_score
+                index += 1
 
             sorted_dict = sorted(row['result'], reverse=True, key = lambda x: x[1]['adjusted_value'])
-            row['result'] = sorted_dict    
+            loaded_main.at[i,'result'] = sorted_dict
         
         with open('massive_data/stored_data/pickles/model_pickle.pickle', 'wb') as f:
             pickle.dump(loaded_main, f)  

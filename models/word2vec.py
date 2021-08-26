@@ -69,31 +69,30 @@ class W2v():
         # Konstanterna avgör hur nära 1 maxtaket ligger samt faktorn vid k = 1. Mindre differens ger närmare 1.
         self.key_len_factor = (math.log(self.keywords_length,3)+0.4)/(math.log(self.keywords_length,3)+0.47) 
 
-        # CSV-files with "centralt innehåll" including and not including titles for each
-        CI = pd.read_csv('massive_data/stored_data/CI_vocab.csv')
-        CI_inc_titles = pd.read_csv('massive_data/stored_data/CI_vocab_including_titles.csv')
+        # CSV-files with "centralt innehåll" 
+        CI = pd.read_csv('massive_data/stored_data/CI_vocab_including_titles.csv')
 
         # Checking for series to be manually mapped with specific "centralt innehåll". 
         if not isinstance(self.surtitle, float):
             if 'Lilla Aktuellt skola' in self.surtitle:
                 self.relevant_CI = CI[CI['uuid'] == '51e34da1-0e1d-11eb-b4ba-0ae95472d63c']
-                self.relevant_CI_inc_titles = CI_inc_titles[CI_inc_titles['uuid'] == '51e34da1-0e1d-11eb-b4ba-0ae95472d63c']
+                self.relevant_CI_inc_titles = CI[CI['uuid'] == '51e34da1-0e1d-11eb-b4ba-0ae95472d63c']
         
             elif 'Newsreel' in self.surtitle and self.audience == 'Grundskola 4-6':
                 self.relevant_CI = CI[(CI['uuid'] == '35518dcf-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '3e8c4968-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '0c60d903-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '1aa25dc9-0a14-11eb-b4ba-0ae95472d63c')]
-                self.relevant_CI_inc_titles = CI_inc_titles[(CI_inc_titles['uuid'] == '35518dcf-0a14-11eb-b4ba-0ae95472d63c') | (CI_inc_titles['uuid'] == '3e8c4968-0a14-11eb-b4ba-0ae95472d63c') | (CI_inc_titles['uuid'] == '0c60d903-0a14-11eb-b4ba-0ae95472d63c') | (CI_inc_titles['uuid'] == '1aa25dc9-0a14-11eb-b4ba-0ae95472d63c')]
+                self.relevant_CI_inc_titles = CI[(CI['uuid'] == '35518dcf-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '3e8c4968-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '0c60d903-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '1aa25dc9-0a14-11eb-b4ba-0ae95472d63c')]
         
             elif 'Newsreel' in self.surtitle and self.audience == 'Grundskola 7-9':
                 self.relevant_CI = CI[(CI['uuid'] == 'ee776597-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == 'f265d641-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '00be6ce6-0a15-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '9fdfda18-0a14-11eb-b4ba-0ae95472d63c')]
-                self.relevant_CI_inc_titles = CI_inc_titles[(CI_inc_titles['uuid'] == 'ee776597-0a14-11eb-b4ba-0ae95472d63c') | (CI_inc_titles['uuid'] == 'f265d641-0a14-11eb-b4ba-0ae95472d63c') | (CI_inc_titles['uuid'] == '00be6ce6-0a15-11eb-b4ba-0ae95472d63c') | (CI_inc_titles['uuid'] == '9fdfda18-0a14-11eb-b4ba-0ae95472d63c')]
+                self.relevant_CI_inc_titles = CI[(CI['uuid'] == 'ee776597-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == 'f265d641-0a14-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '00be6ce6-0a15-11eb-b4ba-0ae95472d63c') | (CI['uuid'] == '9fdfda18-0a14-11eb-b4ba-0ae95472d63c')]
             else:
                 self.relevant_CI = CI[CI['subject'].isin(self.subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))]
-                self.relevant_CI_inc_titles = CI_inc_titles[CI_inc_titles['subject'].isin(self.subject.split(', ')) & CI_inc_titles['audience'].isin(self.audience.split(', '))]                 
+                self.relevant_CI_inc_titles = CI[CI['subject'].isin(self.subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))]                 
 
         # Finding all relevant "centralt innehåll" for the provided content id.
         else:
             self.relevant_CI = CI[CI['subject'].isin(self.subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))]
-            self.relevant_CI_inc_titles = CI_inc_titles[CI_inc_titles['subject'].isin(self.subject.split(', ')) & CI_inc_titles['audience'].isin(self.audience.split(', '))] 
+            self.relevant_CI_inc_titles = CI[CI['subject'].isin(self.subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))] 
 
         # Drop "centralt innehåll" with title "Texter" as no content involves reading
         # if media_type == 'video' or media_type == 'audio' or isinstance(self.media_type, float):
@@ -116,7 +115,12 @@ class W2v():
                 primary_uid = f'~{primary_uid}' 
                 chosen_uid = primary_uid
                 primary_content = self.ur_df[self.ur_df['~uid'] == chosen_uid]
-                self.primary_subject = primary_content.iloc[0]['subject'] 
+                try:
+                    self.primary_subject = primary_content.iloc[0]['subject'] 
+                except:
+                    print(self.content_id)
+                    print(chosen_uid)
+                    return None
                 title = primary_content.iloc[0]['title']
                 surtitle = primary_content.iloc[0]['surtitle']
                 freetext = primary_content.iloc[0]['freetext']
@@ -152,7 +156,7 @@ class W2v():
 
                 # Finding all relevant "centralt innehåll" for the provided content id.
                 self.relevant_CI = CI[CI['subject'].isin(self.primary_subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))]
-                self.relevant_CI_inc_titles = CI_inc_titles[CI_inc_titles['subject'].isin(self.primary_subject.split(', ')) & CI_inc_titles['audience'].isin(self.audience.split(', '))] 
+                self.relevant_CI_inc_titles = CI[CI['subject'].isin(self.primary_subject.split(', ')) & CI['audience'].isin(self.audience.split(', '))] 
 
                 # Lock specific language related "centralt innehåll" for content in other languages that are based on a swedish version
                 if self.audience == 'Grundskola 1-3':
@@ -215,6 +219,7 @@ class W2v():
     def preprocess_texts(self, text):
         # Preprocess text. Lowercase, remove punctuation, remove stop words and custom stop words
         stop_words = stopwords.words('swedish')
+        text = str(text)
         lowered_text = text.lower()
         rm_custom_words = ' '.join([self.dictionary.get(i, i) for i in lowered_text.split()])
         rm_punctuation_text = re.sub(r"[^\w\s-]+", '', rm_custom_words)
@@ -366,8 +371,8 @@ class W2v():
         for i, row in self.relevant_CI_inc_titles.iterrows():
             self.get_results(row)    
             if (self.versions_dict and 'Modersmål' in row['subject']) or (self.surtitle == 'Lilla Aktuellt skola') or (self.surtitle == 'Newsreel'):
-                self.cos_dict[row.uuid] = {'CI': row['CI'], 'audience': row['audience'], 'subject': row['subject'], 'title': row['title'], 'type': 'Preset', 'value': 1.0}          
-                self.wmd_dict[row.uuid] = {'CI': row['CI'], 'audience': row['audience'], 'subject': row['subject'], 'title': row['title'], 'type': 'Preset', 'value': 1.0}          
+                self.cos_dict[row.uuid] = {'CI': row['value'], 'audience': row['audience'], 'subject': row['subject'], 'title': row['title'], 'type': 'Preset', 'value': 1.0}          
+                self.wmd_dict[row.uuid] = {'CI': row['value'], 'audience': row['audience'], 'subject': row['subject'], 'title': row['title'], 'type': 'Preset', 'value': 1.0}          
 
         # Iterate rows containing only "centralt innehåll" and apply sub-models to compare with content metadata
         for i, row in self.relevant_CI.iterrows():

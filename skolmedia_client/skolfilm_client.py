@@ -16,7 +16,7 @@ from process_data import clean_df
 
 class Skolfilm:
 
-    __prod_search_source = [
+    __rek_search_source = [
         "metadata",
         "product.title",
         "product.surtitle",
@@ -37,6 +37,7 @@ class Skolfilm:
         "relations.versions",
         "metadata.modified"
     ]
+
 
     def __init__(self):
         self.es = ElasticClient().connection
@@ -59,7 +60,6 @@ class Skolfilm:
             "title": product["_source"]["product"]["title"],
             "streaming_format": product["_source"]["streaming"]["format"],
             "language": ", ".join(product["_source"]["query"]["language"]),
-            "query_freetext": " ".join(product["_source"]["query"]["freetext"].split(",")).replace("\n", ""),
             "keyword_tags": " ".join(product["_source"]["query"]["tags"]).replace("\n", ""),
             "keywords": ", ".join(product["_source"]["query"]["keywords"]).replace("\n", ""),
             "freetext": ", ".join(product["_source"]["keywords"]["freetext"].split(",")).replace("\n", ""),
@@ -93,6 +93,7 @@ class Skolfilm:
                 data[0].keys(),
             )
         return data
+        
 
     def get_interval(self, start, end, index, limit, write_to_json=False, write_to_csv=True):
         if start is None and end is None:
@@ -103,34 +104,42 @@ class Skolfilm:
             end = end.strftime("%Y-%m-%d %H:%M:%S")
 
         format = "%Y-%m-%d %H:%M:%S"
-        try: 
-            datetime.strptime(start, format)
-            datetime.strptime(end, format)
-        except:
-            print("Ange tidsstämpel i formatet YYYY-MM-dd HH:mm:ss")
-            return
+        if start != 'all' and end != 'all':
+            try: 
+                datetime.strptime(start, format)
+                datetime.strptime(end, format)
+                response = self.es.search(
+                    index=index,
+                    scroll="2m",
+                    size=limit,
+                    body={"query": {"range": {"metadata.modified": {"gte": start, "lte": end}}}}
+                ) 
+                data = list(map(self.__map_products, response["hits"]["hits"]))
+            except:
+                print("Ange tidsstämpel i formatet YYYY-MM-dd HH:mm:ss")
+                return
+        else:
+            response = self.__get_all_from_index(
+                index,
+                self.__rek_search_source,
+                limit,
+            )
+            data = list(map(self.__map_products, response))
 
-        response = self.es.search(
-            index=index,
-            scroll="2m",
-            size=limit,
-            body={"query": {"range": {"metadata.modified": {"gte": start, "lte": end}}}}
-        )   
-            
-        data = list(map(self.__map_products, response["hits"]["hits"]))
         if data:
             if write_to_json:
                 self.__write_to_json(
                     response["hits"]["hits"],
-                    f'massive_data/stored_data/interval.csv'
+                    f'massive_data/interval.csv'
                 )
             if write_to_csv:
                 new_df = self.__write_to_csv(
                     data,
-                    f"massive_data/stored_data/interval.csv",
+                    f"massive_data/interval.csv",
                     data[0].keys(),
                 )
         return data
+
 
     def merge_df(self, index):
         full_df = pd.read_csv(f"massive_data/stored_data/{index}_cleaned.csv", sep=',', engine='python')
@@ -146,7 +155,7 @@ class Skolfilm:
             date_time_start = datetime.now() - timedelta(1)
             date_time_end = datetime.now()
         elif start == "all" and end == "all":
-            self.__iterate_model(index, full_df)
+            self.__iterate_model(index, full_df, exists)
             return 
         else:
             date_time_start = datetime.strptime(start, "%Y-%m-%d %H:%M:%S")

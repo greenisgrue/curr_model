@@ -17,24 +17,33 @@ def data_struct(index="search_ur_20210731"):
 # Fetch all data in a given index. Data is cleaned and stored as a csv-file in stored_data folder. 
 def fetch_all_media(data_limit=25000, index="search_ur_20210731"):
     from skolmedia_client.skolfilm_client import Skolfilm
-    # if type(data_limit) != int:
-    #     data_limit = int(data_limit)
+    if type(data_limit) != int: 
+        data_limit = int(data_limit)
     client = Skolfilm()
-    client.get_all_media(index=index, limit=data_limit, write_to_csv=True)
+    client.get_all_media(index=index, limit=data_limit, write_to_json=True)
     print("Fetch all media: completed")
     clean_df.clean(index)
     print("Content is cleaned")
 
 # Fetch data in a given time interval. Data is cleaned and merged with its main csv-file in stored_data folder.
 # If no start or end date is set the last 24 hours will be used as default. 
-def fetch_media_time_interval(start_date=None, end_date=None, data_limit=10000, index="search_ur_20210731"):
+def fetch_media(start_date=None, end_date=None, data_limit=10000, index="search_ur_20210731"):
     from skolmedia_client.skolfilm_client import Skolfilm
+    if type(data_limit) != int: 
+        data_limit = int(data_limit)
     client = Skolfilm()
-    client.get_interval(start_date, end_date, index=index, limit=data_limit, write_to_csv=True)
-    print(f"Fetch media in interval {start_date} to {end_date}: completed")
-    clean_df.clean(index)
-    client.merge_df(index)
-    print("Content is cleaned")
+    data = client.get_interval(start_date, end_date, index=index, limit=data_limit, write_to_csv=True)
+    if start_date == None and end_date == None:
+        print(f"Fetch media in interval last 24 hours completed")
+    elif start_date == 'all' and end_date == 'all':
+        print(f"Fetch media in full interval completed")
+    else:
+        print(f"Fetch media in interval {start_date} to {end_date} completed")
+    if data:
+        clean_df.clean(index)
+        client.merge_df(index)
+        print("Content is cleaned")
+
 
 # Run model over media content and save in df as pickle. To run over all content available use parameters "all" "all", for latest 24 hours
 # leave parameters blank and for specific dates use format "YYYY-mm-dd HH:MM:SS"
@@ -48,7 +57,7 @@ def get_model_data(start_date=None, end_date=None, exists=True, index="search_ur
 # for "centralt innehåll" based on user feedback. 
 def update_self_learning_matrix():
     from models.self_learning import SelfLearning
-    self_learn = SelfLearning(True)
+    self_learn = SelfLearning(False)
     self_learn.adjust_weights()
 
 
